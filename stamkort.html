@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta name=”robots” content=”noindex”>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stamkort.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dekko&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+  <title>Børnegården Katholt | Stamkort/børneintranet</title>
+</head>
+<body>
+  <nav class="navbar">
+    <!-- Left: Logo -->
+    <div class="navbar-logo">
+      <a href="index.html"><img src="images/logo-katholt-størrelse.svg" alt="Logo"></a>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="topnav" id="myTopnav">
+      <a href="index.html">Velkommen</a>
+
+      <div class="dropdown">
+        <button class="dropdown-button">Børnehave <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="ny-børnehave.html">Ny i børnehaven</a>
+          <a href="børne-praktisk.html">Praktiske oplysninger</a>
+          <a href="børne-indmeld.html">Ind- og udmeldelse/takster</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropdown-button">Fritidshjem <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="ny-fritidshjem.html">Ny i fritidshjemmet</a>
+          <a href="fritid-praktisk.html">Praktiske oplysninger</a>
+          <a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a>
+        </div>
+      </div>
+
+      <a href="stamkort.html" id="card">Stamkort/børneintranet</a>
+
+      <div class="dropdown">
+        <button class="dropdown-button">Information <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="info-kontakt.html">Kontakt</a>
+          <a href="info-besøg.html">Åbningstider og lukkedage</a>
+          <a href="info-bestyrelse.html">Bestyrelse</a>
+          <a href="info-studerende.html">Studerende</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hamburger Menu Icon -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+
+  <script>
+function myFunction() {
+  const topnav = document.getElementById("myTopnav");
+  topnav.classList.toggle("responsive");
+}
+
+// Dropdown Functionality for Small Screens
+const dropdownButtons = document.querySelectorAll(".dropdown-button");
+dropdownButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent default link behavior
+
+    const dropdownContent = button.nextElementSibling;
+
+    // Toggle visibility
+    dropdownContent.style.display =
+      dropdownContent.style.display === "block" ? "none" : "block";
+
+    // Close other dropdowns
+    document.querySelectorAll(".dropdown-content").forEach((content) => {
+      if (content !== dropdownContent) {
+        content.style.display = "none";
+      }
+    });
+  });
+});
+  </script>
+ 
+ <!-- Header Section -->
+ <header class="py-5 bg-light mb-4">
+  <div class="container">
+    <div class="text-center">
+        <h1 class="fw-bold">Stamkort/børneintranet</h1>
+        <p class="lead">Alt om dit barn – samlet, sikkert og altid opdateret</p>
+    </div>
+  </div>
+  </header>
+
+  <div class="info-section">
+    <img src="images/blyant-log-ind-rød.svg" alt="log ind blyant" class="blyanter">
+  </div>
+<div class="info-login-section">
+<p>Se kontaktinfo på de andre børn og deres forældre.</p>
+<p>Opret dig som bruger herunder (begge forældre).</p>
+</div>
+<div class="info-login-section">
+<div class="login-container">
+<form>
+<p>E-mail: <br><input type="text"></p>
+<p>Adgangskode: <input type="text"> </p>
+<p>
+    For forældre
+    <br>
+<a href="https://www.stamkort.dk/login/?iau=20130923103111110#">Opret barn / forældre</a>
+</p>
+
+<input type="submit" value="Login">
+</form>
+</div>
+</div>
+
+<br><br>
+<div class="hand-drawn-line-blue"></div>
+<br><br>
+        <section class="text-section">
+          <p>Velkommen til Børnegården Katholt. Når jeres barn starter her, skal I udføre følgende trin:</p>
+<br>
+            <img src="images/blyant-sådan-gør-du-blå.svg" alt="sådan gør du blyant" class="blyanter">
+            <br>
+            <ol class="aligned-list">
+                <li>
+                  <h2>Tilmeld jer Beskedservice:</h2>
+                    <ul class="aligned-list-numberless">
+                      <li>Herfra modtager I mails fra Børnegården Katholt.
+                  </li>
+              </ul>
+                <li>
+                    <h2>Opret jer på Stamkort:</h2>
+                    <ul class="aligned-list-numberless">
+                        <li>Udfyld oplysninger om jer selv og barnet.</li>
+                        <li>Husk at oprette begge forældre med separate e-mails!</li>
+                    </ul>
+                </li>
+                <li>
+                    <h2>Upload barnets billede:</h2>
+                    <ul class="aligned-list-numberless">
+                        <li>Log ind på stamkortet.</li>
+                        <li>Klik på den gule giraf og vælg "Skift billede".</li>
+                        <li>Upload og gem billedet.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h2>Rediger tilladelser:</h2>
+                    <ul class="aligned-list-numberless">
+                        <li>Log ind på stamkortet.</li>
+                        <li>Gå til afsnittet <em>Tilladelser</em>.</li>
+                        <li>Sæt flueben ved de aktiviteter, jeres barn må deltage i, og gem ændringerne.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h2>Download Alia App:</h2>
+                    <ul class="aligned-list-numberless">
+                        <li>Find "Alia Børneintranet" i <a href="http://itunes.apple.com/dk/app/alia/id1170197681?mt=8" target="_blank">App Store</a> eller <a href="http://play.google.com/store/apps/details?id=dk.alia.aliaboern&hl=da" target="_blank">Google Play</a>.</li>
+                        <li>Installer og log ind med den kode, I har oprettet på hjemmesiden.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <br><br>
+        <div class="hand-drawn-line-green"></div>
+        <br><br>
+        <section class="text-section">
+            <img src="images/Blyant-funktioner-i-alia-grøn.svg" alt="funktioner i Alia blyant" class="blyanter">
+            <br>
+              <h2><span class="emoji">✅</span>Nem registrering</h2>
+<p>Meld sygdom, ansøg om frihed eller planlæg din ferie direkte i systemet. Det er hurtigt, enkelt og altid tilgængeligt.</p>
+<br>
+<h2><span class="emoji">✉️</span>Kommunikation gjort let</h2>
+<p>Send beskeder og hold nemt kontakt med personalet for bedre koordinering og samarbejde.</p>
+<br>
+<h2><span class="emoji">⏰</span>Overblik over mødetider</h2>
+<p>Få et klart overblik over dine arbejdstider, planlagte vagter og eventuelle ændringer – alt samlet ét sted.</p>
+<br>
+<h2><span class="emoji">📝</span>Personlig tilpasning</h2>
+<p>Opdater og rediger dine stamkortoplysninger hurtigt og nemt, så dine data altid er ajour.</p>
+        </section>
+        <br><br>
+        <div class="hand-drawn-line-yellow"></div>
+        <br><br>
+        <div class="text-section">
+            <img src="images/Blyant-har-du-problemer-gul.svg" alt="har du problemer blyant" class="blyanter">
+            <br>
+            <p>Du er meget velkommen til at tage fat i personalet, hvis du på nogen som helst måde skulle komme til at opleve:</p>
+            <ul>
+              <li>Udfordringer.</li>
+              <li>Har brug for hjælp.</li>
+              <li>Sidder inde med spørgsmål.</li>
+            </ul>
+          </div>
+        <br><br>
+<div class="hand-drawn-line-red"></div>
+<br><br>
+<footer>
+  <div class="container my-5">
+  <!-- Footer -->
+
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h3 class="text-uppercase mb-4 font-weight-bold">
+              Børnegården Katholt
+            </h3>
+            <p>
+              Vi tilbyder en tryg og stimulerende hverdag for børn med fokus på udvikling, leg og læring.
+              Med et engageret personale skaber vi et inkluderende miljø, der fremmer børns nysgerrighed og selvstændighed.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h3 class="text-uppercase mb-4 font-weight-bold">Børnehave</h3>
+            <p><a href="ny-børnehave.html">Ny i børnehaven</a></p>
+            <p><a href="børne-praktisk.html">Praktiske oplysninger</a></p>
+            <p><a href="børne-indmeld.html">Ind- og udmeldelse/takster</a></p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h3 class="text-uppercase mb-4 font-weight-bold">
+              Fritidshjem
+            </h3>
+            <p><a href="ny-fritidshjem.html">Ny i fritidshjemmet</a></p>
+            <p><a href="fritid-praktisk.html">Praktiske oplysninger</a></p>
+            <p><a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a></p>
+          </div>
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h3 class="text-uppercase mb-4 font-weight-bold">Information</h3>
+              <p><a href="info-kontakt.html">Kontakt</a></p>
+              <p><a href="info-besøg.html">Åbningstider og lukkedage</a></p>
+              <p><a href="info-bestyrelse.html">Bestyrelse</a></p>
+              <p><a href="info-studerende.html">Studerende</a></p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+
+      <hr class="my-3">
+
+      <!-- Section: Copyright -->
+      <div class="p-3 pt-0">
+        <div class="row d-flex align-items-center">
+          <!-- Grid column -->
+          <div class="col-md-7 col-lg-8 text-center text-md-start">
+            <!-- Copyright -->
+            <div class="p-3">
+              © 2024 Copyright:
+              <a class="text-black" href="https://www.boernegaardenkatholt.dk/"
+                 >Børnegården Katholt</a>
+                 <span class="footer-text ms-3"><b>Made for educational purposes only</b></span>
+            </div>
+            <!-- Copyright -->
+          </div>
+          <!-- Grid column -->
+        </div>
+      </div>
+      </div>
+      <!-- Section: Copyright -->
+
+    <!-- Grid container -->
+  <!-- Footer -->
+</div>
+<!-- End of .container -->
+</footer>
+</body>
+</html>

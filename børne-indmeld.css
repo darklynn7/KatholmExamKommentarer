@@ -1,0 +1,378 @@
+/* Fjerner margin og sætter font til PT Serif. */
+body {
+  margin: 0;
+  font-family: 'PT Serif', serif;
+}
+
+/* Fjerner margin og padding og sætter box-sizing til border-box, hvilket sikrer, at paddingen og kanter er indkluderet i elementets samlede width og height.  */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Navbar Container. */
+
+/* Navbaren er udformet som flex-container, der justerer indholdet horisontalt med plads mellem elementerne.
+Tilføjer hvid baggrund, padding og en lille skygge. */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #fff;
+padding: 0.75rem;
+height: 100px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styles. */
+
+/* Sikrer at logoet bevarer sine proportioner og er indstillet til height på 50px */
+.navbar-logo img {
+height: 50px;
+width: auto;
+}
+
+/* Top Navigation. */
+
+/* Flex = arrangerer navigationselementer i en række.
+Center = justerer elementer lodret på midten. */
+.topnav {
+display: flex;
+align-items: center;
+}
+
+/* Navigations links. */
+
+/* Links og knapper har hvid baggrund, Dekko font og overgang til hover-effekter. */
+.topnav a, 
+.dropdown-button {
+background-color: #fff;
+border: none;
+cursor: pointer;
+font-family: 'Dekko', sans-serif;
+text-decoration: none;
+color: #333;
+padding: 10px;
+display: inline-block;
+transition: border-bottom 0.3s ease;
+margin: 0 10px;
+font-size: 1.2rem;
+}
+
+/* Ved hover bliver teksten fed og der kommer en stregeffekt med sort kant under. */
+.topnav a:hover,
+.dropdown-button:hover {
+font-weight: bold;
+border-bottom: 2px solid #000;
+}
+
+/* Dropdown menu. */
+
+/* Dropdown er som standard skjult (display: none) og vises (display: block), når man holder musen over den.
+Elementerne i dropdownmenuen stables (z-index) lodret og skrifter baggrundsfarve ved hover. */
+.dropdown {
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: white;
+box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+z-index: 1000;
+min-width: 200px;
+text-decoration: none !important;
+}
+
+.dropdown-content a {
+color: black;
+padding: 10px;
+text-decoration: none !important;
+display: block;
+}
+
+.dropdown-content a:hover {
+background-color: hsl(0, 0%, 90%);
+border-bottom: none;
+text-decoration: none;
+
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+text-decoration: none !important;
+}
+
+.dropdown-button {
+background: none;
+border: none;
+color: black;
+cursor: pointer;
+display: flex;
+align-items: center;
+}
+
+/* Hamburger-ikon. */
+
+/* Skjules ved default. */
+.icon {
+display: none;
+font-size: 24px;
+color: black;
+cursor: pointer;
+}
+
+/* Responsive design for mindre skærme (480px) */
+
+/* Navigationen bliver en dropdown-menu med lodret layout.
+Hamburger-ikonet (.icon) bliver synlig.
+.topnav er skjult som default, men vises når en responsiv klasse tilføjes vha. JavaScript. */
+@media screen and (max-width: 480px) {
+.topnav {
+  flex-direction: column;
+  align-items: flex-start;
+  display: none;
+  background-color: #f1f1f1;
+  width: 100%;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  z-index: 1000;
+  border-top: 1px solid #ddd;
+}
+
+.topnav a,
+.dropdown-button {
+  display: block;
+  color: #444;
+  background-color: #f1f1f1;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: left;
+  box-sizing: border-box;
+  border: none;
+}
+
+.topnav > a,
+.topnav > .dropdown {
+  display: block;
+  color: #444;
+  background-color: #f1f1f1;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: left;
+  box-sizing: border-box;
+  border-bottom: 1px solid #aaa;
+}
+
+.icon {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #f1f1f1;
+}
+
+.dropdown-content a {
+  color: #444;
+  background-color: #f1f1f1;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+}
+
+/* Grå linjer mellem sektioner i dropdown hamburger-menuen */
+  .dropdown-content a + a {
+  border-top: 1px solid #ccc;
+}
+
+/* Vis dropdown ved at trykke på knappen. */
+.dropdown-button:focus + .dropdown-content {
+  display: block;
+}
+
+/* Hvis menu når responsiv klasse er addet. */
+.topnav.responsive {
+  display: flex;
+}
+}
+
+/* Header-sektion. */
+
+/* Styling for header element og dets child elementer (h1 og p).
+cover = sikrer at baggrundsbilleder dækker hele header-sektionen. 
+text-shadow = skyggeeffekt for bedre synlighed. */
+header {
+position: relative; 
+background-image: url('images/daycare-banner-rød-fixet.svg');
+background-size: cover; 
+background-position: center; 
+background-repeat: no-repeat; 
+min-height: 500px; 
+text-align: center; 
+color: white; 
+display: flex; 
+align-items: center;
+justify-content: center;
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+padding: 20px;
+}
+
+header h1 {
+font-weight: 300;
+font-family: 'Dekko', sans-serif;
+font-size: 29px;
+}
+
+header p {
+color: white;
+font-family: 'PT Serif', serif;
+font-size: 16px;
+}
+
+/* Responsive design for mindre skærme (480px) */
+@media (max-width: 480px) {
+header {
+  min-height: 250px;
+  padding: 10px;
+}
+
+header h1 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+}
+
+/* Id-element til børnehave dropdown.
+inline-block = elementet kan opføre sig både som en block og et inline-element - gør det muligt at indstille dimensioner og padding imens stadig at være inline med andre elementer.
+border-bottom = sætter en streg under linket */
+#daycarelink {
+  font-family: 'Dekko', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  display: inline-block;
+  transition: border-bottom 0.3s ease; /* Optional: smooth transition */
+  margin: 0 10px;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #000;
+}
+
+/* Id-element til indmelding børnehave i børnehave dropdown */
+#daycareself {
+background-color: hsl(0, 0%, 90%);
+text-decoration: none !important;
+}
+
+/* Footer */
+  footer a {
+    color: black;
+    font-family: 'PT Serif', serif;
+    font: 16px;
+  }
+  
+  footer h3 {
+    font-family: 'Dekko', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  footer p {
+    color: black;
+    font-family: 'PT Serif', serif;
+    font: 16px;
+  }
+
+  /**/
+  .enrollment-fees {
+    padding: 20px;
+    background-color: white;
+    max-width: 800px;
+    margin: auto;
+    box-sizing: border-box; /* Ensure padding doesn't add to the width */
+  }
+  
+  .enrollment-fees h2 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: black;
+    font-family: 'Dekko', sans-serif;
+    font-size: 1.5rem; /* Use relative units */
+  }
+  
+  .enrollment-fees p, 
+  .enrollment-fees ul, 
+  .enrollment-fees li, 
+  .enrollment-fees a {
+    color: #555;
+    font-family: 'PT Serif', serif;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .enrollment-fees ul {
+    padding-left: 20px;
+  }
+  
+  .enrollment-fees li {
+    margin-bottom: 10px;
+  }
+  
+  .enrollment-fees a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .enrollment-fees a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  @media (max-width: 480px) {
+    .enrollment-fees {
+      padding: 10px;
+    }
+  
+    .enrollment-fees h2 {
+      font-size: 1.1rem;
+    }
+  
+    .enrollment-fees p, 
+    .enrollment-fees li, 
+    .enrollment-fees a {
+      font-size: 0.85rem;
+    }
+
+    .blyanter {
+      display: block;
+      margin: 0 auto 20px; /* Center align and add spacing below */
+      max-width: 90%;
+      height: auto; /* Maintain aspect ratio */
+      font-family: 'Dekko', sans-serif;
+    }
+  }
+  
+  
+  .hand-drawn-line-blue {
+    background-image: url('./images/dotted-line-blå.svg'); /* Path to your SVG */
+    height: 10px;                /* Adjust height based on line style */
+    background-repeat: repeat-x; /* Repeat the pattern horizontally */
+  }
+  
+  .hand-drawn-line-green {
+    background-image: url('./images/dotted-line-grøn.svg'); /* Path to your SVG */
+    height: 10px;                /* Adjust height based on line style */
+    background-repeat: repeat-x; /* Repeat the pattern horizontally */
+  }
+  
+  .blyanter {
+    height: 70px; /* Matches the font size */
+    width: auto; /* Maintains aspect ratio */
+    align-content: center; /* Aligns image with the text baseline */
+    display: block; /* Makes the image behave like a block element */
+    margin: 0 auto; /* Horizontally centers the image */
+  }

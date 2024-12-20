@@ -1,0 +1,594 @@
+/* Reset and basic styles */
+body {
+  margin: 0;
+  font-family: 'PT Serif', serif;
+}
+
+#afterschoollink {
+  font-family: 'Dekko', sans-serif;
+  font-weight: bold;
+  text-decoration: none; /* Remove default underline */
+  color: #333; /* Text color */
+  padding: 10px;
+  display: inline-block;
+  transition: border-bottom 0.3s ease; /* Optional: smooth transition */
+  margin: 0 10px;
+  font-size: 1.2rem; /* A bit larger than the original */
+  border-bottom: 2px solid #000; /* Line under the link */
+}
+#afterschoolnew {
+background-color: hsl(0, 0%, 90%);
+text-decoration: none !important;
+}
+
+/* General Reset */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Navbar Container */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #fff;
+padding: 0.75rem; /* Slightly more padding */
+height: 100px; /* Slightly taller */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styles */
+.navbar-logo img {
+height: 50px;
+width: auto;
+}
+
+/* Top Navigation */
+.topnav {
+display: flex;
+align-items: center;
+}
+
+.topnav a, 
+.dropdown-button {
+background-color: #fff;
+border: none;
+cursor: pointer;
+font-family: 'Dekko', sans-serif;
+text-decoration: none; /* Remove default underline */
+color: #333; /* Text color */
+padding: 10px;
+display: inline-block;
+transition: border-bottom 0.3s ease; /* Optional: smooth transition */
+margin: 0 10px;
+font-size: 1.2rem; /* A bit larger than the original */
+}
+
+.topnav a:hover,
+.dropdown-button:hover {
+font-weight: bold; /* Makes the text bold */
+border-bottom: 2px solid #000; /* Line under the link */
+}
+
+/* Dropdown Menu */
+.dropdown {
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: white;
+box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+z-index: 1000;
+min-width: 200px;
+text-decoration: none !important; /* Removes underline */
+}
+
+.dropdown-content a {
+color: black;
+padding: 10px;
+text-decoration: none !important;
+display: block;
+}
+
+.dropdown-content a:hover {
+background-color: hsl(0, 0%, 90%);
+border-bottom: none; /* Removes any border-bottom */
+text-decoration: none; /* Ensures underline is removed */
+
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+text-decoration: none !important;
+}
+
+.dropdown-button {
+background: none;
+border: none;
+color: black;
+cursor: pointer;
+display: flex;
+align-items: center;
+}
+
+/* Hamburger Icon - Hidden by Default */
+.icon {
+display: none;
+font-size: 24px;
+color: black;
+cursor: pointer;
+}
+
+/* Responsive Design for Screens Smaller than 480px */
+@media screen and (max-width: 480px) {
+.topnav {
+  flex-direction: column;
+  align-items: flex-start;
+  display: none; /* Hidden by default */
+  background-color: #f1f1f1; /* Optional: Background for dropdown menu */
+  width: 100%; /* Full width */
+  position: absolute; /* Overlay behavior */
+  top: 100px; /* Adjust based on navbar height */
+  left: 0;
+  z-index: 1000; /* Ensure it appears above other elements */
+  border-top: 1px solid #ddd; /* Optional: Border for clarity */
+}
+
+.topnav a,
+.dropdown-button {
+  display: block; /* Stack as blocks */
+  color: #444; /* Slightly darker text color */
+  background-color: #f1f1f1; /* Optional: Slightly darker background */
+  padding: 10px 20px; /* Adjust padding for better spacing */
+  width: 100%; /* Ensure full width for touch-friendly links */
+  text-align: left; /* Align text to the left */
+  box-sizing: border-box; /* Ensure padding and borders fit */
+  border: none; /* Remove default borders */
+}
+
+.topnav > a,
+.topnav > .dropdown {
+  display: block; /* Stack items vertically */
+  color: #444; /* Text color */
+  background-color: #f1f1f1; /* Background color */
+  padding: 10px 20px; /* Padding for touch-friendly areas */
+  width: 100%; /* Full width */
+  text-align: left; /* Align text to the left */
+  box-sizing: border-box; /* Ensure padding and borders fit */
+  border-bottom: 1px solid #aaa; /* Small grey line between items */
+}
+
+.icon {
+  display: block; /* Show hamburger icon */
+}
+
+.dropdown-content {
+  display: none; /* Ensure dropdowns are hidden initially */
+  background-color: #f1f1f1; /* Match background */
+}
+
+.dropdown-content a {
+  color: #444; /* Match text color */
+  background-color: #f1f1f1; /* Match background */
+  padding: 10px 20px; /* Same padding as main links */
+  width: 100%; /* Full width */
+  box-sizing: border-box;
+  border: none;
+}
+
+  .dropdown-content a + a {
+  border-top: 1px solid #ccc; /* Slightly lighter line inside dropdowns */
+}
+
+.dropdown-button:focus + .dropdown-content {
+  display: block; /* Show dropdown on button press */
+}
+.topnav.responsive {
+  display: flex; /* Show menu when responsive class is added */
+}
+}
+
+
+header {
+  position: relative; /* Ensures the overlay is positioned relative to the header */
+  background-image: url('images/fritidshjem-banner-rød.svg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the header */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image tiling */
+  min-height: 500px; /* Sets the height of the header */
+  text-align: center; /* Centers the text */
+  color: white; /* Ensures text is visible */
+  display: flex; /* Centers content vertically and horizontally */
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Adds subtle shadow for better readability */
+}
+
+
+header h1 {
+  font-weight: 300; /* Light font-weight */
+  font-family: 'Dekko', sans-serif;
+  font-size: 29px;
+}
+
+header p {
+  color: white; /* Muted text */
+  font-family: 'PT Serif', serif;
+  font-size: 16px;
+}
+
+  footer a {
+    color: black; /* Muted text */
+    font-family: 'PT Serif', serif;
+    font: 16px;
+  }
+  
+  footer h5 {
+    font-family: 'Dekko', sans-serif;
+    font-size: 22px; /* Adjust the size as needed */
+    font-weight: bold;
+  }
+  
+  footer p {
+    color: black; /* Muted text */
+    font-family: 'PT Serif', serif;
+    font: 16px;
+  }
+  .site-section {
+    padding: 50px 0;
+    background-color: white;
+  }
+  
+  .site-section p {
+    margin-bottom: 20px;
+    color: #555;
+    font-family: 'PT Serif', serif;
+    font-size: 16px;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+  }
+  
+@media (max-width: 480px) {
+.site-section {
+  padding: 30px 15px; /* Reduce padding */
+}
+
+.row {
+  display: block; /* Stack items vertically */
+}
+
+.col-md-6,
+.col-md-5 {
+  width: 100%; /* Full width for columns */
+  margin: 0;
+  padding: 0;
+}
+
+.ml-auto,
+.pl-md-5 {
+  margin-left: 0;
+  padding-left: 0; /* Remove extra spacing */
+}
+
+.site-section p {
+  font-size: 14px; /* Smaller text for readability */
+  line-height: 1.6; /* Increase line spacing */
+}
+
+.blyanter {
+  display: block;
+  margin: 0 auto 20px; /* Center align and add spacing below */
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+}
+  
+  .img-fluid {
+    max-width: 100%;
+    height: 250 !important;
+    border-radius: 8px;
+  }
+  .container-values {
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+    width: 90%; /* Make the container bigger (90% of viewport width) */
+    flex-direction: column; /* Stack elements vertically */
+  align-items: center;    /* Center content horizontally */
+  }
+  
+  .core-values {
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  
+  .values-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  .subtitle {
+    margin-bottom: 20px;
+    color: #555;
+    font-family: 'PT Serif', serif;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .value-item {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    flex: 1; /* Make items grow equally */
+    max-width: 20%; /* Ensure 5 items fit in one line */
+    text-align: center; /* Optional: center align content */
+    box-sizing: border-box; /* Include padding/borders in width */
+    padding: 10px; /* Add space around items */
+  }
+  
+  .value-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .icon-value {
+    display: inline-block; /* Ensures proper rendering */
+    visibility: visible !important; /* Force visibility */
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif !important;
+    font-size: 2.5rem;
+    color: inherit; /* Ensure it takes the correct text color */
+    line-height: 1; /* Prevent unnecessary spacing */
+  }
+  .value-title {
+    font-weight: bold;
+margin-bottom: 20px;
+color: black;
+font-family: 'Dekko', sans-serif;
+font-size: 20px;
+  }
+  
+  .value-description {
+    margin-bottom: 20px;
+    color: #555;
+    font-family: 'PT Serif', serif;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .value-title {
+    font-weight: bold;
+margin-bottom: 20px;
+color: black;
+font-family: 'Dekko', sans-serif;
+font-size: 20px;
+  }
+  
+  .value-description {
+    margin-bottom: 20px;
+    color: #555;
+    font-family: 'PT Serif', serif;
+    font-size: 16px;
+    text-align: left;
+  }
+
+@media (max-width: 480px) { /* Target small phone screens */
+.values-list {
+  display: block; /* Stack items vertically */
+  width: 100%; /* Container takes full width */
+  padding: 10px; /* Add padding around container */
+}
+
+.value-item {
+  display: block; /* Ensure items stack */
+  width: 90%; /* Use 90% of the screen width */
+  max-width: 400px; /* Set a maximum width to prevent stretching */
+  margin: 20px auto; /* Center items and add vertical spacing */
+  padding: 20px; /* Internal padding for content */
+  box-sizing: border-box; /* Ensure padding is included in width */
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 8px; /* Rounded corners for aesthetics */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.value-title {
+  font-size: 22px; /* Larger titles for readability */
+  font-weight: bold;
+  margin-bottom: 15px; /* Space below the title */
+  text-align: center;
+}
+
+.value-description {
+  font-size: 18px; /* Larger description font size */
+  line-height: 1.6; /* Improved line spacing */
+  text-align: center; /* Center-align descriptions */
+}
+
+.icon-value {
+  font-size: 2.5rem; /* Ensure visibility on smaller screens */
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+  visibility: visible !important;
+}
+}
+.day-section {
+padding: 30px 15px;
+background-color: white;
+}
+
+.day-section h2 {
+font-weight: bold;
+margin-bottom: 15px;
+color: black;
+font-family: 'Dekko', sans-serif;
+font-size: 18px;
+}
+
+.day-section p {
+margin-bottom: 15px;
+color: #555;
+font-family: 'PT Serif', serif;
+font-size: 16px;
+}
+
+@media (max-width: 480px) {
+.day-section {
+  padding: 20px 10px;
+}
+
+.day-section h2 {
+  font-size: 22px;
+}
+
+.day-section p {
+  font-size: 14px;
+}
+
+}
+/* Generel stil til containeren af galleriet */
+/* Layout og stil for hver kolonne i galleriet */
+.traditions-section {
+padding: 40px 0;
+background-color: white;
+}
+.traditions-section p {
+margin-bottom: 20px;
+color: #555;
+font-family: 'PT Serif', serif;
+font-size: 16px;
+}
+.traditions-section h4 {
+font-weight: bold;
+margin-bottom: 20px;
+color: black;
+font-family: 'Dekko', sans-serif;
+font-size: 22px;
+}
+
+.traditions-section h3 {
+  margin-bottom: 20px;
+  color: #555;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
+  }
+
+.service-item {
+position: relative;
+padding-left: 80px;
+}
+.service-item i {
+position: absolute;
+left: 0px;
+top: 5px;
+font-size: 50px;
+opacity: .4;
+}
+.hand-drawn-line-blue {
+background-image: url('./images/dotted-line-blå.svg'); /* Path to your SVG */
+height: 10px;                /* Adjust height based on line style */
+background-repeat: repeat-x; /* Repeat the pattern horizontally */
+}
+.hand-drawn-line-green {
+background-image: url('./images/dotted-line-grøn.svg'); /* Path to your SVG */
+height: 10px;                /* Adjust height based on line style */
+background-repeat: repeat-x; /* Repeat the pattern horizontally */
+}
+.hand-drawn-line-yellow {
+background-image: url('./images/dotted-line-gul.svg'); /* Path to your SVG */
+height: 10px;                /* Adjust height based on line style */
+background-repeat: repeat-x; /* Repeat the pattern horizontally */
+}
+.hand-drawn-line-red {
+background-image: url('./images/dotted-line-rød.svg'); /* Path to your SVG */
+height: 10px;                /* Adjust height based on line style */
+background-repeat: repeat-x; /* Repeat the pattern horizontally */
+}
+.blyanter {
+height: 70px; /* Matches the font size */
+width: auto; /* Maintains aspect ratio */
+align-content: center; /* Aligns image with the text baseline */
+display: block; /* Makes the image behave like a block element */
+margin: 0 auto; /* Horizontally centers the image */
+}
+
+.activities-section {
+padding: 40px;
+background-color: white;
+}
+
+.activities-container {
+display: flex;
+justify-content: space-between; /* Center items within the container */
+flex-wrap: wrap; /* Allow items to wrap to the next line */
+gap: 50px; /* Increased gap between items */
+}
+
+.activity-item {
+background-color: white;
+border-radius: 8px;
+overflow: hidden;
+text-align: center;
+flex: 1 1 calc(33.333% - 50px); /* 3 boxes per row with larger gap */
+box-sizing: border-box; /* Ensures padding and border are included in width/height */
+}
+
+.activity-item img {
+width: 100%; /* Ensure the image scales with the box width */
+height: 300px; /* Smaller image height */
+object-fit: cover; /* Preserve image aspect ratio while filling the space */
+border-radius: 8px;
+}
+
+.activity-item h3 {
+font-weight: bold;
+margin-bottom: 20px;
+color: black;
+font-family: 'Dekko', sans-serif;
+font-size: 22px;
+text-align: center;
+}
+
+.activity-item p {
+text-align: center;
+margin-bottom: 20px;
+color: #555;
+font-family: 'PT Serif', serif;
+font-size: 16px;
+}
+
+/* Media query for phone screens */
+@media screen and (max-width: 480px) {
+.activities-container {
+  gap: 20px; /* Reduce the gap for smaller screens */
+}
+
+.activity-item {
+  flex: 1 1 100%; /* One item per row */
+}
+
+.activity-item img {
+  height: 200px; /* Adjust image height for smaller screens */
+}
+
+.activity-item h3 {
+  font-size: 18px; /* Adjust font size for smaller screens */
+}
+
+.activity-item p {
+  font-size: 14px; /* Adjust font size for smaller screens */
+}
+}
+
+/* Generel stil til containeren af galleriet */
+/* Layout og stil for hver kolonne i galleriet */

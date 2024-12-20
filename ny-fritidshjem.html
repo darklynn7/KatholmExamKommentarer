@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="ny-fritidshjem.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dekko&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+  <title>Børnegården Katholm | Fritidshjem | Ny i fritidshjemmet</title>
+</head>
+<body>
+  <nav class="navbar">
+    <!-- Left: Logo -->
+    <div class="navbar-logo">
+      <a href="index.html"><img src="images/logo-katholt-størrelse.svg" alt="Logo"></a>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="topnav" id="myTopnav">
+      <a href="index.html">Velkommen</a>
+
+      <div class="dropdown">
+        <button class="dropdown-button">Børnehave <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="ny-børnehave.html">Ny i børnehaven</a>
+          <a href="børne-praktisk.html">Praktiske oplysninger</a>
+          <a href="børne-indmeld.html">Ind- og udmeldelse/takster</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropdown-button" id="afterschoollink">Fritidshjem <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="ny-fritidshjem.html" id="afterschoolnew">Ny i fritidshjemmet</a>
+          <a href="fritid-praktisk.html">Praktiske oplysninger</a>
+          <a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a>
+        </div>
+      </div>
+
+      <a href="stamkort.html">Stamkort/børneintranet</a>
+
+      <div class="dropdown">
+        <button class="dropdown-button">Information <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="info-kontakt.html">Kontakt</a>
+          <a href="info-besøg.html">Åbningstider og lukkedage</a>
+          <a href="info-bestyrelse.html">Bestyrelse</a>
+          <a href="info-studerende.html">Studerende</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hamburger Menu Icon -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+
+  <script>
+function myFunction() {
+  const topnav = document.getElementById("myTopnav");
+  topnav.classList.toggle("responsive");
+}
+
+// Dropdown Functionality for Small Screens
+const dropdownButtons = document.querySelectorAll(".dropdown-button");
+dropdownButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent default link behavior
+
+    const dropdownContent = button.nextElementSibling;
+
+    // Toggle visibility
+    dropdownContent.style.display =
+      dropdownContent.style.display === "block" ? "none" : "block";
+
+    // Close other dropdowns
+    document.querySelectorAll(".dropdown-content").forEach((content) => {
+      if (content !== dropdownContent) {
+        content.style.display = "none";
+      }
+    });
+  });
+});
+  </script>
+ <!-- Header Section -->
+ <header class="py-5 bg-light mb-4">
+<div class="container">
+  <div class="text-center">
+      <h1 class="fw-bold">Ny i fritidshjemmet</h1>
+      <p class="lead">Få alt du skal vide om opstart i fritidshjemmet</p>
+  </div>
+</div>
+</header>
+<div class="site-section">
+  <div class="container">
+    <img src="images/velkommen-fritid-rigtig.svg" alt="velkommen i fritidshjemmet blyant" class="blyanter">
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="images/fritidshjem-billede-rigtig.webp" alt="børn rutsjer på rutsjebane" class="img-fluid">
+      </div>
+      <div class="col-md-5 ml-auto pl-md-5">
+        <br>
+        <p><span>Fritidshjemmet er en privatinstitution, der er normeret til op til 100 børn, som vi deler op i fire grupper. Vi skaber trygge og inspirerende rammer, hvor børnene kan udvikle sig, lege og lære sammen med både jævnaldrende og engagerede voksne.
+          <br><br>Vi ser os selv som en levende og imødekommende institution, hvor glæde, trivsel og fællesskab er i fokus. Her arbejder vi hver dag på at skabe et miljø, hvor både børn, forældre og personale føler sig hjemme og værdsat.
+        <br><br>Vi vægter nærvær, kreativitet og samarbejde højt i vores daglige arbejde, og vi er stolte af at kunne tilbyde et sted, hvor dit barn kan udforske, udvikle og være sig selv.</span></p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <br><br>
+  <div class="hand-drawn-line-blue"></div>
+  <br><br>
+  <section class="core-values">
+    <div class="container-values">
+  <img src="images/værdier-rigtig.svg" alt="vores værdier og fokusområder blyant" class="blyanter">
+  <br>
+  <p class="subtitle">Hos Børnegården Katholt ses barndom og institutionslivet som en livsfase, som skal leves og udleves, og ikke som et pensum.</p>
+      <div class="values-list">
+        <div class="value-item">
+          <div class="icon-value">🫶</div>
+          <h2 class="value-title">Varme, nærvær og hygge</h2>
+          <p class="value-description">Hos Katholt skaber vi en hverdag fyldt med glæde og positivitet, hvor børn trygt kan udvikle sig, styrke deres selvværd og udforske verden.
+            <br><br>Vi møder hvert barn med omsorg og retfærdighed i trygge rammer.</p>
+        </div>
+        <div class="value-item">
+          <div class="icon-value">🎲</div>
+          <h2 class="value-title">Legen som læring</h2>
+          <p class="value-description">Vi tror på, at leg er nøglen til læring og udvikling. Derfor kombinerer vi fri leg med voksenstyrede aktiviteter, hvor idræt og bevægelse styrker både fællesskab og individ.
+            <br><br>Gennem leg udvikler børn sprog, fantasi, social forståelse, selvstændighed og ansvarlighed.</p>
+        </div>
+        <div class="value-item">
+          <div class="icon-value">🏡</div>
+          <h2 class="value-title">Tryghed i højsædet</h2>
+          <p class="value-description">Tryghed er fundamentet for al udvikling. I et trygt miljø styrker vi børns selvværd, nysgerrighed og lyst til at udforske naturen, deres følelser og relationer.
+            <br><br>Trygge børn tør lege, lære, udfordre grænser og finde deres egen stemme.</p>
+        </div>
+        <div class="value-item">
+          <div class="icon-value">🍃</div>
+          <h2 class="value-title">Udeliv – frisk luft og frihed</h2>
+          <p class="value-description">Hos Katholt prioriterer vi udeliv, og børnene er ude hver dag.
+            <br><br>Frisk luft og fysisk aktivitet skaber energi, reducerer stress, fremmer glæde og giver plads til kreativitet og færre konflikter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<br><br>
+<div class="hand-drawn-line-green"></div>
+<br><br>
+<div class="day-section">
+  <div class="container">
+    <img src="images/dag-fritid-rigtig.svg" alt="dagsrytme og hverdagen blyant" class="blyanter">
+    <br>
+    <div class="row">
+      <div class="col-md-5 ml-auto pr-md-5">
+          <h2>Hverdagen på fritidshjemmet</h2>
+          <p>Fritidshjemmet er et trygt fristed, hvor børn kan møde venner, udvikle sig og indgå i sociale fællesskaber.
+            <br><br>Sammen med børnene har vi skabt retningslinjer for samvær og ansvar for vores ting, så alle bidrager til et positivt miljø.
+            <br><br>De voksne er rollemodeller, der gennem nærvær, tillid og samtaler styrker børnenes selvværd og sikrer en hverdag, hvor de føler sig set og værdsat.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="images/skema-fritid.svg" alt="fritidshjemmets skema" class="img-fluid">
+        </div>
+      </div>
+    </div>
+    </div>
+    <br><br>
+    <div class="hand-drawn-line-yellow"></div>
+    <br><br>
+<section id="activities" class="activities-section">
+  <img src="images/aktiviteter-blyant-fritid.svg" alt="aktiviteter blyant" class="blyanter">
+  <br>
+  <div class="activities-container">
+    <div class="activity-item">
+      <img src="images/kreativ-ler.webp" alt="Kreativt værksted">
+      <h3>Kreativt værksted</h3>
+      <p>Ler, træ- og kreativværksted, hvor børnene kan udfolde deres fantasifulde sider.</p>
+    </div>
+    <div class="activity-item">
+      <img src="images/Gymnastiksal-3.webp" alt="Gymnastiksal">
+      <h3>Gymnastiksal</h3>
+      <p>God plads til fysisk aktivitet, både planlagte og spontane lege.</p>
+    </div>
+    <div class="activity-item">
+      <img src="images/dyrerum.webp" alt="Dyrerum">
+      <h3>Dyrerum</h3>
+      <p>Et rum til dyreaktiviteter og læring om forskellige dyr.</p>
+    </div>
+    <div class="activity-item">
+      <img src="images/udeleg.webp" alt="Leg ude">
+      <h3>Leg ude</h3>
+      <p>Boldspil, bygge huler, bålsted og leg i naturen. Aktivitet både ude og inde.</p>
+    </div>
+    <div class="activity-item">
+      <img src="images/børn-læse.webp" alt="Spil og bøger">
+      <h3>Spil og bøger</h3>
+      <p>En samling af spændende bøger og forskellige spil til alle aldre.</p>
+    </div>
+    <div class="activity-item">
+      <img src="images/puderum.webp" alt="Puderum">
+      <h3>Puderum i kælderen</h3>
+      <p>Et roligt område til afslapning og fordybelse, hvor børnene kan tage en pause.</p>
+    </div>
+  </div>
+  </section>
+            <br><br>
+<div class="hand-drawn-line-red"></div>
+<br><br>
+<!-- Section Services Start -->
+  <section class="traditions-section">
+	<div class="traditions-container">
+		<div class="row justify-content-center">
+			<div class="col-lg-7 text-center">
+				<div class="section-title">
+          <img src="images/traditioner-fritid-outline.svg" alt="traditioner i fritidshjemmet blyant" class="blyanter">
+          <br>
+          <h3><u>Traditioner for børnene:</u></h3>
+				</div>
+			</div>
+		</div>
+		 <!-- Første række med 5 elementer -->
+     <div class="row justify-content-center">
+      <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="service-item mb-5">
+            <i class="fa-solid fa-mask"></i>
+              <h4 class="mb-3">Fastelavn</h4>
+              <p>Vi forbereder os med masker og fastelavnsboller og afslutter med tøndeslagning, hvor børnene må være udklædte.</p>
+          </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="service-item mb-5">
+            <i class="fa-solid fa-ghost"></i>
+              <h4 class="mb-3">Halloween</h4>
+              <p>Det bliver uhyggeligt i fritidshjemmet!</p>
+          </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="service-item mb-5">
+            <i class="fa-solid fa-cat"></i>
+              <h4 class="mb-3">Kæledyrsdag</h4>
+              <p>Børnene kan medbringe små kæledyr i bure efter aftale med de voksne.</p>
+          </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="service-item mb-5 mb-lg-0">
+            <i class="fa-solid fa-apple-whole"></i>
+              <h4 class="mb-3">Høstfest</h4>
+              <p>I september holder vi høstfest, hvor børnene laver forberedelser og æblemost. Der er også besøg af dyr.</p>
+          </div>
+      </div>
+<div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="service-item mb-5 mb-lg-0">
+            <i class="fa-solid fa-sleigh"></i>
+              <h4 class="mb-3">Jul</h4>
+              <p>Vi laver julepynt, julegaver og bager julekager. Der er også julebanko.</p>
+          </div>
+      </div>
+  </div>
+  <!-- Anden række med 5 elementer -->
+  <div class="row justify-content-center">
+      <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="service-item mb-5 mb-lg-0">
+            <i class="fa-solid fa-users"></i>
+              <h4 class="mb-3">Klubben for 3. klasse</h4>
+              <p>Vi starter en årlig 3. kl. klub om efteråret, hvor børnene planlægger deres sidste år på fritteren.</p>
+          </div>
+      </div>
+<div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="service-item mb-5 mb-lg-0">
+            <i class="fa-solid fa-masks-theater"></i>
+              <h4 class="mb-3">Et show</h4>
+              <p>Hvert år arrangerer vi et show f.eks. talent-, cirkus-, MGP- og modeshows.</p>
+          </div>
+      </div>
+  <div class="col-lg-2 col-md-4 col-sm-6">
+    <div class="service-item mb-5">
+        <i class="fa-solid fa-trash"></i>
+      <h4 class="mb-3">Affaldsindsamling</h4>
+      <p>Vi deltager hvert år i den landdækkende affaldsindsamling og slutter med hotdog som tak.</p>
+    </div>
+  </div>
+  <div class="col-lg-2 col-md-4 col-sm-6">
+    <div class="service-item mb-5">
+        <i class="fa-solid fa-hand-holding-dollar"></i>
+      <h4 class="mb-3">Loppemarked/aktivitetsdag</h4>
+      <p>Loppemarked i maj/juni med sjove aktiviteter. Alle pengene går til en døveskole i Honduras.</p>
+    </div>
+  </div>
+  <div class="col-lg-2 col-md-4 col-sm-6">
+    <div class="service-item mb-5">
+        <i class="fa-solid fa-cookie"></i>
+      <h4 class="mb-3">Bag for en sag</h4>
+      <p>Vi bager cupcakes i flere uger, og pengene går til Børns Vilkårs børnetelefon.</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="traditions-section">
+    <div class="traditions-container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 text-center">
+  <div class="section-title">
+    <h3><u>Traditioner med forædredeltagelse:</u></h3>
+          </div>
+      </div>
+  </div>
+  <!-- Første række med 4 elementer -->
+  <div class="row justify-content-center">
+      <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="service-item mb-5">
+            <i class="fa-solid fa-comments"></i>
+              <h4 class="mb-3">Forældremøde</h4>
+              <p>Et møde for alle forældre, hvor der orienteres om året og vælges medlemmer til bestyrelsen.</p>
+          </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="service-item mb-5">
+            <i class="fa-solid fa-briefcase"></i>
+              <h4 class="mb-3">Arbejdslørdag i maj måned</h4>
+              <p>En fælles dag, hvor forældre og børn hjælper med praktiske opgaver i fritidshjemmet, såsom vedligeholdelse og småprojekter.
+            </p>
+          </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="service-item mb-5">
+            <i class="fa-solid fa-utensils"></i>
+              <h4 class="mb-3">Grillfest</h4>
+              <p>En hyggelig sammenkomst i august/september med grillmad, aktiviteter og socialt samvær.</p>
+          </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="service-item mb-5 mb-lg-0">
+            <i class="fa-solid fa-mug-hot"></i>
+              <h4 class="mb-3">Forældrekaffe</h4>
+              <p>En uformel kaffe- og hyggestund for forældre, hvor man kan mødes og tale sammen.</p>
+          </div>
+      </div>
+  <!-- Anden række med 3 elementer -->
+  <div class="row justify-content-center">
+    <div class="col-lg-2 col-md-4 col-sm-6">
+        <div class="service-item mb-5 mb-lg-0">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+            <h4 class="mb-3">Loppemarked i maj/juni</h4>
+            <p>Arrangement i maj/juni, hvor man kan sælge og købe lopper for at støtte døve skolen i Honduras.</p>
+        </div>
+    </div>
+    
+    <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="service-item mb-5 mb-lg-0">
+            <i class="fa-solid fa-cookie"></i>
+              <h4 class="mb-3">Bag for en sag</h4>
+              <p>En indsamlingsaktivitet, hvor børn og forældre bager og sælger kager til fordel for Børns Vilkårs børnetelefon.</p>
+          </div>
+      </div>
+<div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="service-item mb-5 mb-lg-0">
+            <i class="fa-solid fa-face-smile"></i>
+              <h4 class="mb-3">Arrangementer hvor forældre er publikum</h4>
+              <p>Forældre inviteres til at opleve børnenes teater, sang og kreative optrædener.</p>
+          </div>
+      </div>
+  </div>
+  </div>
+</div>
+</div>
+</section>
+<br><br>
+<div class="hand-drawn-line-blue"></div>
+<br><br>
+<footer>
+  <div class="container my-5">
+  <!-- Footer -->
+
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold">
+              Børnegården Katholt
+            </h5>
+            <p>
+              Vi tilbyder en tryg og stimulerende hverdag for børn med fokus på udvikling, leg og læring.
+              Med et engageret personale skaber vi et inkluderende miljø, der fremmer børns nysgerrighed og selvstændighed.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Børnehave</h5>
+            <p><a href="ny-børnehave.html">Ny i børnehaven</a></p>
+            <p><a href="børne-praktisk.html">Praktiske oplysninger</a></p>
+            <p><a href="børne-indmeld.html">Ind- og udmeldelse/takster</a></p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold">
+              Fritidshjem
+            </h5>
+            <p><a href="ny-fritidshjem.html">Ny i fritidshjemmet</a></p>
+            <p><a href="fritid-praktisk.html">Praktiske oplysninger</a></p>
+            <p><a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a></p>
+          </div>
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Information</h5>
+              <p><a href="info-kontakt.html">Kontakt</a></p>
+              <p><a href="info-besøg.html">Åbningstider og lukkedage</a></p>
+              <p><a href="info-bestyrelse.html">Bestyrelse</a></p>
+              <p><a href="info-studerende.html">Studerende</a></p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+
+      <hr class="my-3">
+
+      <!-- Section: Copyright -->
+      <div class="p-3 pt-0">
+        <div class="row d-flex align-items-center">
+          <!-- Grid column -->
+          <div class="col-md-7 col-lg-8 text-center text-md-start">
+            <!-- Copyright -->
+            <div class="p-3">
+              © 2024 Copyright:
+              <a class="text-black" href="https://www.boernegaardenkatholt.dk/"
+                 >Børnegården Katholt</a>
+                 <span class="footer-text ms-3"><b>Made for educational purposes only</b></span>
+            </div>
+            <!-- Copyright -->
+          </div>
+          <!-- Grid column -->
+        </div>
+      </div>
+      </div>
+      <!-- Section: Copyright -->
+
+    <!-- Grid container -->
+  <!-- Footer -->
+</div>
+<!-- End of .container -->
+</footer>
+</body>
+</html>

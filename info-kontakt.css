@@ -1,0 +1,347 @@
+/* Reset and basic styles */
+body {
+  margin: 0;
+  font-family: 'PT Serif', serif;
+}
+
+#infolink {
+  font-family: 'Dekko', sans-serif;
+  font-weight: bold;
+  text-decoration: none; /* Remove default underline */
+  color: #333; /* Text color */
+  padding: 10px;
+  display: inline-block;
+  transition: border-bottom 0.3s ease; /* Optional: smooth transition */
+  margin: 0 10px;
+  font-size: 1.2rem; /* A bit larger than the original */
+  border-bottom: 2px solid #000; /* Line under the link */
+}
+#infocontact {
+background-color: hsl(0, 0%, 90%);
+text-decoration: none !important;
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.75rem; /* Slightly more padding */
+  height: 100px; /* Slightly taller */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styles */
+.navbar-logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Top Navigation */
+.topnav {
+  display: flex;
+  align-items: center;
+}
+
+.topnav a, 
+.dropdown-button {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: 'Dekko', sans-serif;
+  text-decoration: none; /* Remove default underline */
+  color: #333; /* Text color */
+  padding: 10px;
+  display: inline-block;
+  transition: border-bottom 0.3s ease; /* Optional: smooth transition */
+  margin: 0 10px;
+  font-size: 1.2rem; /* A bit larger than the original */
+}
+
+.topnav a:hover,
+.dropdown-button:hover {
+  font-weight: bold; /* Makes the text bold */
+  border-bottom: 2px solid #000; /* Line under the link */
+}
+
+/* Dropdown Menu */
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  min-width: 200px;
+  text-decoration: none !important; /* Removes underline */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none !important;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: hsl(0, 0%, 90%);
+  border-bottom: none; /* Removes any border-bottom */
+  text-decoration: none; /* Ensures underline is removed */
+
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  text-decoration: none !important;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Hamburger Icon - Hidden by Default */
+.icon {
+  display: none;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+}
+
+/* Responsive Design for Screens Smaller than 480px */
+@media screen and (max-width: 480px) {
+  .topnav {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none; /* Hidden by default */
+    background-color: #f1f1f1; /* Optional: Background for dropdown menu */
+    width: 100%; /* Full width */
+    position: absolute; /* Overlay behavior */
+    top: 100px; /* Adjust based on navbar height */
+    left: 0;
+    z-index: 1000; /* Ensure it appears above other elements */
+    border-top: 1px solid #ddd; /* Optional: Border for clarity */
+  }
+
+  .topnav a,
+  .dropdown-button {
+    display: block; /* Stack as blocks */
+    color: #444; /* Slightly darker text color */
+    background-color: #f1f1f1; /* Optional: Slightly darker background */
+    padding: 10px 20px; /* Adjust padding for better spacing */
+    width: 100%; /* Ensure full width for touch-friendly links */
+    text-align: left; /* Align text to the left */
+    box-sizing: border-box; /* Ensure padding and borders fit */
+    border: none; /* Remove default borders */
+  }
+
+  .topnav > a,
+  .topnav > .dropdown {
+    display: block; /* Stack items vertically */
+    color: #444; /* Text color */
+    background-color: #f1f1f1; /* Background color */
+    padding: 10px 20px; /* Padding for touch-friendly areas */
+    width: 100%; /* Full width */
+    text-align: left; /* Align text to the left */
+    box-sizing: border-box; /* Ensure padding and borders fit */
+    border-bottom: 1px solid #aaa; /* Small grey line between items */
+  }
+
+  .icon {
+    display: block; /* Show hamburger icon */
+  }
+
+  .dropdown-content {
+    display: none; /* Ensure dropdowns are hidden initially */
+    background-color: #f1f1f1; /* Match background */
+  }
+
+  .dropdown-content a {
+    color: #444; /* Match text color */
+    background-color: #f1f1f1; /* Match background */
+    padding: 10px 20px; /* Same padding as main links */
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+    border: none;
+  }
+
+    .dropdown-content a + a {
+    border-top: 1px solid #ccc; /* Slightly lighter line inside dropdowns */
+  }
+
+  .dropdown-button:focus + .dropdown-content {
+    display: block; /* Show dropdown on button press */
+  }
+
+  .topnav.responsive {
+    display: flex; /* Show menu when responsive class is added */
+  }
+}
+
+
+header {
+  position: relative; /* Ensures the overlay is positioned relative to the header */
+  background-image: url('images/forside-banner-rigtig.svg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the header */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image tiling */
+  min-height: 500px; /* Sets the height of the header */
+  text-align: center; /* Centers the text */
+  color: white; /* Ensures text is visible */
+  display: flex; /* Centers content vertically and horizontally */
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Adds subtle shadow for better readability */
+}
+
+header h1 {
+  font-weight: 300; /* Light font-weight */
+  font-family: 'Dekko', sans-serif;
+  font-size: 29px;
+}
+
+header p {
+  color: white; /* Muted text */
+  font-family: 'PT Serif', serif;
+  font-size: 16px;
+}
+
+  footer a {
+    color: black; /* Muted text */
+    font-family: 'PT Serif', serif;
+    font: 16px;
+  }
+ 
+  footer h3 {
+    font-family: 'Dekko', sans-serif;
+    font-size: 22px; /* Adjust the size as needed */
+    font-weight: bold;
+  }
+  
+  footer p {
+    color: black; /* Muted text */
+    font-family: 'PT Serif', serif;
+    font: 16px;
+  }
+/* General Styles */
+.text-section {
+  padding: 20px;
+  background-color: white;
+  max-width: 800px;
+  margin: auto;
+}
+
+.text-section h2 {
+  font-size: 22px; /* Adjusted for better scaling */
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-family: 'Dekko', sans-serif;
+}
+
+.text-section p,
+.text-section ul,
+.text-section li {
+  margin-bottom: 15px;
+  color: #555;
+  font-family: 'PT Serif', serif;
+  font-size: 16px;
+}
+
+.text-section b {
+  margin-bottom: 15px;
+  color: black;
+  font-family: 'PT Serif', serif;
+  font-size: 16px;
+}
+
+/* Remove extra padding */
+.text-section ul {
+  padding-left: 20px;
+}
+
+.text-section li {
+  padding-left: 10px;
+}
+
+@media (max-width: 480px) {
+  .text-section {
+    padding: 10px;
+  }
+
+  .text-section h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .text-section p,
+  .text-section ul,
+  .text-section li,
+  .text-section b {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .blyanter {
+    display: block;
+    margin: 0 auto 20px; /* Center align and add spacing below */
+    max-width: 90%;
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+.hand-drawn-line-blue {
+  background-image: url('./images/dotted-line-blå.svg'); /* Path to your SVG */
+  height: 10px;                /* Adjust height based on line style */
+  background-repeat: repeat-x; /* Repeat the pattern horizontally */
+}
+.hand-drawn-line-green {
+  background-image: url('./images/dotted-line-grøn.svg'); /* Path to your SVG */
+  height: 10px;                /* Adjust height based on line style */
+  background-repeat: repeat-x; /* Repeat the pattern horizontally */
+}
+.blyanter {
+  height: 70px; /* Matches the font size */
+  width: auto; /* Maintains aspect ratio */
+  align-content: center; /* Aligns image with the text baseline */
+  display: block; /* Makes the image behave like a block element */
+  margin: 0 auto; /* Horizontally centers the image */
+}
+.map-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 15px; /* Rounded corners for iframe */
+}
+
+/* Media query for small screens */
+@media (max-width: 480px) {
+  .map-container {
+    padding-bottom: 75%; /* Adjust aspect ratio for smaller screens */
+  }
+}
