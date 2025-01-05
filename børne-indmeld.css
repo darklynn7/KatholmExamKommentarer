@@ -256,7 +256,7 @@ border-bottom = sætter en streg under linket */
   color: #333;
   padding: 10px;
   display: inline-block;
-  transition: border-bottom 0.3s ease; /* Optional: smooth transition */
+  transition: border-bottom 0.3s ease;
   margin: 0 10px;
   font-size: 1.2rem;
   border-bottom: 2px solid #000;
@@ -287,13 +287,12 @@ text-decoration: none !important;
     font: 16px;
   }
 
-  /**/
   .enrollment-fees {
     padding: 20px;
     background-color: white;
     max-width: 800px;
     margin: auto;
-    box-sizing: border-box; /* Ensure padding doesn't add to the width */
+    box-sizing: border-box; /* Sørger for padding ikke øger width */
   }
   
   .enrollment-fees h2 {
@@ -301,7 +300,7 @@ text-decoration: none !important;
     margin-bottom: 15px;
     color: black;
     font-family: 'Dekko', sans-serif;
-    font-size: 1.5rem; /* Use relative units */
+    font-size: 1.5rem;
   }
   
   .enrollment-fees p, 
@@ -331,7 +330,7 @@ text-decoration: none !important;
     text-decoration: underline;
   }
   
-  
+  /* Responsiv til mobil */
   @media (max-width: 480px) {
     .enrollment-fees {
       padding: 10px;
@@ -349,30 +348,31 @@ text-decoration: none !important;
 
     .blyanter {
       display: block;
-      margin: 0 auto 20px; /* Center align and add spacing below */
+      margin: 0 auto 20px;
       max-width: 90%;
       height: auto; /* Maintain aspect ratio */
       font-family: 'Dekko', sans-serif;
     }
   }
   
-  
+  /* Håndtegnet streger */
   .hand-drawn-line-blue {
-    background-image: url('./images/dotted-line-blå.svg'); /* Path to your SVG */
-    height: 10px;                /* Adjust height based on line style */
-    background-repeat: repeat-x; /* Repeat the pattern horizontally */
+    background-image: url('./images/dotted-line-blå.svg');
+    height: 10px;               
+    background-repeat: repeat-x;
   }
   
   .hand-drawn-line-green {
-    background-image: url('./images/dotted-line-grøn.svg'); /* Path to your SVG */
-    height: 10px;                /* Adjust height based on line style */
-    background-repeat: repeat-x; /* Repeat the pattern horizontally */
+    background-image: url('./images/dotted-line-grøn.svg');
+    height: 10px;       
+    background-repeat: repeat-x;
   }
   
+  /* Blyanter */
   .blyanter {
-    height: 70px; /* Matches the font size */
-    width: auto; /* Maintains aspect ratio */
-    align-content: center; /* Aligns image with the text baseline */
-    display: block; /* Makes the image behave like a block element */
-    margin: 0 auto; /* Horizontally centers the image */
+    height: 70px;
+    width: auto;
+    align-content: center;
+    display: block;
+    margin: 0 auto;
   }

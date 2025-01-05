@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="da">
+<!-- Head-sektion. -->
 <head>
+  <!--Fortæller søgemaskiner, at de ikke skal indeksere siden. -->
   <meta name="robots" content="noindex">
+  <!--Angiver UTF-8-tegnkodning. -->
   <meta charset="UTF-8">
+  <!-- Sikre responsivt design. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Refererer til lokalt stylesheet samt eksterne stylesheets til Bootstrap, Font Awesome og Google Fonts. -->
   <link rel="stylesheet" href="info-studerende.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Dekko&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+ <!-- Fortæller titlen på websiden. -->
   <title>Børnegården Katholm | Information | Studerende</title>
 </head>
 <body>
+    <!-- Navigationslinje: Indeholder navigationsmenu med logo (linker til forsiden), links i menuen samt dropdownmenuer til undersider. -->
   <nav class="navbar">
     <!-- Left: Logo -->
     <div class="navbar-logo">
@@ -53,50 +60,55 @@
       </div>
     </div>
 
-    <!-- Hamburger Menu Icon -->
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </nav>
+   <!-- Hamburger-ikon - skifter navigationens synlighed på små skærme vha. JavaScript (myFunction()). -->
+   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</nav>
 
-  <script>
+<script>
+// Responsiv menu - skifter navigationsmenuens synlighed på små skærme vha. tilføje/fjerne den responsive klasse.
 function myFunction() {
-  const topnav = document.getElementById("myTopnav");
-  topnav.classList.toggle("responsive");
+const topnav = document.getElementById("myTopnav");
+topnav.classList.toggle("responsive");
 }
 
-// Dropdown Functionality for Small Screens
+// Dropdown-funktionalitet - Implementerer klikbaseret dropdown-adfærd til små skærme.
+// Det sikrer, at kun én dropdown-menu er åben ad gangen.
 const dropdownButtons = document.querySelectorAll(".dropdown-button");
 dropdownButtons.forEach((button) => {
-  button.addEventListener("click", (event) => {
-    event.preventDefault(); // Prevent default link behavior
+button.addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent default link behavior
 
-    const dropdownContent = button.nextElementSibling;
+  const dropdownContent = button.nextElementSibling;
 
-    // Toggle visibility
-    dropdownContent.style.display =
-      dropdownContent.style.display === "block" ? "none" : "block";
+  // Skifte mellem synlighed.
+  dropdownContent.style.display =
+    dropdownContent.style.display === "block" ? "none" : "block";
 
-    // Close other dropdowns
-    document.querySelectorAll(".dropdown-content").forEach((content) => {
-      if (content !== dropdownContent) {
-        content.style.display = "none";
-      }
-    });
+  // Lukker andre dropdowns.
+  document.querySelectorAll(".dropdown-content").forEach((content) => {
+    if (content !== dropdownContent) {
+      content.style.display = "none";
+    }
   });
 });
-  </script>
+});
+</script>
  
-<!-- Header Section -->
+<!-- Header Sektion -->
 <header class="py-5 bg-light mb-4">
 <div class="container">
   <div class="text-center">
+        <!-- Viser en titel (Studerende) og en undertitel (Læs om vores praktikpladser), som fremhæver sidens formål. -->
       <h1 class="fw-bold">Studerende</h1>
       <p class="lead">Læs om vores praktikpladser</p>
   </div>
 </div>
 </header>
+<!-- Indholdsafsnit -->
   <section class="text-section">
+      <!-- Billede af farveblyant. -->
     <img src="images/blyant-praktikplads.svg" alt="praktikplads blyant" class="blyanter">
     <br>
 <h2>Er du pædagogstuderende?</h2>
@@ -105,6 +117,7 @@ dropdownButtons.forEach((button) => {
 <h2>Udvikl dine kompetencer</h2>
 <p>I praktikforløbet får du:</p>
 <ul>
+  <!-- unordered list-->
 <li>Mulighed for at udvikle dine faglige og praktiske kompetencer.</li>
 <li>Et støttende og inspirerende læringsmiljø.</li>
 <li>Erfaring i en hverdag, hvor vi vægter faglighed, omsorg og udvikling højt.</li>
@@ -112,92 +125,146 @@ dropdownButtons.forEach((button) => {
 <br>
 <h2>Er det noget for dig?</h2>
 <p>Hvis du synes, det lyder spændende, kan du læse meget mere om praktikforløbet i vores praktikbeskrivelse.</p>
+<!-- Hyperlink til PDF. "_blank" siger at linket åbnes i en ny browser/vindue. -->
 <a href="https://www.boernegaardenkatholt.dk/filer/2747praktikbeskrivelse-skabelon-dagtilbud-paed-udd--i-viaredigeret-feb-2017.pdf" target="_blank">👉 Læs praktikbeskrivelsen her</a>
 </section>
 
 <br><br>
+<!-- Billede af "håndtegnet" stribet linje. -->
 <div class="hand-drawn-line-blue"></div>
 <br><br>
 
+<!-- Footer-sektion. -->
 <footer>
-  <!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="container my-5">
-  <!-- Footer -->
-    <!-- Grid container -->
-    <div class="container p-4 pb-0">
-      <!-- Section: Links -->
-      <section class="">
-        <!--Grid row-->
-        <div class="row">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h3 class="text-uppercase mb-4 font-weight-bold">
-              Børnegården Katholt
-            </h3>
-            <p>
-              Vi tilbyder en tryg og stimulerende hverdag for børn med fokus på udvikling, leg og læring.
-              Med et engageret personale skaber vi et inkluderende miljø, der fremmer børns nysgerrighed og selvstændighed.
-            </p>
-          </div>
-          <!-- Grid column -->
-          <hr class="w-100 clearfix d-md-none">
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h3 class="text-uppercase mb-4 font-weight-bold">Børnehave</h3>
-            <p><a href="ny-børnehave.html">Ny i børnehaven</a></p>
-            <p><a href="børne-praktisk.html">Praktiske oplysninger</a></p>
-            <p><a href="børne-indmeld.html">Ind- og udmeldelse/takster</a></p>
-          </div>
-          <!-- Grid column -->
-          <hr class="w-100 clearfix d-md-none">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h3 class="text-uppercase mb-4 font-weight-bold">
-              Fritidshjem
-            </h3>
-            <p><a href="ny-fritidshjem.html">Ny i fritidshjemmet</a></p>
-            <p><a href="fritid-praktisk.html">Praktiske oplysninger</a></p>
-            <p><a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a></p>
-          </div>
-          <!-- Grid column -->
-          <hr class="w-100 clearfix d-md-none">
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h3 class="text-uppercase mb-4 font-weight-bold">Information</h3>
-              <p><a href="info-kontakt.html">Kontakt</a></p>
-              <p><a href="info-besøg.html">Åbningstider og lukkedage</a></p>
-              <p><a href="info-bestyrelse.html">Bestyrelse</a></p>
-              <p><a href="info-studerende.html">Studerende</a></p>
-          </div>
-          <!-- Grid column -->
-        </div>
-        <!--Grid row-->
-      </section>
-      <!-- Section: Links -->
-      <hr class="my-3">
-      <!-- Section: Copyright -->
-      <div class="p-3 pt-0">
-        <div class="row d-flex align-items-center">
-          <!-- Grid column -->
-          <div class="col-md-7 col-lg-8 text-center text-md-start">
-            <!-- Copyright -->
-            <div class="p-3">
-              © 2024 Copyright:
-              <a class="text-black" href="https://www.boernegaardenkatholt.dk/"
-                 >Børnegården Katholt</a>
-                 <span class="footer-text ms-3"><b>Made for educational purposes only</b></span>
+  <div class="container my-5">
+      <!-- Grid container. -->
+      <div class="container p-4 pb-0">
+        <!-- Sektion - links. -->
+        <section class="">
+          <!-- Grid row. -->
+          <div class="row">
+            <!-- Grid column. -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h3 class="text-uppercase mb-4 font-weight-bold">
+                Børnegården Katholt
+              </h3>
+              <p>
+                Vi tilbyder en tryg og stimulerende hverdag for børn med fokus på udvikling, leg og læring.
+                Med et engageret personale skaber vi et inkluderende miljø, der fremmer børns nysgerrighed og selvstændighed.
+              </p>
             </div>
-            <!-- Copyright -->
+            <!-- Grid column -->
+
+  <!-- <hr> = laver et tematisk brud i indholdet i en vandret linje.
+   w-100 = værktøjsklasse fra Bootstrap - gør elementet 100% bredt og sikrer, at den vandrette linje strækker sig over hele beholderens bredde.
+   clearfix = utility-klasse (fra Bootstrap), som sikrer en stabil layoutstruktur ved at rydde effekten af flydende elementer og sikre, at linjen ikke skaber problemer i layoutet.
+   d-md-none = Bootstrap-klasse der skjuler <hr> elementet på mellemstore skærme (md) og større og sikrer, at den vandrette linje kun vises på mindre skærme. -->
+            <hr class="w-100 clearfix d-md-none">
+  
+            <!-- Grid column -->
+
+            <!-- col-md-2 col-lg-2 col-xl-2 = angiver kolonnebredden for forskellige skærmstørrelser - her fylder kolonnen 2 enheder på mellemstore (768 px), store (992px) og ekstra store (1200px) skærme.
+             mx-auto = centerer elementet horizontalt inden for containeren.
+             mt-3 = tilføjer en margin på 3 enheder til toppen. -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <!-- text-uppercase = laver teksten til store bogstaver
+               mb-4 = tilføjer margen på 4 enheder under overskriften.
+               font-weight-bold = gør teksten fed. -->
+              <h3 class="text-uppercase mb-4 font-weight-bold">Børnehave</h3>
+              <p><a href="ny-børnehave.html">Ny i børnehaven</a></p>
+              <p><a href="børne-praktisk.html">Praktiske oplysninger</a></p>
+              <p><a href="børne-indmeld.html">Ind- og udmeldelse/takster</a></p>
+            </div>
+
+            <!-- Grid column -->
+  
+  <!-- <hr> = laver et tematisk brud i indholdet i en vandret linje.
+   w-100 = værktøjsklasse fra Bootstrap - gør elementet 100% bredt og sikrer, at den vandrette linje strækker sig over hele beholderens bredde.
+   clearfix = utility-klasse (fra Bootstrap), som sikrer en stabil layoutstruktur ved at rydde effekten af flydende elementer og sikre, at linjen ikke skaber problemer i layoutet.
+   d-md-none = Bootstrap-klasse der skjuler <hr> elementet på mellemstore skærme (md) og større og sikrer, at den vandrette linje kun vises på mindre skærme. -->
+            <hr class="w-100 clearfix d-md-none">
+  
+            <!-- Grid column -->
+
+                        <!-- col-md-2 col-lg-2 col-xl-2 = angiver kolonnebredden for forskellige skærmstørrelser - her fylder kolonnen 2 enheder på mellemstore (768 px), store (992px) og ekstra store (1200px) skærme.
+             mx-auto = centerer elementet horizontalt inden for containeren.
+             mt-3 = tilføjer en margin på 3 enheder til toppen. -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <!-- text-uppercase = laver teksten til store bogstaver
+               mb-4 = tilføjer margen på 4 enheder under overskriften.
+               font-weight-bold = gør teksten fed. -->
+              <h3 class="text-uppercase mb-4 font-weight-bold">
+                Fritidshjem
+              </h3>
+              <p><a href="ny-fritidshjem.html">Ny i fritidshjemmet</a></p>
+              <p><a href="fritid-praktisk.html">Praktiske oplysninger</a></p>
+              <p><a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a></p>
+            </div>
+  
+            <!-- Grid column -->
+
+              <!-- <hr> = laver et tematisk brud i indholdet i en vandret linje.
+   w-100 = værktøjsklasse fra Bootstrap - gør elementet 100% bredt og sikrer, at den vandrette linje strækker sig over hele beholderens bredde.
+   clearfix = utility-klasse (fra Bootstrap), som sikrer en stabil layoutstruktur ved at rydde effekten af flydende elementer og sikre, at linjen ikke skaber problemer i layoutet.
+   d-md-none = Bootstrap-klasse der skjuler <hr> elementet på mellemstore skærme (md) og større og sikrer, at den vandrette linje kun vises på mindre skærme. -->
+            <hr class="w-100 clearfix d-md-none">
+  
+            <!-- Grid column -->
+
+            <!-- col-md-2 col-lg-2 col-xl-2 = angiver kolonnebredden for forskellige skærmstørrelser - her fylder kolonnen 2 enheder på mellemstore (768 px), store (992px) og ekstra store (1200px) skærme.
+             mx-auto = centerer elementet horizontalt inden for containeren.
+             mt-3 = tilføjer en margin på 3 enheder til toppen. -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h3 class="text-uppercase mb-4 font-weight-bold">Information</h3>
+                <p><a href="info-kontakt.html">Kontakt</a></p>
+                <p><a href="info-besøg.html">Åbningstider og lukkedage</a></p>
+                <p><a href="info-bestyrelse.html">Bestyrelse</a></p>
+                <p><a href="info-studerende.html">Studerende</a></p>
+            </div>
           </div>
-          <!-- Grid column -->
+        </section>
+
+        <!-- Sektion - links -->
+  
+        <!-- <hr> = laver et tematisk brud i indholdet i en vandret linje.
+         m = margin (plads uden for elementet)
+         y = anvender marginen på både top og bund (lodret akse) -->
+        <hr class="my-3">
+  
+        <!-- Copyright-sektion -->
+
+        <!-- pt-3 = tilføjer padding på 3 enheder til alle sider.
+         pt-0 = sætter den øverste padding til 0 enheder og overrider padding fra pt-3 for toppen. -->
+        <div class="p-3 pt-0">
+          <!--Row = Bootstrap-klasse til organisering af indhold i et grid layout.
+          d-flex: aktiverer flexbox-layout og giver mulighed for fleksibel justering og placering af underordnede elementer.
+          align-items-center = centerer elementerne vertikalt i flexcontaineren. -->
+          <div class="row d-flex align-items-center">
+            <!-- Grid column -->
+
+           <!-- <col-md-7 col-lg-8 = angiver kolonnebredden:
+            7 enheder bred på mellemstore skærme (768px)
+            8 enheder bred på store skærme (992px).
+            text-center = centerer teksten på små skærme.
+            text-md-start = justerer teksten til venstre (start) for mellemstore og større skærme -->
+            <div class="col-md-7 col-lg-8 text-center text-md-start">
+              <!-- Copyright -->
+
+              <!-- pt-3 = tilføjer padding på 3 enheder til alle sider. -->
+              <div class="p-3">
+                © 2024 Copyright:
+                <!-- Hyperlink til site. -->
+                <a class="text-black" href="https://www.boernegaardenkatholt.dk/"
+                   >Børnegården Katholt</a>
+                   <!-- <span> = inline container brugt til at style og formatte til en tekst.
+                    ms-3 = Bootstrap-klasse som adder venstre margin af 3 enheder (mellemrum). -->
+                   <span class="footer-text ms-3"><b>Made for educational purposes only</b></span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- Section: Copyright -->
-    </div>
-    <!-- Grid container -->
-  <!-- Footer -->
-</div>
-<!-- End of .container -->
-</footer>
+  </div>
+  </footer>
 </body>
-</html>
+  </html>
