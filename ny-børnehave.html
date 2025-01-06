@@ -1,476 +1,1009 @@
 <!DOCTYPE html>
+
 <html lang="da">
+
 <head>
+
   <meta name="robots" content="noindex">
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="ny-børnehave.css">
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
   <link href="https://fonts.googleapis.com/css2?family=Dekko&display=swap" rel="stylesheet">
+
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+
   <title>Børnegården Katholt | Børnehave | Ny i børnehaven</title>
+
 </head>
+
 <body>
+
   <nav class="navbar">
+
     <!-- Left: Logo -->
+
     <div class="navbar-logo">
+
       <a href="index.html"><img src="images/logo-katholt-størrelse.svg" alt="Logo"></a>
+
     </div>
 
+ 
+
     <!-- Navigation Links -->
+
     <div class="topnav" id="myTopnav">
+
       <a href="index.html">Velkommen</a>
 
-      <div class="dropdown">
-        <button class="dropdown-button" id="daycarelink">Børnehave <i class="fa fa-caret-down"></i></button>
-        <div class="dropdown-content">
-          <a href="ny-børnehave.html" id="newdaycareopen" >Ny i børnehaven</a>
-          <a href="børne-praktisk.html">Praktiske oplysninger</a>
-          <a href="børne-indmeld.html">Ind- og udmeldelse/takster</a>
-        </div>
-      </div>
+ 
 
       <div class="dropdown">
-        <button class="dropdown-button">Fritidshjem <i class="fa fa-caret-down"></i></button>
+
+        <button class="dropdown-button" id="daycarelink">Børnehave <i class="fa fa-caret-down"></i></button>
+
         <div class="dropdown-content">
-          <a href="ny-fritidshjem.html">Ny i fritidshjemmet</a>
-          <a href="fritid-praktisk.html">Praktiske oplysninger</a>
-          <a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a>
+
+          <a href="ny-børnehave.html" id="newdaycareopen" >Ny i børnehaven</a>
+
+          <a href="børne-praktisk.html">Praktiske oplysninger</a>
+
+          <a href="børne-indmeld.html">Ind- og udmeldelse/takster</a>
+
         </div>
+
       </div>
+
+ 
+
+      <div class="dropdown">
+
+        <button class="dropdown-button">Fritidshjem <i class="fa fa-caret-down"></i></button>
+
+        <div class="dropdown-content">
+
+          <a href="ny-fritidshjem.html">Ny i fritidshjemmet</a>
+
+          <a href="fritid-praktisk.html">Praktiske oplysninger</a>
+
+          <a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a>
+
+        </div>
+
+      </div>
+
+ 
 
       <a href="stamkort.html">Stamkort/børneintranet</a>
 
+ 
+
       <div class="dropdown">
+
         <button class="dropdown-button">Information <i class="fa fa-caret-down"></i></button>
+
         <div class="dropdown-content">
+
           <a href="info-kontakt.html">Kontakt</a>
+
           <a href="info-besøg.html">Åbningstider og lukkedage</a>
+
           <a href="info-bestyrelse.html">Bestyrelse</a>
+
           <a href="info-studerende.html">Studerende</a>
+
         </div>
+
       </div>
+
     </div>
 
+ 
+
     <!-- Hamburger Menu Icon -->
+
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+
       <i class="fa fa-bars"></i>
+
     </a>
+
   </nav>
 
+ 
+
   <script>
+
 function myFunction() {
+
   const topnav = document.getElementById("myTopnav");
+
   topnav.classList.toggle("responsive");
+
 }
 
+ 
+
 // Dropdown Functionality for Small Screens
+
 const dropdownButtons = document.querySelectorAll(".dropdown-button");
+
 dropdownButtons.forEach((button) => {
+
   button.addEventListener("click", (event) => {
+
     event.preventDefault(); // Prevent default link behavior
+
+ 
 
     const dropdownContent = button.nextElementSibling;
 
+ 
+
     // Toggle visibility
+
     dropdownContent.style.display =
+
       dropdownContent.style.display === "block" ? "none" : "block";
 
+ 
+
     // Close other dropdowns
+
     document.querySelectorAll(".dropdown-content").forEach((content) => {
+
       if (content !== dropdownContent) {
+
         content.style.display = "none";
+
       }
+
     });
+
   });
+
 });
+
   </script>
- <!-- Header Section -->
- <header class="py-5 bg-light mb-4">
+
+<!-- Header Section -->
+
+<header class="py-5 bg-light mb-4">
+
 <div class="container">
+
   <div class="text-center">
+
       <h1 class="fw-bold">Ny i børnehaven</h1>
+
       <p class="lead">Få alt du skal vide om opstart i børnehaven</p>
+
   </div>
+
 </div>
+
 </header>
+
+<!-- Sektion med indhold om børnehavens hverdag -->
+
 <div class="site-section">
+
   <div class="container">
+
+     <!-- Illustration af blyant -->
+
     <img src="images/velkommen-børn-outline.svg" alt="velkommen i børnehaven blyant" class="blyanter">
+
     <br>
+
     <div class="row">
+
+       <!-- Venstre kolonne med billede -->
+
       <div class="col-md-6">
+
         <img src="images/Legoklodser.webp" alt="barn leger med lego dublo" class="img-fluid">
+
       </div>
+
+       <!-- Højre kolonne med tekst -->
+
       <div class="col-md-5 ml-auto pl-md-5">
+
         <br>
+
+         <!-- Forklarende tekst om børnehavens værdier og tilgang -->
+
         <p><span>I børnehaven arbejder vi tæt sammen med forældrene for at skabe en god og indholdsrig hverdag for børnene. Vi sørger for, at hvert enkelt barn får den omsorg og de udfordringer, der passer til deres behov, i et trygt og udviklende miljø, hvor både børn og voksne trives.<br><br>Vi lægger stor vægt på varme, nærvær og hygge og ønsker, at dagligdagen er præget af skæg, latter og sjove oplevelser. En positiv indstilling til hverdagen kan nemlig hjælpe med at forebygge konflikter og skabe en god stemning.<br><br>I Børnehaven prioriterer vi at give børnene tryghed og styrke deres sociale forståelse, selvværd og selvtillid. Samtidig vil vi vække deres nysgerrighed for naturen, deres egen udvikling og den verden, de er en del af.</span></p>
+
       </div>
+
     </div>
+
   </div>
+
   </div>
+
   <br><br>
+
+  <!-- Dekorativ linje for at skabe visuel opdeling -->
+
   <div class="hand-drawn-line-blue"></div>
+
   <br><br>
+
   <br><br>
+
+  <!-- Illustration og beskrivelse af børnehavens værdier -->
+
   <img src="images/værdier-rigtig.svg" alt="vores værdier og fokusområder blyant" class="blyanter">
+
   <br>
+
   <p class="subtitle">Hos Børnegården Katholt ses barndom og institutionslivet som en livsfase, som skal leves og udleves, og ikke som et pensum.</p>
+
   <section class="core-values">
+
     <div class="container-values">
+
       <div class="values-list">
+
         <div class="value-item">
+
           <div class="icon-value">🌟</div>
+
           <h2 class="value-title">Tryghed først</h2>
+
           <br>
+
           <p class="value-description">Vi mener, at tryghed er nøglen til leg, læring og udvikling. Det giver børnene selvtillid og mod til at afprøve egne og andres grænser.
+
             <br><br>I vores miljø kan børnene lege frit, lære gennem oplevelser og skabe deres egne erfaringer.</p>
+
         </div>
+
         <div class="value-item">
+
           <div class="icon-value">😂</div>
+
           <h2 class="value-title">Latter, leg og læring</h2>
+
           <br>
+
           <p class="value-description">En dag i børnehaven skal være fyldt med glæde, sjov og latter. Vi ved, at en positiv stemning kan afhjælpe konflikter og give plads til læring.
+
             <br><br>Legen er hjertet i vores daglige aktiviteter – en leg, der er kreativ, fantasifuld og en kilde til social forståelse og ansvarlighed.</p>
+
         </div>
+
         <div class="value-item">
+
           <div class="icon-value">🌱</div>
+
           <h2 class="value-title">Udvikling og nysgerrighed</h2>
+
           <br>
+
           <p class="value-description">Vi ønsker at styrke børns selvværd og selvtillid og gøre dem nysgerrige på verden omkring dem – fra naturen til deres egne følelser og relationer.
+
             <br><br>Her er plads til at udforske, lære og udvikle sig i et trygt miljø, hvor børnene kan finde deres egen stemme og identitet.</p>
+
         </div>
+
         <div class="value-item">
+
           <div class="icon-value">🔄</div>
+
           <h2 class="value-title">En balance mellem fri leg og voksenstyring</h2>
+
           <br>
+
           <p class="value-description">Vi skaber en harmonisk vekselvirkning mellem børns egne initiativer og voksenstyrende aktiviteter.
+
             <br><br>På den måde sikrer vi, at børnene både lærer at tage ansvar og samarbejde og samtidig får mulighed for at udtrykke sig frit.</p>
+
         </div>
+
         <div class="value-item">
+
             <div class="icon-value">💬</div>
+
             <h2 class="value-title">En dag med mening</h2>
+
             <br>
+
             <p class="value-description">Vi ønsker, at børnene oplever børnehaven som et sted, hvor de føler sig set og hørt, hvor deres personlighed er i centrum, og hvor de får lov til at vokse og lære gennem leg, samarbejde og varme relationer.</p>
+
           </div>
+
       </div>
+
     </div>
+
   </section>
+
 <br><br>
+
 <div class="hand-drawn-line-green"></div>
+
 <br><br>
+
 <div class="day-section">
+
   <div class="container">
+
     <img src="images/dag-børn-rigtig.svg" alt="en dag i børnehaven/dagsrytme blyant" class="blyanter">
+
     <br>
+
     <div class="row">
+
+       <!-- Tekstsektion til venstre -->
+
       <div class="col-md-5 ml-auto pr-md-5">
+
         <p>
+
             En dag i børnehaven er fyldt med aktiviteter, leg og læring, der giver børnene både tryghed og mulighed for at udfolde sig.
+
             <br><br>
+
+            <!-- Underafsnit: Leg og fordybelse -->
+
             <h2>Leg og fordybelse</h2>
+
             <p>Vi lægger vægt på, at børnene får tid og rum til at fordybe sig og eksperimentere med de aktiviteter, de deltager i. Selvom vi tilskynder til at færdiggøre de opgaver, de påbegynder, prioriterer vi oplevelserne frem for at skabe færdige produkter, som børnene skal tage med hjem. Det er vigtigt for os, at børnene føler, at de bidrager til fællesskabet og får en god dag fyldt med meningsfulde oplevelser.</p>
+
             <br>
+
             <h2>Praktiske gøremål og rollemodeller</h2>
+
           <p>Vi inddrager børnene i daglige praktiske opgaver som at bage boller/brød, skære frugt, smøre brød, dække bord og hjælpe med vasketøjet. Vi ønsker at være gode rollemodeller og understøtte børnenes nysgerrighed og ansvarsfølelse, samtidig med at vi værdsætter det spontane og impulsive i hverdagen.</p>
+
           <br>
+
           <h2>Udeleg hver dag</h2>
+
           <p>Børnene er ude hver dag, og vi sætter stor pris på udeleg! Den friske luft er gavnlig for både krop og sind, og den åbne plads giver børnene mulighed for at udfolde sig, bruge deres kræfter og skabe sjove oplevelser.
+
             <br><br>Her er plads til at lege frit, finde nye steder og udforske uden at føle sig overvåget. Det giver færre konflikter og mindre stress – en frihed, der understøtter børns naturlige nysgerrighed og glæde.<br><br>
+
             Vi opfordrer jer til at tage jer god tid til at hente jeres barn, så de kan nyde deres tid i det fri og få mest muligt ud af legepladsens mange muligheder.</p>
+
             <br>
+
             <h2>Udeliv i nærmiljøet</h2>
+
             <p>Fra marts til oktober tager vi grupperne ud af huset hver tredje uge fra kl. 9.00 til ca. 12.30.<br><br>
+
               Vi pakker cykeltraileren med mad og nødvendigheder, så børnene er klar til en dag i naturen. Udelivet giver dem chancen for at udforske omgivelserne, opdage nye steder og få et godt kendskab til nærmiljøet.<br><br>
+
               Samtidig styrker de deres motoriske færdigheder og udvikler en sund, aktiv livsstil. Vi kombinerer leg, læring og fysisk aktivitet for at skabe meningsfulde og sjove oplevelser, som børnene vil huske.</p>
+
       </div>
+
+       <!-- Billedsektion til højre -->
+
       <div class="col-md-6">
+
         <img src="images/børn-skema-dotted.svg" alt="børnehavens skema" class="img-fluid">
+
     </div>
+
   </div>
+
 </div>
+
 </div>
+
 <br><br>
+
 <div class="hand-drawn-line-yellow"></div>
+
 <br><br>
+
+<!-- Illustration af faciliteter -->
+
 <img src="images/faciliteter-børn-rigtig.svg" alt="vores faciliteter blyant" class="blyanter">
+
 <br>
+
+<!-- Aktiviteter sektion -->
+
 <section id="activities" class="activities-section">
+
+  <!-- Container til aktiviteter -->
+
   <div class="activities-container">
+
+    <!-- Individuel aktivitetsblok -->
+
     <div class="activity-item">
+
+      <!-- Billede af legeplads -->
+
       <img src="images/legeplads-copy.webp" alt="barn leger på legepladsen">
+
       <h3>Legeplads</h3>
+
+      <!-- Beskrivelse af aktiviteten -->
+
       <p>Vores store legeplads byder på masser af muligheder for leg og oplevelser.</p>
+
     </div>
+
     <div class="activity-item">
+
+      <!-- Billede af gymnastiksalen -->
+
       <img src="images/Unknown-copy.webp" alt="barn og pædagog leger i gymnastiksalen">
+
       <h3>Gymnastiksal</h3>
+
       <p>Vores store dejlige gymnastiksal giver børnene de bedste betingelser for motorisk udfoldelse om formiddagen.</p>
+
     </div>
+
   </div>
-  </section>
-            <br><br>
+
+</section>
+
+ 
+
+<br><br>
+
+<!-- Håndtegnet rød streg mellem sektioner -->
+
 <div class="hand-drawn-line-red"></div>
+
+ 
+
 <br><br>
-<!-- Section Services Start -->
-  <div class="traditions-section">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-7 text-center">
-				<div class="section-title">
+
+ 
+
+<!-- Traditioner sektion -->
+
+<div class="traditions-section">
+
+  <!-- Container til traditioner -->
+
+  <div class="container">
+
+    <div class="row justify-content-center">
+
+      <!-- Sektionstitel med billede -->
+
+      <div class="col-lg-7 text-center">
+
+        <div class="section-title">
+
           <img src="images/traditioner-børn-rigtig.svg" alt="traditioner i børnehaven blyant" class="blyanter">
+
           <br>
+
           <p>I børnehaven har vi en del traditioner.</p>
-				</div>
-			</div>
-		</div>
-		<!-- Første række med 4 elementer -->
-		<div class="row justify-content-center">
-			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="service-item mb-5">
-					<i class="fa-solid fa-wand-magic-sparkles"></i>
-					<h4 class="mb-3">Fastelavn</h4>
-					<p>Hvert år fejrer vi fastelavn med børnene. Op til festen laver vi pynt, bager fastelavnsboller og afslutter med tøndeslagning, hvor børnene gerne må komme udklædte.</p>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="service-item mb-5">
-					<i class="fa-solid fa-egg"></i>
-					<h4 class="mb-3">Påske</h4>
-					<p>Inden påske klipper og klistrer vi kreativt påskepynt som gækkebreve, påskeæg og små dekorationer til højtiden.</p>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="service-item mb-5">
-					<i class="fa-solid fa-candy-cane"></i>
-					<h4 class="mb-3">Jul</h4>
-					<p>Vi laver julepynt, bager julekager og går til julegudstjeneste. Efter kirken spiser vi risengrød og får besøg af julemanden. Omkring 1. dec har vi julehygge med Lucia-optræden for familien.</p>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="service-item mb-5 mb-lg-0">
-					<i class="fa-solid fa-user-group"></i>
-					<h4 class="mb-3">De store børn</h4>
-					<p>Det sidste år i børnehaven samles de ældste børn to formiddage om ugen til særlige aktiviteter. Her får de ekstra udfordringer og oplevelser, som forbereder dem til deres næste skridt.</p>
-				</div>
-			</div>
-		</div>
-		<!-- Anden række med 3 elementer -->
-		<div class="row justify-content-center">
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="service-item mb-5 mb-lg-0">
-					<i class="fa-solid fa-cake-candles"></i>
-					<h4 class="mb-3">Fødselsdage</h4>
-					<p>Børns fødselsdage fejres i børnehaven eller hjemme med gruppen, aftalt med personalet. Vi prioriterer sunde fødselsdage med alternativer til slik og ingen sodavand. Fødselsdage holdes ikke på personalemødedage, som står i barnets garderobe.</p>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="service-item mb-5 mb-lg-0">
-					<i class="fa-solid fa-person-walking-with-cane"></i>
-					<h4 class="mb-3">Bedsteforældredag</h4>
-					<p>Hver forår inviterer vi bedsteforældrene til en hyggelig dag. Har barnet ikke bedsteforældre, er andre nære relationer meget velkomne, så alle børn kan få besøg.</p>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="service-item mb-5 mb-lg-0">
-          <i class="fa-solid fa-camera"></i>
-					<h4 class="mb-3">Fotografering</h4>
-					<p>Hvert år kommer fotografen forbi og tager billeder af børnene – et skønt minde for både børn og forældre.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<br><br>
-<div class="hand-drawn-line-blue"></div>
-<br><br>
-<div class="food-section">
-  <div class="menu-container">
-    <img src="images/mad-børn-rigtig.svg" alt="mad og kostpolitik blyant" class="blyanter">
-    <br>
-      <div class="menu-grid">
-          <!-- Left Column -->
-          <div class="menu-left">
-              <div class="menu-item">
-                  <h3 class="item-title">Mål</h3>
-                  <ol class="aligned-list">
-                      <li>
-                          Skabe tid og nærvær ved spisesituationerne: morgenmad, frugt, frokost og eftermiddagsmåltid.
-                      </li>
-                      <li>
-                          Give børnene et sundt og varieret eftermiddagsmåltid hver dag kl. 14.00.
-                      </li>
-                      <li>
-                        Øge børnenes bevidsthed om, hvad sund kost betyder for kroppen, og hvordan den påvirker deres energi og velvære.
-                      </li>
-                      <li>
-                          Lære børnene om sunde og bæredygtige madvaner gennem praktisk erfaring og aktiviteter.
-                      </li>
-                  </ol>
-              </div>
-<br>
-              <div class="menu-item">
-                  <h3 class="item-title">Hverdagsrutiner</h3>
-                  <ul class="aligned-list-numberless">
-                      <li>
-                        <b>Morgenmad (6.30 – 7.30):</b> Vi serverer sund og nærende morgenmad, som børnene kan nyde i en rolig atmosfære.
-                      </li>
-                      <li>
-                        <b>Frugt (9.15):</b> Børnene medbringer dagligt et stykke frugt, som vi deler i grupper og serverer sammen med vand.
-                      </li>
-                      <li>
-                        <b>Frokost (11.15):</b> Børnene spiser deres medbragte madpakker, akkompagneret af mælk eller kærnemælk. Samtidig lærer de om gode spisevaner og madens oprindelse.
-                      </li>
-                      <li>
-                      <b>Eftermiddagsmåltid (14.00):</b> Vi serverer brød, enten hjemmebagt eller købt, sammen med vand.
-                      </li>
-                  </ul>
-              </div>
-<br>
-              <div class="menu-item">
-                  <h3 class="item-title">Maddage</h3>
-                  <p>Flere gange årligt afholder vi maddage, hvor børnene medbringer små retter til en fælles frokost. Her lærer de om madlavning, madkultur og fællesskab. <u>Eksempler på maddage inkluderer:</u></p>
-                  <ul class="aligned-list-numberless">
-                      <li>
-          <b>Påske- og julefrokost:</b> Børnehaven står for maden med fokus på sundhed og hjemmelavede retter.
-        </li>
-        <li>
-          <b>Smør selv-dage:</b> Børn og voksne tilbereder frokosten sammen.
-        </li>
-        </ul>
-              </div>
-          </div>
-          <!-- Right Column -->
-          <div class="menu-right">
-              <div class="menu-item">
-                  <h3 class="item-title">Slik og søde sager</h3>
-                  <p class="item-description">Slik må ikke medbringes i børnehaven. Til fødselsdage opfordrer vi til sunde alternativer og anbefaler kreative løsninger som balloner eller små gaver i stedet for slikposer.</p>
-              </div>
-<br>
-              <div class="menu-item">
-                  <h3 class="item-title">Sund kost og bevægelse</h3>
-                  <p class="item-description">Vi inddrager temaet "sund kost" i dagligdagen og kombinerer det med aktiviteter som udeliv, bevægelse på legepladsen og idræt i gymnastiksalen. Målet er at vise sammenhængen mellem sund mad, motion og velvære.</p>
-              </div>
-<br>
-              <div class="menu-item">
-                  <h3 class="item-title">Resultater vi ønsker</h3>
-                  <ul class="aligned-list-numberless">
-                      <li>
-                        At børnene får lyst til at prøve nye typer frugt og grønt.
-                      </li>
-                      <li>
-                        At børnene inspirerer hinanden til sunde madpakker og fødselsdage.
-                      </li>
-                      <li>
-                        At børnene oplever, hvordan sund kost giver energi til leg og bevægelse.
-                      </li>
-                  </ul>
-              </div>
-              <br>
-              <!-- Menu Image -->
-              <div class="circle-image">
-                  <img src="images/madpakke1.webp" alt="mad i børnehaven">
-              </div>
-          </div>
+
+        </div>
+
       </div>
+
+    </div>
+
+    <!-- Første række med traditionselementer -->
+
+    <div class="row justify-content-center">
+
+      <div class="col-lg-3 col-md-6 col-sm-6">
+
+         <!-- Individuelt traditionselement -->
+
+        <div class="service-item mb-5">
+
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+          <h4 class="mb-3">Fastelavn</h4>
+
+          <p>Hvert år fejrer vi fastelavn med børnene. Op til festen laver vi pynt, bager fastelavnsboller og afslutter med tøndeslagning, hvor børnene gerne må komme udklædte.</p>
+
+        </div>
+
+      </div>
+
+      <!-- Gentagelse af traditionselement for Påske, Jul og De store børn -->
+
+      <!-- Elementerne har forskellige ikoner, titler og beskrivelser -->
+
+      <div class="col-lg-3 col-md-6 col-sm-6">
+
+        <div class="service-item mb-5">
+
+          <i class="fa-solid fa-egg"></i>
+
+          <h4 class="mb-3">Påske</h4>
+
+          <p>Inden påske klipper og klistrer vi kreativt påskepynt som gækkebreve, påskeæg og små dekorationer til højtiden.</p>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6">
+
+        <div class="service-item mb-5">
+
+          <i class="fa-solid fa-candy-cane"></i>
+
+          <h4 class="mb-3">Jul</h4>
+
+          <p>Vi laver julepynt, bager julekager og går til julegudstjeneste. Efter kirken spiser vi risengrød og får besøg af julemanden. Omkring 1. dec har vi julehygge med Lucia-optræden for familien.</p>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6">
+
+        <div class="service-item mb-5 mb-lg-0">
+
+          <i class="fa-solid fa-user-group"></i>
+
+          <h4 class="mb-3">De store børn</h4>
+
+          <p>Det sidste år i børnehaven samles de ældste børn to formiddage om ugen til særlige aktiviteter. Her får de ekstra udfordringer og oplevelser, som forbereder dem til deres næste skridt.</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+     <!-- Anden række med traditionselementer -->
+
+    <div class="row justify-content-center">
+
+      <div class="col-lg-4 col-md-6 col-sm-6">
+
+        <div class="service-item mb-5 mb-lg-0">
+
+          <i class="fa-solid fa-cake-candles"></i>
+
+          <h4 class="mb-3">Fødselsdage</h4>
+
+          <p>Børns fødselsdage fejres i børnehaven eller hjemme med gruppen, aftalt med personalet. Vi prioriterer sunde fødselsdage med alternativer til slik og ingen sodavand. Fødselsdage holdes ikke på personalemødedage, som står i barnets garderobe.</p>
+
+        </div>
+
+      </div>
+
+       <!-- Gentagelse af traditionselement for Bedsteforældredag og Fotografering -->
+
+      <div class="col-lg-4 col-md-6 col-sm-6">
+
+        <div class="service-item mb-5 mb-lg-0">
+
+          <i class="fa-solid fa-person-walking-with-cane"></i>
+
+          <h4 class="mb-3">Bedsteforældredag</h4>
+
+          <p>Hver forår inviterer vi bedsteforældrene til en hyggelig dag. Har barnet ikke bedsteforældre, er andre nære relationer meget velkomne, så alle børn kan få besøg.</p>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6">
+
+        <div class="service-item mb-5 mb-lg-0">
+
+          <i class="fa-solid fa-camera"></i>
+
+          <h4 class="mb-3">Fotografering</h4>
+
+          <p>Hvert år kommer fotografen forbi og tager billeder af børnene – et skønt minde for både børn og forældre.</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
-  </div>
+
+</div>
+
 <br><br>
+
+<!-- Håndtegnet blå streg mellem sektioner -->
+
+<div class="hand-drawn-line-blue"></div>
+
+<br><br>
+
+<!-- Madpolitik sektion -->
+
+<div class="food-section">
+
+  <div class="menu-container">
+
+    <img src="images/mad-børn-rigtig.svg" alt="mad og kostpolitik blyant" class="blyanter">
+
+    <br>
+
+      <!-- Menu grid opdelt i venstre og højre kolonner -->
+
+      <div class="menu-grid">
+
+       <!-- Venstre kolonne -->
+
+          <div class="menu-left">
+
+              <div class="menu-item">
+
+                  <h3 class="item-title">Mål</h3>
+
+                  <!-- Liste over mål for mad og spisesituationer -->
+
+                  <ol class="aligned-list">
+
+                      <li>
+
+                          Skabe tid og nærvær ved spisesituationerne: morgenmad, frugt, frokost og eftermiddagsmåltid.
+
+                      </li>
+
+                      <li>
+
+                          Give børnene et sundt og varieret eftermiddagsmåltid hver dag kl. 14.00.
+
+                      </li>
+
+                      <li>
+
+                        Øge børnenes bevidsthed om, hvad sund kost betyder for kroppen, og hvordan den påvirker deres energi og velvære.
+
+                      </li>
+
+                      <li>
+
+                          Lære børnene om sunde og bæredygtige madvaner gennem praktisk erfaring og aktiviteter.
+
+                      </li>
+
+                  </ol>
+
+              </div>
+
+<br>
+
+              <div class="menu-item">
+
+                  <h3 class="item-title">Hverdagsrutiner</h3>
+
+                  <ul class="aligned-list-numberless">
+
+                      <li>
+
+                        <b>Morgenmad (6.30 – 7.30):</b> Vi serverer sund og nærende morgenmad, som børnene kan nyde i en rolig atmosfære.
+
+                      </li>
+
+                      <li>
+
+                        <b>Frugt (9.15):</b> Børnene medbringer dagligt et stykke frugt, som vi deler i grupper og serverer sammen med vand.
+
+                      </li>
+
+                      <li>
+
+                        <b>Frokost (11.15):</b> Børnene spiser deres medbragte madpakker, akkompagneret af mælk eller kærnemælk. Samtidig lærer de om gode spisevaner og madens oprindelse.
+
+                      </li>
+
+                      <li>
+
+                      <b>Eftermiddagsmåltid (14.00):</b> Vi serverer brød, enten hjemmebagt eller købt, sammen med vand.
+
+                      </li>
+
+                  </ul>
+
+              </div>
+
+<br>
+
+              <div class="menu-item">
+
+                  <h3 class="item-title">Maddage</h3>
+
+                  <p>Flere gange årligt afholder vi maddage, hvor børnene medbringer små retter til en fælles frokost. Her lærer de om madlavning, madkultur og fællesskab. <u>Eksempler på maddage inkluderer:</u></p>
+
+                  <ul class="aligned-list-numberless">
+
+                      <li>
+
+          <b>Påske- og julefrokost:</b> Børnehaven står for maden med fokus på sundhed og hjemmelavede retter.
+
+        </li>
+
+        <li>
+
+          <b>Smør selv-dage:</b> Børn og voksne tilbereder frokosten sammen.
+
+        </li>
+
+        </ul>
+
+              </div>
+
+          </div>
+
+         <!-- Højre kolonne -->
+
+          <div class="menu-right">
+
+              <div class="menu-item">
+
+                  <h3 class="item-title">Slik og søde sager</h3>
+
+                  <p class="item-description">Slik må ikke medbringes i børnehaven. Til fødselsdage opfordrer vi til sunde alternativer og anbefaler kreative løsninger som balloner eller små gaver i stedet for slikposer.</p>
+
+              </div>
+
+<br>
+
+              <div class="menu-item">
+
+                  <h3 class="item-title">Sund kost og bevægelse</h3>
+
+                  <p class="item-description">Vi inddrager temaet "sund kost" i dagligdagen og kombinerer det med aktiviteter som udeliv, bevægelse på legepladsen og idræt i gymnastiksalen. Målet er at vise sammenhængen mellem sund mad, motion og velvære.</p>
+
+              </div>
+
+<br>
+
+              <div class="menu-item">
+
+                  <h3 class="item-title">Resultater vi ønsker</h3>
+
+                  <ul class="aligned-list-numberless">
+
+                      <li>
+
+                        At børnene får lyst til at prøve nye typer frugt og grønt.
+
+                      </li>
+
+                      <li>
+
+                        At børnene inspirerer hinanden til sunde madpakker og fødselsdage.
+
+                      </li>
+
+                      <li>
+
+                        At børnene oplever, hvordan sund kost giver energi til leg og bevægelse.
+
+                      </li>
+
+                  </ul>
+
+              </div>
+
+              <br>
+
+            <!-- Cirkulært billede -->
+
+              <div class="circle-image">
+
+                  <img src="images/madpakke1.webp" alt="mad i børnehaven">
+
+              </div>
+
+          </div>
+
+      </div>
+
+  </div>
+
+  </div>
+
+<br><br>
+
   <div class="hand-drawn-line-green"></div>
 
 
 
 
+
     <!-- Remove the container if you want to extend the Footer to full width. -->
+
     <footer>
+
     <div class="container my-5">
+
     <!-- Footer -->
 
+ 
+
       <!-- Grid container -->
+
       <div class="container p-4 pb-0">
+
         <!-- Section: Links -->
+
         <section class="">
+
           <!--Grid row-->
+
           <div class="row">
+
             <!-- Grid column -->
+
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+
               <h5 class="text-uppercase mb-4 font-weight-bold">
+
                 Børnegården Katholt
+
               </h5>
+
               <p>
+
                 Vi tilbyder en tryg og stimulerende hverdag for børn med fokus på udvikling, leg og læring.
+
                 Med et engageret personale skaber vi et inkluderende miljø, der fremmer børns nysgerrighed og selvstændighed.
+
               </p>
+
             </div>
+
             <!-- Grid column -->
-  
+
+ 
+
             <hr class="w-100 clearfix d-md-none">
-  
+
+ 
+
             <!-- Grid column -->
+
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+
               <h5 class="text-uppercase mb-4 font-weight-bold">Børnehave</h5>
+
               <p><a href="ny-børnehave.html">Ny i børnehaven</a></p>
+
               <p><a href="børne-praktisk.html">Praktiske oplysninger</a></p>
+
               <p><a href="børne-indmeld.html">Ind- og udmeldelse/takster</a></p>
+
             </div>
+
             <!-- Grid column -->
-  
+
+ 
+
             <hr class="w-100 clearfix d-md-none">
-  
+
+ 
+
             <!-- Grid column -->
+
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+
               <h5 class="text-uppercase mb-4 font-weight-bold">
+
                 Fritidshjem
+
               </h5>
+
               <p><a href="ny-fritidshjem.html">Ny i fritidshjemmet</a></p>
+
               <p><a href="fritid-praktisk.html">Praktiske oplysninger</a></p>
+
               <p><a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a></p>
+
             </div>
-  
+
+ 
+
             <!-- Grid column -->
+
             <hr class="w-100 clearfix d-md-none">
-  
+
+ 
+
             <!-- Grid column -->
+
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+
               <h5 class="text-uppercase mb-4 font-weight-bold">Information</h5>
+
                 <p><a href="info-kontakt.html">Kontakt</a></p>
+
                 <p><a href="info-besøg.html">Åbningstider og lukkedage</a></p>
+
                 <p><a href="info-bestyrelse.html">Bestyrelse</a></p>
+
                 <p><a href="info-studerende.html">Studerende</a></p>
+
             </div>
+
             <!-- Grid column -->
+
           </div>
+
           <!--Grid row-->
+
         </section>
+
         <!-- Section: Links -->
-  
+
+ 
+
         <hr class="my-3">
-  
-        <!-- Section: Copyright -->
-        <div class="p-3 pt-0">
-          <div class="row d-flex align-items-center">
-            <!-- Grid column -->
-            <div class="col-md-7 col-lg-8 text-center text-md-start">
-              <!-- Copyright -->
-              <div class="p-3">
-                © 2024 Copyright:
-                <a class="text-black" href="https://www.boernegaardenkatholt.dk/"
-                   >Børnegården Katholt</a>
-                   <span class="footer-text ms-3"><b>Made for educational purposes only</b></span>
-              </div>
-              <!-- Copyright -->
-            </div>
-            <!-- Grid column -->
-          </div>
-        </div>
-        </div>
+
+ 
+
         <!-- Section: Copyright -->
 
+        <div class="p-3 pt-0">
+
+          <div class="row d-flex align-items-center">
+
+            <!-- Grid column -->
+
+            <div class="col-md-7 col-lg-8 text-center text-md-start">
+
+              <!-- Copyright -->
+
+              <div class="p-3">
+
+                © 2024 Copyright:
+
+                <a class="text-black" href="https://www.boernegaardenkatholt.dk/"
+
+                   >Børnegården Katholt</a>
+
+                   <span class="footer-text ms-3"><b>Made for educational purposes only</b></span>
+
+              </div>
+
+              <!-- Copyright -->
+
+            </div>
+
+            <!-- Grid column -->
+
+          </div>
+
+        </div>
+
+        </div>
+
+        <!-- Section: Copyright -->
+
+ 
+
       <!-- Grid container -->
+
     <!-- Footer -->
+
   </div>
+
   <!-- End of .container -->
+
   </footer>
+
 </body>
+
   </html>
