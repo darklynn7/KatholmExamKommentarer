@@ -1,785 +1,1601 @@
-/* Reset and basic styles */
+/* Reset og grundlæggende stilarter */
+
 body {
-  margin: 0;
-  font-family: 'PT Serif', serif;
+
+  margin: 0; /* Fjerner standard marginer */
+
+  font-family: 'PT Serif', serif; /* Indstiller skrifttypen til 'PT Serif' */
+
 }
+
+ 
 
 #daycarelink {
-  font-family: 'Dekko', sans-serif;
-  font-weight: bold;
-  text-decoration: none; /* Remove default underline */
-  color: #333; /* Text color */
-  padding: 10px;
-  display: inline-block;
-  transition: border-bottom 0.3s ease; /* Optional: smooth transition */
-  margin: 0 10px;
-  font-size: 1.2rem; /* A bit larger than the original */
-  border-bottom: 2px solid #000; /* Line under the link */
+
+  font-family: 'Dekko', sans-serif; /* Indstiller en unik skrifttype for linket */
+
+  font-weight: bold; /* Gør teksten fed */
+
+  text-decoration: none; /* Fjerner standard understregning */
+
+  color: #333; /* Indstiller tekstfarven til mørkegrå */
+
+  padding: 10px; /* Giver luft omkring linket */
+
+  display: inline-block; /* Gør det muligt at tilføje padding og margin */
+
+  transition: border-bottom 0.3s ease; /* Tilføjer en glidende overgangseffekt til linjen under linket */
+
+  margin: 0 10px; /* Tilføjer horisontal afstand mellem links */
+
+  font-size: 1.2rem; /* Gør teksten lidt større */
+
+  border-bottom: 2px solid #000; /* Tilføjer en linje under linket */
+
 }
+
+ 
+
 #newdaycareopen {
-background-color: hsl(0, 0%, 90%);
-text-decoration: none !important;
+
+  background-color: hsl(0, 0%, 90%); /* Indstiller baggrundsfarven til lys grå */
+
+  text-decoration: none !important; /* Fjerner understregning med høj prioritet */
+
 }
-/* General Reset */
+
+ 
+
+/* Generel Reset */
+
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+
+  margin: 0; /* Fjerner alle standard marginer */
+
+  padding: 0; /* Fjerner alle standard paddinger */
+
+  box-sizing: border-box; /* Indstiller box-modellen for at inkludere padding og border i elementets størrelse */
+
 }
+
+ 
 
 /* Navbar Container */
+
 .navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: #fff;
-padding: 0.75rem; /* Slightly more padding */
-height: 100px; /* Slightly taller */
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  display: flex; /* Bruger Flexbox til at placere elementer i rækkefølge */
+
+  justify-content: space-between; /* Ligger elementerne med plads imellem dem */
+
+  align-items: center; /* Centrerer elementer vertikalt */
+
+  background-color: #fff; /* Sætter baggrundsfarven til hvid */
+
+  padding: 0.75rem; /* Tilføjer padding for at skabe plads inde i navbaren */
+
+  height: 100px; /* Sætter højden på navbaren */
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tilføjer en skygge under navbaren for at skabe dybde */
+
 }
 
-/* Logo Styles */
+ 
+
+/* Logo Stilarter */
+
 .navbar-logo img {
-height: 50px;
-width: auto;
+
+  height: 50px; /* Indstiller højden på logoet */
+
+  width: auto; /* Bevarer logoets proportioner */
+
 }
+
+ 
 
 /* Top Navigation */
+
 .topnav {
-display: flex;
-align-items: center;
-}
 
-.topnav a, 
-.dropdown-button {
-background-color: #fff;
-border: none;
-cursor: pointer;
-font-family: 'Dekko', sans-serif;
-text-decoration: none; /* Remove default underline */
-color: #333; /* Text color */
-padding: 10px;
-display: inline-block;
-transition: border-bottom 0.3s ease; /* Optional: smooth transition */
-margin: 0 10px;
-font-size: 1.2rem; /* A bit larger than the original */
-}
+  display: flex; /* Bruger Flexbox til at arrangere elementer horisontalt */
 
-.topnav a:hover,
-.dropdown-button:hover {
-font-weight: bold; /* Makes the text bold */
-border-bottom: 2px solid #000; /* Line under the link */
-}
-
-/* Dropdown Menu */
-.dropdown {
-display: inline-block;
-}
-
-.dropdown-content {
-display: none;
-position: absolute;
-background-color: white;
-box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-z-index: 1000;
-min-width: 200px;
-text-decoration: none !important; /* Removes underline */
-}
-
-.dropdown-content a {
-color: black;
-padding: 10px;
-text-decoration: none !important;
-display: block;
-}
-
-.dropdown-content a:hover {
-background-color: hsl(0, 0%, 90%);
-border-bottom: none; /* Removes any border-bottom */
-text-decoration: none; /* Ensures underline is removed */
+  align-items: center; /* Justerer elementer lodret i midten */
 
 }
 
-.dropdown:hover .dropdown-content {
-display: block;
-text-decoration: none !important;
-}
-
-.dropdown-button {
-background: none;
-border: none;
-color: black;
-cursor: pointer;
-display: flex;
-align-items: center;
-}
-
-/* Hamburger Icon - Hidden by Default */
-.icon {
-display: none;
-font-size: 24px;
-color: black;
-cursor: pointer;
-}
-
-/* Responsive Design for Screens Smaller than 480px */
-@media screen and (max-width: 480px) {
-.topnav {
-  flex-direction: column;
-  align-items: flex-start;
-  display: none; /* Hidden by default */
-  background-color: #f1f1f1; /* Optional: Background for dropdown menu */
-  width: 100%; /* Full width */
-  position: absolute; /* Overlay behavior */
-  top: 100px; /* Adjust based on navbar height */
-  left: 0;
-  z-index: 1000; /* Ensure it appears above other elements */
-  border-top: 1px solid #ddd; /* Optional: Border for clarity */
-}
+ 
 
 .topnav a,
+
 .dropdown-button {
-  display: block; /* Stack as blocks */
-  color: #444; /* Slightly darker text color */
-  background-color: #f1f1f1; /* Optional: Slightly darker background */
-  padding: 10px 20px; /* Adjust padding for better spacing */
-  width: 100%; /* Ensure full width for touch-friendly links */
-  text-align: left; /* Align text to the left */
-  box-sizing: border-box; /* Ensure padding and borders fit */
-  border: none; /* Remove default borders */
+
+  background-color: #fff; /* Indstiller baggrundsfarven til hvid */
+
+  border: none; /* Fjerner kant */
+
+  cursor: pointer; /* Ændrer musens markør til en hånd */
+
+  font-family: 'Dekko', sans-serif; /* Indstiller skrifttypen */
+
+  text-decoration: none; /* Fjerner understregning */
+
+  color: #333; /* Indstiller tekstfarven til mørkegrå */
+
+  padding: 10px; /* Tilføjer luft omkring teksten */
+
+  display: inline-block; /* Gør elementerne inline og kan få padding */
+
+  transition: border-bottom 0.3s ease; /* Tilføjer glidende effekt på linjen under teksten */
+
+  margin: 0 10px; /* Tilføjer horisontal afstand */
+
+  font-size: 1.2rem; /* Gør teksten større */
+
 }
 
-.topnav > a,
-.topnav > .dropdown {
-  display: block; /* Stack items vertically */
-  color: #444; /* Text color */
-  background-color: #f1f1f1; /* Background color */
-  padding: 10px 20px; /* Padding for touch-friendly areas */
-  width: 100%; /* Full width */
-  text-align: left; /* Align text to the left */
-  box-sizing: border-box; /* Ensure padding and borders fit */
-  border-bottom: 1px solid #aaa; /* Small grey line between items */
+ 
+
+.topnav a:hover,
+
+.dropdown-button:hover {
+
+  font-weight: bold; /* Gør teksten fed ved hover */
+
+  border-bottom: 2px solid #000; /* Tilføjer en sort linje under teksten ved hover */
+
 }
 
-.icon {
-  display: block; /* Show hamburger icon */
+ 
+
+/* Dropdown Menu */
+
+.dropdown {
+
+  display: inline-block; /* Holder dropdown-menuen inline med andre elementer */
+
 }
+
+ 
 
 .dropdown-content {
-  display: none; /* Ensure dropdowns are hidden initially */
-  background-color: #f1f1f1; /* Match background */
+
+  display: none; /* Skjuler dropdown-menuen som standard */
+
+  position: absolute; /* Positionerer menuen relativt til dens nærmeste forfader */
+
+  background-color: white; /* Indstiller baggrundsfarven til hvid */
+
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Tilføjer en skygge for dybdeeffekt */
+
+  z-index: 1000; /* Sørger for, at menuen ligger over andre elementer */
+
+  min-width: 200px; /* Minimum bredde på dropdown-menuen */
+
 }
+
+ 
 
 .dropdown-content a {
-  color: #444; /* Match text color */
-  background-color: #f1f1f1; /* Match background */
-  padding: 10px 20px; /* Same padding as main links */
-  width: 100%; /* Full width */
-  box-sizing: border-box;
-  border: none;
+
+  color: black; /* Indstiller tekstfarven til sort */
+
+  padding: 10px; /* Tilføjer luft omkring links */
+
+  text-decoration: none !important; /* Sikrer, at links ikke er understregede */
+
+  display: block; /* Gør links til blokke for nem klikflade */
+
 }
+
+ 
+
+.dropdown-content a:hover {
+
+  background-color: hsl(0, 0%, 90%); /* Skifter baggrundsfarven til lys grå ved hover */
+
+  border-bottom: none; /* Fjerner kant ved hover */
+
+  text-decoration: none; /* Sikrer, at links ikke er understregede */
+
+}
+
+ 
+
+.dropdown:hover .dropdown-content {
+
+  display: block; /* Gør dropdown-menuen synlig ved hover */
+
+}
+
+ 
+
+.dropdown-button {
+
+  background: none; /* Fjerner baggrundsfarve */
+
+  border: none; /* Fjerner kant */
+
+  color: black; /* Indstiller tekstfarven til sort */
+
+  cursor: pointer; /* Ændrer musens markør til en hånd */
+
+  display: flex; /* Bruger Flexbox til at arrangere indholdet horisontalt */
+
+  align-items: center; /* Justerer indholdet lodret i midten */
+
+}
+
+ 
+
+/* Hamburger-ikon - Skjult som standard */
+
+.icon {
+
+  display: none; /* Skjuler hamburger-ikonet som standard */
+
+  font-size: 24px; /* Sætter ikonets størrelse */
+
+  color: black; /* Indstiller farven til sort */
+
+  cursor: pointer; /* Ændrer markøren til en hånd for klikbarhed */
+
+}
+
+ 
+
+/* Responsivt design til skærme mindre end 480px */
+
+@media screen and (max-width: 480px) {
+
+.topnav {
+
+  flex-direction: column; /* Arrangerer menuen lodret */
+
+  align-items: flex-start; /* Justerer elementer til venstre */
+
+  display: none; /* Skjuler menuen som standard */
+
+  background-color: #f1f1f1; /* Baggrundsfarve for dropdown-menuen */
+
+  width: 100%; /* Menuen dækker hele bredden af skærmen */
+
+  position: absolute; /* Lægger menuen som overlay */
+
+  top: 100px; /* Positionerer menuen under navbaren */
+
+  left: 0; /* Positionerer menuen fra venstre kant */
+
+  z-index: 1000; /* Sørger for, at menuen ligger øverst */
+
+  border-top: 1px solid #ddd; /* Tilføjer en linje for visuel klarhed */
+
+}
+
+ 
+
+.topnav a,
+
+.dropdown-button {
+
+  display: block; /* Gør hvert link til en blok */
+
+  color: #444; /* Sætter tekstfarven til mørkegrå */
+
+  background-color: #f1f1f1; /* Baggrundsfarve til links */
+
+  padding: 10px 20px; /* Tilføjer luft omkring teksten */
+
+  width: 100%; /* Gør links bredere for at være touch-venlige */
+
+  text-align: left; /* Justerer teksten til venstre */
+
+  box-sizing: border-box; /* Sørger for, at padding og borders medregnes */
+
+  border: none; /* Fjerner standardborders */
+
+}
+
+ 
+
+.topnav > a,
+
+.topnav > .dropdown {
+
+  display: block; /* Stakker hovedmenuen lodret */
+
+  color: #444; /* Tekstfarve for hovedmenuen */
+
+  background-color: #f1f1f1; /* Baggrundsfarve for hovedmenuen */
+
+  padding: 10px 20px; /* Gør links touch-venlige */
+
+  width: 100%; /* Menuen fylder hele bredden */
+
+  text-align: left; /* Justerer tekst til venstre */
+
+  box-sizing: border-box; /* Sørger for, at padding og borders medregnes */
+
+  border-bottom: 1px solid #aaa; /* Tilføjer en linje mellem menupunkter */
+
+}
+
+ 
+
+.icon {
+
+  display: block; /* Viser hamburger-ikonet i responsive visning */
+
+}
+
+ 
+
+.dropdown-content {
+
+  display: none; /* Skjuler dropdown-menuen som standard */
+
+    background-color: #f1f1f1; /* Baggrundsfarve matcher hovedmenuen */
+
+}
+
+ 
+
+.dropdown-content a {
+
+  color: #444; /* Tekstfarve for dropdown-menuen */
+
+  background-color: #f1f1f1; /* Baggrundsfarve for dropdown-menuen */
+
+  padding: 10px 20px; /* Ensartet padding som hovedmenuen */
+
+  width: 100%; /* Dropdown-menuen fylder hele bredden */
+
+  box-sizing: border-box; /* Sørger for, at padding og borders medregnes */
+
+  border: none; /* Fjerner borders */
+
+}
+
+ 
 
   .dropdown-content a + a {
-  border-top: 1px solid #ccc; /* Slightly lighter line inside dropdowns */
+
+  border-top: 1px solid #ccc; /* Tilføjer en linje mellem dropdown-links */
+
 }
+
+ 
 
 .dropdown-button:focus + .dropdown-content {
-  display: block; /* Show dropdown on button press */
+
+  display: block; /* Viser dropdown-menuen, når dropdown-knappen er i fokus */
+
 }
+
+ 
 
 .topnav.responsive {
-  display: flex; /* Show menu when responsive class is added */
+
+  display: flex; /* Viser menuen, når 'responsive'-klassen er tilføjet */
+
 }
+
 }
+
+ 
 
 header {
+
 position: relative; /* Ensures the overlay is positioned relative to the header */
+
 background-image: url('images/daycare-banner-rød-fixet.svg'); /* Replace with your image path */
+
 background-size: cover; /* Ensures the image covers the header */
+
 background-position: center; /* Centers the image */
+
 background-repeat: no-repeat; /* Prevents image tiling */
+
 min-height: 500px; /* Sets the height of the header */
+
 text-align: center; /* Centers the text */
+
 color: white; /* Ensures text is visible */
+
 display: flex; /* Centers content vertically and horizontally */
+
 align-items: center;
+
 justify-content: center;
+
 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Adds subtle shadow for better readability */
+
 }
+
+ 
 
 header h1 {
+
 font-weight: 300; /* Light font-weight */
+
 font-family: 'Dekko', sans-serif;
+
 font-size: 29px;
+
 }
+
+ 
 
 header p {
+
 color: white; /* Muted text */
+
 font-family: 'PT Serif', serif;
+
 font-size: 16px;
+
 }
+
+ 
 
   footer a {
+
     color: black; /* Muted text */
+
     font-family: 'PT Serif', serif;
+
     font: 16px;
+
   }
-  
+
+ 
+
   footer h5 {
+
     font-family: 'Dekko', sans-serif;
+
     font-size: 22px; /* Adjust the size as needed */
+
     font-weight: bold;
+
   }
-  
+
+ 
+
   footer p {
+
     color: black; /* Muted text */
+
     font-family: 'PT Serif', serif;
+
     font: 16px;
+
   }
+
+ 
+
+  /* Sektion med generelle indstillinger for afsnit */
 
   .site-section {
-    padding: 50px 0;
-    background-color: white;
+
+    padding: 50px 0; /* Tilføjer lodret polstring oven og neden */
+
+    background-color: white; /* Baggrundsfarve for sektionen */
+
   }
-  
+
+ 
+
   .site-section p {
-    margin-bottom: 20px;
-    color: #555;
-    font-family: 'PT Serif', serif;
-    font-size: 16px;
+
+    margin-bottom: 20px; /* Afstand mellem afsnit */
+
+  color: #555; /* Tekstfarve */
+
+  font-family: 'PT Serif', serif; /* Serif-skrifttype */
+
+  font-size: 16px; /* Skriftstørrelse */
+
   }
-  
+
+ 
+
+  /* Klasse til billeder for at sikre, de er fleksible */
+
   .img-fluid {
-    max-width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px;
+
+    max-width: 100%; /* Sikrer, at billeder ikke overstiger deres containerbredde */
+
+    height: auto; /* Bevarer billedets aspektforhold */
+
+    border-radius: 8px; /* Afrunder billedets hjørner */
+
   }
-  
+
+ 
+
+  /* Responsivt design til skærme mindre end 480px */
+
 @media (max-width: 480px) {
+
 .site-section {
-  padding: 30px 15px; /* Reduce padding */
+
+  padding: 30px 15px; /* Mindre polstring for små skærme */
+
 }
+
+ 
 
 .row {
-  display: block; /* Stack items vertically */
+
+  display: block; /* Arrangerer elementer lodret */
+
 }
+
+ 
 
 .col-md-6,
+
 .col-md-5 {
-  width: 100%; /* Full width for columns */
-  margin: 0;
-  padding: 0;
+
+  width: 100%; /* Kolonner tager fuld bredde */
+
+    margin: 0;
+
+    padding: 0; /* Fjerner mellemrum */
+
 }
+
+ 
 
 .ml-auto,
+
 .pl-md-5 {
+
   margin-left: 0;
-  padding-left: 0; /* Remove extra spacing */
+
+  padding-left: 0; /* Fjerner ekstra mellemrum på venstre side */
+
 }
+
+ 
 
 .site-section p {
-  font-size: 14px; /* Smaller text for readability */
-  line-height: 1.6; /* Increase line spacing */
+
+  font-size: 14px; /* Mindre skrift for bedre læsbarhed */
+
+  line-height: 1.6; /* Øger linjeafstand for læsbarhed */
+
 }
+
+ 
 
 .blyanter {
-  display: block;
-  margin: 0 auto 20px; /* Center align and add spacing below */
-  max-width: 80%;
-  height: auto; /* Maintain aspect ratio */
-  font-family: 'Dekko', sans-serif;
-}
+
+  display: block; /* Gør det til en blok for centering */
+
+    margin: 0 auto 20px; /* Centrerer og tilføjer afstand nedenunder */
+
+    max-width: 80%; /* Gør billedet mindre bredt */
+
+    height: auto; /* Bevarer aspektforholdet */
+
+    font-family: 'Dekko', sans-serif; /* Dekorativ skrifttype */
+
 }
 
+}
+
+ 
+
+ 
+
   
-  
+
   .container-values {
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between; /* Distribute space evenly */
-    flex-wrap: wrap; /* Allow wrapping if necessary */
-    width: 90%; /* Make the container bigger (90% of viewport width) */
-    flex-direction: column; /* Stack elements vertically */
-  align-items: center;    /* Center content horizontally */
-  }
-  
-  .core-values {
-    padding: 10px 20px;
-    background-color: #fff;
-    border-radius: 10px;
-  }
-  
-  .values-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-  }
-  .subtitle {
-    margin-bottom: 20px;
-    color: #555;
-    font-family: 'PT Serif', serif;
-    font-size: 16px;
-    text-align: center;
-  }
-  
-  .value-item {
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    flex: 1; /* Make items grow equally */
-    max-width: 20%; /* Ensure 5 items fit in one line */
-    text-align: center; /* Optional: center align content */
-    box-sizing: border-box; /* Include padding/borders in width */
-    padding: 10px; /* Add space around items */
-  }
-  
-  .value-item:hover {
-    transform: translateY(-10px);
-  }
-  
-  .icon-value {
-    display: inline-block; /* Ensures proper rendering */
-    visibility: visible !important; /* Force visibility */
-    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif !important;
-    font-size: 2.5rem;
-    color: inherit; /* Ensure it takes the correct text color */
-    line-height: 1; /* Prevent unnecessary spacing */
-  }
-  .value-title {
-    font-weight: bold;
-margin-bottom: 20px;
-color: black;
-font-family: 'Dekko', sans-serif;
-font-size: 20px;
-  }
-  
-  .value-description {
-    margin-bottom: 20px;
-    color: #555;
-    font-family: 'PT Serif', serif;
-    font-size: 16px;
-    text-align: left;
-  }
-  
-  .value-title {
-    font-weight: bold;
-margin-bottom: 20px;
-color: black;
-font-family: 'Dekko', sans-serif;
-font-size: 20px;
-  }
-  
-  .value-description {
-    margin-bottom: 20px;
-    color: #555;
-    font-family: 'PT Serif', serif;
-    font-size: 16px;
-    text-align: left;
+
+    margin: 0 auto; /* Centrerer containeren */
+
+  padding: 20px; /* Tilføjer polstring */
+
+  text-align: center; /* Centrerer tekstindhold */
+
+  display: flex; /* Gør det til en fleksibel container */
+
+  justify-content: space-between; /* Fordeler elementer jævnt */
+
+  flex-wrap: wrap; /* Tillader elementer at bryde linjen */
+
+  width: 90%; /* Containerens bredde som 90% af viewporten */
+
+  flex-direction: column; /* Stakker elementer lodret */
+
+  align-items: center; /* Centrerer indhold horisontalt */
+
   }
 
-@media (max-width: 480px) { /* Target small phone screens */
+  /* Enkel værdi-container */
+
+  .core-values {
+
+    padding: 10px 20px; /* Polstring omkring indhold */
+
+    background-color: #fff; /* Hvid baggrund */
+
+    border-radius: 10px; /* Afrundede hjørner */
+
+  }
+
+ 
+
+  /* Liste af værdier */
+
+  .values-list {
+
+    display: flex; /* Fleksibelt layout */
+
+  flex-wrap: wrap; /* Tillader linjeskift */
+
+  gap: 30px; /* Afstand mellem elementer */
+
+  justify-content: center; /* Centrerer elementer */
+
+  }
+
+  .subtitle {
+
+    margin-bottom: 20px; /* Afstand nedenunder */
+
+  color: #555; /* Tekstfarve */
+
+  font-family: 'PT Serif', serif; /* Serif-skrifttype */
+
+  font-size: 16px; /* Skriftstørrelse */
+
+  text-align: center; /* Centrerer tekst */
+
+  }
+
+ 
+
+  /* Individuelle værdi-elementer */
+
+  .value-item {
+
+    background-color: #f4f4f4; /* Lysegrå baggrund */
+
+    border-radius: 10px; /* Afrundede hjørner */
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Blød skygge */
+
+    transition: transform 0.3s ease; /* Glidende animation ved hover */
+
+    flex: 1; /* Elementerne vokser ensartet */
+
+    max-width: 20%; /* Sikrer plads til fem elementer pr. linje */
+
+    text-align: center; /* Centrerer tekstindhold */
+
+    box-sizing: border-box; /* Indregner padding og border i bredden */
+
+    padding: 10px; /* Polstring omkring elementet */
+
+  }
+
+ 
+
+  .value-item:hover {
+
+    transform: translateY(-10px); /* Løfter elementet ved hover */
+
+  }
+
+ 
+
+  /* Ikoner i værdielementer */
+
+  .icon-value {
+
+    display: inline-block; /* Sikrer korrekt placering */
+
+    visibility: visible !important; /* Tvinger synlighed */
+
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif !important; /* Emoji-skrifttype */
+
+    font-size: 2.5rem; /* Stor ikonstørrelse */
+
+    color: inherit; /* Arver tekstfarve */
+
+    line-height: 1; /* Forhindrer ekstra mellemrum */
+
+  }
+
+  /* Titel i værdielementer */
+
+  .value-title {
+
+    font-weight: bold; /* Gør teksten fed */
+
+    margin-bottom: 20px; /* Afstand nedenunder */
+
+    color: black; /* Sort tekstfarve */
+
+    font-family: 'Dekko', sans-serif; /* Dekorativ skrifttype */
+
+    font-size: 20px; /* Stor skriftstørrelse */
+
+  }
+
+ 
+
+  /* Beskrivelse i værdielementer */
+
+  .value-description {
+
+    margin-bottom: 20px; /* Afstand nedenunder */
+
+    color: #555; /* Grå tekstfarve */
+
+    font-family: 'PT Serif', serif; /* Serif-skrifttype */
+
+    font-size: 16px; /* Skriftstørrelse */
+
+    text-align: left; /* Justerer tekst til venstre */
+
+  }
+
+ 
+
+  /* Stil til titler i værdier */
+
+  .value-title {
+
+    font-weight: bold; /* Gør teksten fed */
+
+    margin-bottom: 20px; /* Afstand nedenunder */
+
+    color: black; /* Sort tekstfarve */
+
+    font-family: 'Dekko', sans-serif; /* Dekorativ skrifttype */
+
+    font-size: 20px; /* Skriftstørrelse */
+
+  }
+
+ 
+
+  /* Stil til beskrivelser i værdier */
+
+  .value-description {
+
+    margin-bottom: 20px; /* Afstand nedenunder */
+
+    color: #555; /* Grå tekstfarve */
+
+    font-family: 'PT Serif', serif; /* Serif-skrifttype */
+
+    font-size: 16px; /* Skriftstørrelse */
+
+    text-align: left; /* Venstrejusteret tekst */
+
+  }
+
+ 
+
+  /* Responsive tilpasninger til små skærme (maks. bredde: 480px) */
+
+@media (max-width: 480px) { /* Målret små skærme som mobiltelefoner */
+
 .values-list {
-  display: block; /* Stack items vertically */
-  width: 100%; /* Container takes full width */
-  padding: 10px; /* Add padding around container */
+
+  display: block; /* Arrangerer elementer lodret */
+
+    width: 100%; /* Container tager fuld bredde */
+
+    padding: 10px; /* Tilføjer polstring omkring containeren */
+
 }
+
+ 
 
 .value-item {
-  display: block; /* Ensure items stack */
-  width: 90%; /* Use 90% of the screen width */
-  max-width: 400px; /* Set a maximum width to prevent stretching */
-  margin: 20px auto; /* Center items and add vertical spacing */
-  padding: 20px; /* Internal padding for content */
-  box-sizing: border-box; /* Ensure padding is included in width */
-  background-color: #f9f9f9; /* Light background for contrast */
-  border-radius: 8px; /* Rounded corners for aesthetics */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+
+  display: block; /* Sikrer, at elementer stables */
+
+  width: 90%; /* Brug 90% af skærmbredden */
+
+  max-width: 400px; /* Maksimal bredde for at forhindre strækning */
+
+  margin: 20px auto; /* Centrer elementer og tilføj lodret afstand */
+
+  padding: 20px; /* Intern polstring for indhold */
+
+  box-sizing: border-box; /* Inkluder polstring i bredden */
+
+  background-color: #f9f9f9; /* Lys baggrund for kontrast */
+
+  border-radius: 8px; /* Afrundede hjørner for æstetik */
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tilføj en subtil skygge */
+
 }
+
+ 
 
 .value-title {
-  font-size: 22px; /* Larger titles for readability */
-  font-weight: bold;
-  margin-bottom: 15px; /* Space below the title */
-  text-align: center;
+
+  font-size: 22px; /* Større titler for bedre læsbarhed */
+
+    font-weight: bold; /* Gør teksten fed */
+
+    margin-bottom: 15px; /* Afstand under titlen */
+
+    text-align: center; /* Centrerer titler */
+
 }
+
+ 
 
 .value-description {
-  font-size: 18px; /* Larger description font size */
-  line-height: 1.6; /* Improved line spacing */
-  text-align: center; /* Center-align descriptions */
+
+  font-size: 18px; /* Større skriftstørrelse til beskrivelse */
+
+  line-height: 1.6; /* Forbedret linjeafstand */
+
+  text-align: center; /* Centrerer beskrivelsen */
+
 }
+
+ 
 
 .icon-value {
-  font-size: 2.5rem; /* Ensure visibility on smaller screens */
-  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
-  visibility: visible !important;
+
+  font-size: 2.5rem; /* Sørg for synlighed på små skærme */
+
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important; /* Emoji-skrifttype */
+
+  visibility: visible !important; /* Tving synlighed */
+
 }
+
 }
+
+ 
+
+/* Stil til sektion for "dag" */
 
 .day-section {
-padding: 30px 15px;
-background-color: white;
+
+  padding: 30px 15px; /* Polstring omkring sektionen */
+
+  background-color: white; /* Hvid baggrund */
+
 }
+
+ 
 
 .day-section h2 {
-font-weight: bold;
-margin-bottom: 15px;
-color: black;
-font-family: 'Dekko', sans-serif;
-font-size: 18px;
+
+  font-weight: bold; /* Fed overskrift */
+
+  margin-bottom: 15px; /* Afstand under overskriften */
+
+  color: black; /* Sort tekstfarve */
+
+  font-family: 'Dekko', sans-serif; /* Dekorativ skrifttype */
+
+  font-size: 18px; /* Skriftstørrelse */
+
 }
 
+ 
+
 .day-section p {
-margin-bottom: 15px;
-color: #555;
-font-family: 'PT Serif', serif;
-font-size: 16px;
+
+  margin-bottom: 15px; /* Afstand under teksten */
+
+  color: #555; /* Grå tekstfarve */
+
+  font-family: 'PT Serif', serif; /* Serif-skrifttype */
+
+  font-size: 16px; /* Skriftstørrelse */
+
 }
+
+ 
+
+/* Responsive tilpasninger til små skærme */
 
 @media (max-width: 480px) {
+
 .day-section {
-  padding: 20px 10px;
+
+  padding: 20px 10px; /* Reduceret polstring */
+
 }
+
+ 
 
 .day-section h2 {
-  font-size: 22px;
+
+  font-size: 22px; /* Større overskrifter */
+
 }
+
+ 
 
 .day-section p {
-  font-size: 14px;
-}
+
+  font-size: 14px; /* Mindre tekst for bedre tilpasning */
 
 }
+
+ 
+
+}
+
+ 
+
+/* Sektion til aktiviteter */
 
 .activities-section {
-padding: 40px;
-background-color: white;
-display: flex; /* Enable flexbox */
-justify-content: center; /* Center horizontally */
-align-items: center; /* Center vertically (if needed) */
+
+  padding: 40px; /* Polstring omkring sektionen */
+
+  background-color: white; /* Hvid baggrund */
+
+  display: flex; /* Aktiverer flexbox-layout */
+
+  justify-content: center; /* Centrerer horisontalt */
+
+  align-items: center; /* Centrerer vertikalt (hvis nødvendigt) */
+
 }
 
+ 
+
+/* Container til aktivitetselementer */
+
 .activities-container {
-display: flex;
-justify-content: space-between; /* Space items evenly within the container */
-flex-wrap: nowrap; /* Prevent wrapping */
+
+display: flex; /* Fleksibelt layout */
+
+justify-content: space-between; /* Jævn fordeling af elementer */
+
+flex-wrap: nowrap; /* Forhindrer linjeskift */
+
 gap: 100px; /* Space between items */
-max-width: calc(500px * 2 + 20px); /* Width for two items and the gap */
-width: 100%; /* Adjusts to fit the parent container */
+
+max-width: calc(500px * 2 + 20px);/* Maksimal bredde til to elementer og afstand */
+
+width: 100%; /* Tilpasser sig forældrekontaineren */
+
 }
+
+ 
+
+/* Individuelle aktivitetselementer */
 
 .activity-item {
-background-color: white;
-border-radius: 8px;
-overflow: hidden;
-text-align: center;
-flex: 0 0 500px; /* Fixed width for each item */
-box-sizing: border-box;
+
+  background-color: white; /* Hvid baggrund */
+
+  border-radius: 8px; /* Afrundede hjørner */
+
+  overflow: hidden; /* Skjuler indhold, der stikker ud */
+
+  text-align: center; /* Centrerer tekst */
+
+  flex: 0 0 500px; /* Fast bredde for hvert element */
+
+  box-sizing: border-box; /* Inkluderer padding i bredden */
+
 }
+
+ 
 
 .activity-item img {
-width: 100%; /* Make images responsive */
-height: 500px; /* Maintain aspect ratio */
-object-fit: cover;
-border-radius: 8px;
+
+  width: 100%; /* Gør billeder responsive */
+
+  height: 500px; /* Fast højde for at bevare proportioner */
+
+  object-fit: cover; /* Fylder containeren og beskærer billedet */
+
+  border-radius: 8px; /* Afrundede hjørner */
+
 }
 
-/* Responsive adjustments for phones */
+ 
+
+/* Responsivt design til små skærme */
+
 @media (max-width: 480px) {
+
 .activities-container {
-  flex-wrap: wrap; /* Allow wrapping */
-  gap: 20px; /* Reduce gap between items for small screens */
+
+  flex-wrap: wrap; /* Tillader linjeskift */
+
+    gap: 20px; /* Reduceret afstand mellem elementer */
+
 }
+
+ 
 
 .activity-item {
-  flex: 1 1 100%; /* Full width */
-  width: 100%; /* Ensure the item spans the full container width */
-  height: auto; /* Allow height to adjust dynamically */
+
+  flex: 1 1 100%; /* Sørger for, at hver aktivitetsblok fylder hele bredden */
+
+  width: 100%; /* Sikrer, at elementet spænder over containerens fulde bredde */
+
+  height: auto; /* Tillader højden at justeres dynamisk efter indhold */
+
 }
+
+ 
 
 .activity-item img {
-  width: 100%; /* Make images adapt to container */
-  height: auto; /* Maintain aspect ratio */
+
+  width: 100%; /* Gør billederne fleksible og tilpasser sig containerens bredde */
+
+  height: auto; /* Bevarer billedets proportioner */
+
 }
+
+ 
 
 .activity-item h3 {
-  font-size: 18px; /* Adjust font size for smaller screens */
+
+  font-size: 18px; /* Tilpasser overskriftens størrelse til mindre skærme */
+
 }
+
+ 
 
 .activity-item p {
-  font-size: 14px; /* Adjust font size for smaller screens */
-}
+
+  font-size: 14px; /* Tilpasser tekststørrelsen for bedre læsbarhed på mindre skærme */
+
 }
 
+}
+
+ 
 
 .activity-item h3 {
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: black;
-  font-family: 'Dekko', sans-serif;
-  font-size: 22px;
-  text-align: center;
+
+  font-weight: bold; /* Gør overskriften fed */
+
+  margin-bottom: 20px; /* Tilføjer plads under overskriften */
+
+  color: black; /* Sætter overskriftens farve til sort */
+
+  font-family: 'Dekko', sans-serif; /* Angiver en dekorativ skrifttype */
+
+  font-size: 22px; /* Sætter en standardstørrelse for overskriften */
+
+  text-align: center; /* Centrerer overskriften */
+
 }
 
+ 
+
 .activity-item p {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #555;
-  font-family: 'PT Serif', serif;
-  font-size: 16px;
+
+  text-align: center; /* Centrerer teksten */
+
+  margin-bottom: 20px; /* Tilføjer afstand under teksten */
+
+  color: #555; /* Sætter en grå farve til teksten */
+
+  font-family: 'PT Serif', serif; /* Angiver en serif-skrifttype */
+
+  font-size: 16px; /* Sætter en standardstørrelse for teksten */
+
 }
+
 /* Generel stil til containeren af galleriet */
+
 /* Layout og stil for hver kolonne i galleriet */
+
 .col-lg-4.col-sm-6 {
-padding: 10px;
-display: flex;
-justify-content: center;
-align-items: center;
+
+  padding: 10px; /* Tilføjer polstring omkring elementerne */
+
+  display: flex; /* Bruger flex til at centrere indholdet */
+
+  justify-content: center; /* Centrerer elementer horisontalt */
+
+  align-items: center; /* Centrerer elementer vertikalt */
+
 }
+
 .traditions-section {
-padding: 50px 0;
-background-color: white;
+
+  padding: 50px 0; /* Tilføjer lodret afstand over og under sektionen */
+
+  background-color: white; /* Sætter baggrundsfarven til hvid */
+
 }
+
 .traditions-section p {
-margin-bottom: 20px;
-color: #555;
-font-family: 'PT Serif', serif;
-font-size: 16px;
+
+  margin-bottom: 20px; /* Tilføjer afstand under tekstafsnit */
+
+  color: #555; /* Sætter en neutral tekstfarve */
+
+  font-family: 'PT Serif', serif; /* Bruger en serif-skrifttype til teksten */
+
+  font-size: 16px; /* Sætter en standardstørrelse for teksten */
+
 }
+
 .traditions-section h4 {
-font-weight: bold;
-margin-bottom: 20px;
-color: black;
-font-family: 'Dekko', sans-serif;
-font-size: 22px;
+
+  font-weight: bold; /* Gør overskrifterne fede */
+
+  margin-bottom: 20px; /* Tilføjer afstand under overskriften */
+
+  color: black; /* Sætter overskriftens farve til sort */
+
+  font-family: 'Dekko', sans-serif; /* Bruger en dekorativ skrifttype */
+
+  font-size: 22px; /* Sætter overskriftens størrelse */
+
 }
+
+ 
 
 .service-item {
-position: relative;
-padding-left: 80px;
-}
-.service-item i {
-position: absolute;
-left: 0px;
-top: 5px;
-font-size: 50px;
-opacity: .4;
-}
-.menu-container {
-width: 90%;
-max-width: 1200px;
-margin: 20px auto;
-padding: 20px;
-}
-.menu-container p {
-margin-bottom: 20px;
-color: #555;
-font-family: 'PT Serif', serif;
-font-size: 16px;
-}
-.aligned-list-numberless {
-margin-left: 5px; /* Matches the container's padding */
-padding-left: 0; /* Removes unnecessary inner padding */
-list-style-position: inside; /* Aligns bullets with text */
-margin-bottom: 20px;
-color: #555;
-font-family: 'PT Serif', serif;
-font-size: 16px;
-}
-.aligned-list-numberless b {
-margin-left: 5px; /* Matches the container's padding */
-padding-left: 0; /* Removes unnecessary inner padding */
-list-style-position: inside; /* Aligns bullets with text */
-margin-bottom: 20px;
-color: black;
-font-family: 'PT Serif', serif;
-font-size: 16px;
-}
-.aligned-list {
-margin-left: 5px; /* Matches the container's padding */
-padding-left: 0; /* Removes unnecessary inner padding */
-list-style-position: inside; /* Aligns bullets with text */
-list-style: none; /* Remove default numbering */
-counter-reset: list-counter; /* Initialize counter */
-}
-.aligned-list li {
-counter-increment: list-counter; /* Increment counter for each <li> */
-margin-left: 0; /* Ensure alignment */
-display: flex; /* Align numbers and text neatly */
-align-items: baseline; /* Align text and numbers properly */
-margin-bottom: 20px;
-color: #555;
-font-family: 'PT Serif', serif;
-font-size: 16px;
-}
-.aligned-list li::before {
-content: counter(list-counter) ". "; /* Add custom numbers */
-font-weight: bold; /* Make numbers bold */
-margin-right: 8px; /* Add spacing between number and text */
-color: inherit; /* Inherit text color */
-margin-bottom: 20px;
-font-size: 22px;
-font-family: 'Dekko', sans-serif;
+
+  position: relative; /* Gør det muligt at placere elementer relativt inde i containeren */
+
+  padding-left: 80px; /* Tilføjer indrykning til venstre */
+
 }
 
-.food-section h3 {
-font-weight: bold;
+.service-item i {
+
+  position: absolute; /* Placerer ikonet i forhold til containeren */
+
+  left: 0px; /* Placerer ikonet helt til venstre */
+
+  top: 5px; /* Justerer ikonet lidt ned */
+
+  font-size: 50px; /* Sætter ikonets størrelse */
+
+  opacity: .4; /* Giver ikonet en gennemsigtighed for subtilitet */
+
+}
+
+.menu-container {
+
+  width: 90%; /* Sikrer, at containeren fylder 90% af bredden */
+
+  max-width: 1200px; /* Begrænser containerens maksimale bredde */
+
+  margin: 20px auto; /* Centrerer containeren og tilføjer lodret afstand */
+
+  padding: 20px; /* Tilføjer polstring omkring indholdet */
+
+}
+
+.menu-container p {
+
+  margin-bottom: 20px; /* Tilføjer afstand under afsnit */
+
+  color: #555; /* Sætter en neutral tekstfarve */
+
+  font-family: 'PT Serif', serif; /* Bruger en serif-skrifttype */
+
+  font-size: 16px; /* Sætter tekststørrelsen */
+
+}
+
+.aligned-list-numberless {
+
+  margin-left: 5px; /* Matcher containerens polstring */
+
+  padding-left: 0; /* Fjerner indre polstring */
+
+  list-style-position: inside; /* Justerer bullets med teksten */
+
+  margin-bottom: 20px; /* Tilføjer afstand under listen */
+
+  color: #555; /* Sætter en neutral tekstfarve */
+
+  font-family: 'PT Serif', serif; /* Bruger en serif-skrifttype */
+
+  font-size: 16px; /* Sætter tekststørrelsen */
+
+}
+
+.aligned-list-numberless b {
+
+margin-left: 5px; /* Matches the container's padding */
+
+padding-left: 0; /* Removes unnecessary inner padding */
+
+list-style-position: inside; /* Aligns bullets with text */
+
 margin-bottom: 20px;
+
 color: black;
-font-family: 'Dekko', sans-serif;
-font-size: 22px;
-}
-/* Grid Layout */
-.menu-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 30px;
-}
-/* Left Column */
-.menu-item {
-margin-bottom: 20px;
-}
-.item-title {
-display: flex;
-justify-content: space-between;
-font-size: 22px;
-font-weight: bold;
-margin-bottom: 20px;
-font-family: 'Dekko', sans-serif;
-text-align: center;
-}
-.item-description {
-margin-top: 5px;
-margin-bottom: 20px;
-color: #555;
+
 font-family: 'PT Serif', serif;
+
 font-size: 16px;
+
 }
-/* Right Column Image */
+
+.aligned-list {
+
+margin-left: 5px; /* Matches the container's padding */
+
+padding-left: 0; /* Removes unnecessary inner padding */
+
+list-style-position: inside; /* Aligns bullets with text */
+
+list-style: none; /* Remove default numbering */
+
+counter-reset: list-counter; /* Initialize counter */
+
+}
+
+.aligned-list li {
+
+  counter-increment: list-counter; /* Øger tælleren for hvert listepunkt */
+
+  margin-left: 0; /* Justerer placeringen af listepunktet */
+
+  display: flex; /* Bruger flex til at justere indholdet */
+
+  align-items: baseline; /* Justerer tekst og tal korrekt */
+
+  margin-bottom: 20px; /* Tilføjer afstand mellem listepunkterne */
+
+  color: #555; /* Sætter en neutral tekstfarve */
+
+  font-family: 'PT Serif', serif; /* Bruger en serif-skrifttype */
+
+  font-size: 16px; /* Sætter tekststørrelsen */
+
+}
+
+.aligned-list li::before {
+
+content: counter(list-counter) ". "; /* Add custom numbers */
+
+font-weight: bold; /* Make numbers bold */
+
+margin-right: 8px; /* Add spacing between number and text */
+
+color: inherit; /* Inherit text color */
+
+margin-bottom: 20px;
+
+font-size: 22px;
+
+font-family: 'Dekko', sans-serif;
+
+}
+
+ 
+
+.food-section h3 {
+
+  font-weight: bold; /* Gør overskriften fed */
+
+  margin-bottom: 20px; /* Tilføjer afstand under overskriften */
+
+  color: black; /* Sætter overskriftens farve til sort */
+
+  font-family: 'Dekko', sans-serif; /* Bruger en dekorativ skrifttype */
+
+  font-size: 22px; /* Sætter størrelsen for overskriften */
+
+}
+
+/* Grid Layout */
+
+.menu-grid {
+
+  display: grid; /* Anvender grid-layout */
+
+  grid-template-columns: 1fr 1fr; /* Definerer to lige store kolonner */
+
+  gap: 30px; /* Tilføjer afstand mellem grid-elementer */
+
+}
+
+/* Venstre kolonne af menuen */
+
+.menu-item {
+
+margin-bottom: 20px; /* Tilføjer afstand under hvert menupunkt */
+
+}
+
+.item-title {
+
+display: flex; /* Gør det muligt at arrangere titel og eventuelle andre elementer på linje */
+
+justify-content: space-between; /* Sørger for lige afstand mellem elementer */
+
+font-size: 22px; /* Justerer skriftstørrelse */
+
+font-weight: bold; /* Gør teksten fed */
+
+margin-bottom: 20px; /* Tilføjer afstand under titlen */
+
+font-family: 'Dekko', sans-serif; /* Bruger en specifik skrifttype */
+
+text-align: center; /* Centrerer teksten */
+
+}
+
+.item-description {
+
+  margin-top: 5px; /* Tilføjer afstand over beskrivelsen */
+
+  margin-bottom: 20px; /* Tilføjer afstand under beskrivelsen */
+
+  color: #555; /* Indstiller tekstfarven */
+
+  font-family: 'PT Serif', serif; /* Bruger en specifik skrifttype */
+
+  font-size: 16px; /* Justerer skriftstørrelse */
+
+}
+
+/* Billeder i højre kolonne */
+
 .circle-image {
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 20px auto; /* Centers it horizontally with auto margins */
+
+  display: flex; /* Gør det muligt at centrere billedet */
+
+  justify-content: center; /* Centrerer vandret */
+
+  align-items: center; /* Centrerer lodret */
+
+  margin: 20px auto; /* Tilføjer margen og centrerer billedet horisontalt */
+
 }
+
 .circle-image img {
-width: 300px;
-height: 300px;
-object-fit: cover;
-border-radius: 50%;
+
+  width: 300px; /* Billedets bredde */
+
+  height: 300px; /* Billedets højde */
+
+  object-fit: cover; /* Sørger for, at billedet dækker hele området uden at forvrænges */
+
+  border-radius: 50%; /* Gør billedet rundt */
+
 }
+
+ 
 
 .food-section b {
-margin-bottom: 20px;
-color: black;
-font-family: 'PT Serif', serif;
-font-size: 16px;
+
+  margin-bottom: 20px; /* Tilføjer afstand under teksten */
+
+  color: black; /* Indstiller tekstfarven */
+
+  font-family: 'PT Serif', serif; /* Bruger en specifik skrifttype */
+
+  font-size: 16px; /* Justerer skriftstørrelse */
+
 }
+
+ 
 
 .food-section h3 {
-font-size: 22px;
-font-weight: bold;
-margin-bottom: 20px;
-font-family: 'Dekko', sans-serif;
-text-align: center;
+
+  font-size: 22px; /* Justerer skriftstørrelse */
+
+  font-weight: bold; /* Gør teksten fed */
+
+  margin-bottom: 20px; /* Tilføjer afstand under overskriften */
+
+  font-family: 'Dekko', sans-serif; /* Bruger en specifik skrifttype */
+
+  text-align: center; /* Centrerer teksten */
+
 }
 
-/* Responsive Design for Phone Screens (max-width: 480px) */
+ 
+
+/* Responsivt design til skærme med max bredde på 480px */
+
 @media (max-width: 480px) {
+
 .menu-container {
-  width: 100%; /* Full-width for small screens */
-  padding: 10px; /* Slightly larger padding for breathing space */
+
+  width: 100%; /* Fuld bredde på små skærme */
+
+    padding: 10px; /* Justerer indre afstand for bedre pladsudnyttelse */
+
 }
+
+ 
 
 .menu-grid {
-  display: block; /* Stack columns vertically */
+
+  display: block; /* sætter kolonnerne lodret */
+
 }
+
+ 
 
 .menu-left, .menu-right {
-  margin-bottom: 20px; /* Spacing between sections */
+
+  margin-bottom: 20px; /* Tilføjer afstand mellem sektioner */
+
 }
+
+ 
 
 .circle-image img {
-  width: 180px; /* Larger image size */
-  height: 180px;
+
+  width: 180px; /* Mindre billedstørrelse */
+
+  height: 180px; /* Mindre billedhøjde */
+
 }
+
+ 
 
 .item-title, h3 {
-  font-size: 22px; /* Larger font for headings */
-  margin-bottom: 10px;
+
+  font-size: 22px; /* Justerer skrifttypestørrelse til overskrifter */
+
+  margin-bottom: 10px; /* Mindsker marginen under overskriften */
+
 }
 
-.menu-container p, 
-.aligned-list li, 
-.item-description, 
+ 
+
+.menu-container p,
+
+.aligned-list li,
+
+.item-description,
+
 .aligned-list-numberless li {
-  font-size: 14px; /* Bigger font size for body text */
-  line-height: 1.5; /* Improve readability with more line spacing */
+
+  font-size: 14px; /* Mindre skriftstørrelse for brødtekst */
+
+    line-height: 1.5; /* Gør teksten mere læsbar med større linjeafstand */
+
 }
+
+ 
 
 .aligned-list li::before {
-  font-size: 18px; /* Bigger list counter */
+
+  font-size: 18px;/* Justerer størrelse på nummereringen */
+
 }
+
+ 
 
 .menu-item {
-  margin-bottom: 15px; /* Maintain good spacing */
+
+  margin-bottom: 15px; /* Justerer afstand under hvert menupunkt */
+
 }
+
+ 
 
 .circle-image {
-  margin: 15px auto; /* Center image with enough margin */
+
+  margin: 15px auto; /* Tilføjer mindre margin og centrerer billedet */
+
 }
 
-/* Ensure list alignment */
-.aligned-list, 
+ 
+
+/* Sørger for korrekt justering af lister */
+
+.aligned-list,
+
 .aligned-list-numberless {
+
   padding-left: 10px;
+
   margin-left: 0;
+
 }
+
+ 
 
 .food-section h3 {
+
   font-weight: bold;
-  margin-bottom: 15px; /* Adjusted margin */
-  color: black;
-  font-family: 'Dekko', sans-serif;
-  font-size: 20px; /* New size for smaller screens */
+
+  margin-bottom: 15px; /* Mindsker margin under overskriften */
+
+    color: black;
+
+    font-family: 'Dekko', sans-serif;
+
+    font-size: 20px; /* Mindre skrifttypestørrelse til små skærme */
+
 }
+
+ 
 
 .food-section b {
+
   margin-bottom: 20px;
+
   color: black;
+
   font-family: 'PT Serif', serif;
+
   font-size: 14px;
+
   }
+
 }
 
+ 
+
+/* Håndtegnede linjer i forskellige farver */
+
 .hand-drawn-line-blue {
-background-image: url('./images/dotted-line-blå.svg'); /* Path to your SVG */
-height: 10px;                /* Adjust height based on line style */
-background-repeat: repeat-x; /* Repeat the pattern horizontally */
+
+background-image: url('./images/dotted-line-blå.svg'); /* Sti til blå linje */
+
+height: 10px; /* Justerer højden baseret på linjestil */
+
+background-repeat: repeat-x; /* Gentager mønstret vandret */
+
 }
+
 .hand-drawn-line-green {
-background-image: url('./images/dotted-line-grøn.svg'); /* Path to your SVG */
-height: 10px;                /* Adjust height based on line style */
-background-repeat: repeat-x; /* Repeat the pattern horizontally */
+
+background-image: url('./images/dotted-line-grøn.svg'); /* Sti til blå linje */
+
+height: 10px;                /* Justerer højden baseret på linjestil */
+
+background-repeat: repeat-x; /* Gentager mønstret vandret */
+
 }
+
 .hand-drawn-line-yellow {
-background-image: url('./images/dotted-line-gul.svg'); /* Path to your SVG */
-height: 10px;                /* Adjust height based on line style */
-background-repeat: repeat-x; /* Repeat the pattern horizontally */
+
+background-image: url('./images/dotted-line-gul.svg'); /* Sti til blå linje */
+
+height: 10px;               /* Justerer højden baseret på linjestil */
+
+background-repeat: repeat-x; /* Gentager mønstret vandret */
+
 }
+
 .hand-drawn-line-red {
-background-image: url('./images/dotted-line-rød.svg'); /* Path to your SVG */
-height: 10px;                /* Adjust height based on line style */
-background-repeat: repeat-x; /* Repeat the pattern horizontally */
+
+background-image: url('./images/dotted-line-rød.svg'); /* Sti til blå linje */
+
+height: 10px;                /* Justerer højden baseret på linjestil */
+
+background-repeat: repeat-x; /* Gentager mønstret vandret */
+
 }
+
+/* Blyant-ikon-stil */
+
 .blyanter {
-height: 70px; /* Matches the font size */
-width: auto; /* Maintains aspect ratio */
-align-content: center; /* Aligns image with the text baseline */
-display: block; /* Makes the image behave like a block element */
-margin: 0 auto; /* Horizontally centers the image */
+
+  height: 70px; /* Justerer højden til ikonet */
+
+  width: auto; /* Bevarer billedets proportioner */
+
+  align-content: center; /* Justerer billedet med tekstens basislinje */
+
+  display: block; /* Gør billedet til et blok-element */
+
+  margin: 0 auto; /* Centrerer billedet horisontalt */
+
 }

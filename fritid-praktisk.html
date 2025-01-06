@@ -1,296 +1,695 @@
-<!DOCTYPE html>
+!DOCTYPE html>
+
 <html lang="da">
+
 <head>
+
   <meta name="robots" content="noindex">
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="fritid-praktisk.css">
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
   <link href="https://fonts.googleapis.com/css2?family=Dekko&display=swap" rel="stylesheet">
+
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+
   <title>Børnegården Katholt | Fritidshjem | Praktiske oplysninger</title>
+
 </head>
+
 <body>
+
   <nav class="navbar">
+
     <!-- Left: Logo -->
+
     <div class="navbar-logo">
+
       <a href="index.html"><img src="images/logo-katholt-størrelse.svg" alt="Logo"></a>
+
     </div>
 
+ 
+
     <!-- Navigation Links -->
+
     <div class="topnav" id="myTopnav">
+
       <a href="index.html">Velkommen</a>
 
-      <div class="dropdown">
-        <button class="dropdown-button">Børnehave <i class="fa fa-caret-down"></i></button>
-        <div class="dropdown-content">
-          <a href="ny-børnehave.html">Ny i børnehaven</a>
-          <a href="børne-praktisk.html">Praktiske oplysninger</a>
-          <a href="børne-indmeld.html">Ind- og udmeldelse/takster</a>
-        </div>
-      </div>
+ 
 
       <div class="dropdown">
-        <button class="dropdown-button" id="afterschoollink">Fritidshjem <i class="fa fa-caret-down"></i></button>
+
+        <button class="dropdown-button">Børnehave <i class="fa fa-caret-down"></i></button>
+
         <div class="dropdown-content">
-          <a href="ny-fritidshjem.html">Ny i fritidshjemmet</a>
-          <a href="fritid-praktisk.html" id="afterschoolpractical">Praktiske oplysninger</a>
-          <a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a>
+
+          <a href="ny-børnehave.html">Ny i børnehaven</a>
+
+          <a href="børne-praktisk.html">Praktiske oplysninger</a>
+
+          <a href="børne-indmeld.html">Ind- og udmeldelse/takster</a>
+
         </div>
+
       </div>
+
+ 
+
+      <div class="dropdown">
+
+        <button class="dropdown-button" id="afterschoollink">Fritidshjem <i class="fa fa-caret-down"></i></button>
+
+        <div class="dropdown-content">
+
+          <a href="ny-fritidshjem.html">Ny i fritidshjemmet</a>
+
+          <a href="fritid-praktisk.html" id="afterschoolpractical">Praktiske oplysninger</a>
+
+          <a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a>
+
+        </div>
+
+      </div>
+
+ 
 
       <a href="stamkort.html">Stamkort/børneintranet</a>
 
+ 
+
       <div class="dropdown">
+
         <button class="dropdown-button">Information <i class="fa fa-caret-down"></i></button>
+
         <div class="dropdown-content">
+
           <a href="info-kontakt.html">Kontakt</a>
+
           <a href="info-besøg.html">Åbningstider og lukkedage</a>
+
           <a href="info-bestyrelse.html">Bestyrelse</a>
+
           <a href="info-studerende.html">Studerende</a>
+
         </div>
+
       </div>
+
     </div>
 
+ 
+
     <!-- Hamburger Menu Icon -->
+
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+
       <i class="fa fa-bars"></i>
+
     </a>
+
   </nav>
 
+ 
+
   <script>
+
 function myFunction() {
+
   const topnav = document.getElementById("myTopnav");
+
   topnav.classList.toggle("responsive");
+
 }
 
+ 
+
 // Dropdown Functionality for Small Screens
+
 const dropdownButtons = document.querySelectorAll(".dropdown-button");
+
 dropdownButtons.forEach((button) => {
+
   button.addEventListener("click", (event) => {
+
     event.preventDefault(); // Prevent default link behavior
+
+ 
 
     const dropdownContent = button.nextElementSibling;
 
+ 
+
     // Toggle visibility
+
     dropdownContent.style.display =
+
       dropdownContent.style.display === "block" ? "none" : "block";
 
+ 
+
     // Close other dropdowns
+
     document.querySelectorAll(".dropdown-content").forEach((content) => {
+
       if (content !== dropdownContent) {
+
         content.style.display = "none";
+
       }
+
     });
+
   });
+
 });
+
   </script>
- <!-- Header Section -->
- <header class="py-5 bg-light mb-4">
+
+<!-- Header Section -->
+
+  <!-- Header-sektionen, som indeholder en overskrift og en beskrivelse, som bliver vist øverst på siden -->
+
+<header class="py-5 bg-light mb-4">
+
 <div class="container">
+
+  <!-- Centrerer overskriften og beskrivelsen i headeren -->
+
   <div class="text-center">
+
+   
+
+    <!-- Overskrift med fed skrift -->
+
       <h1 class="fw-bold">Praktiske oplysninger</h1>
+
+       <!-- Underoverskrift/beskrivelse, som giver yderligere information -->
+
       <p class="lead">Alt det du skal vide for dit barn kan få en tryg og sjov hverdag hos os</p>
+
   </div>
+
 </div>
+
 </header>
+
+<!-- Info-sektion med praktiske oplysninger, hvor forskellige emner bliver præsenteret -->
+
 <section class="info-section">
+
+  <!-- Billede af en blyant, der illustrerer komme- og gåtider -->
+
   <img src="images/blyant-komme-gå.svg" alt="komme- og gåtider blyant" class="blyanter">
+
   <br>
+
+  <!-- Overskrift for afsnittet om mødetider, med en emoji for visuel effekt -->
+
   <h2><span class="emoji">🕒</span>Mødetider</h2>
+
+  <!-- Beskrivelse af hvordan mødetiderne administreres -->
+
   <p>Ved indmeldelse på fritidshjemmet udleveres en seddel med børnenes komme/gå tider, der skal udfyldes. Disse tider følger vi, når børnene sendes hjem.</p>
+
+  <!-- Instruktion om hvad forældre skal gøre hvis der er ændringer i mødetiderne -->
+
   <p>Sker der ændringer i jeres barns mødetider, skal I:</p>
+
   <ul>
+
+     <!-- Liste med detaljerede instruktioner om, hvordan ændringer i mødetider skal kommunikeres -->
+
   <li>Enten ringe, eller sende en seddel med barnets navn, dato og forældreunderskrift. Det er vigtigt, at vi får besked, så der ikke opstår tvivlssituationer!</li>
+
 </ul>
+
   <br>
+
+  <!-- Overskrift for afsnittet om selvregistrering af komme- og gåtider via iPad, med en emoji -->
+
   <h2><span class="emoji">📱</span>Komme/gå på iPad</h2>
+
+  <!-- Forklaring af, hvordan iPad'en bruges til registrering -->
+
   <p>Selvregistrering på iPad (Alia):</p>
+
   <ul>
+
+    <!-- Instruktion til forældre om, hvordan børnene selv skal registrere deres mødetid -->
+
   <li>Når jeres barn møder ind, skal de selv trykke sig ind på iPad'en.</li>
+
+<!-- Instruktion om at selvregistrering også gælder når barnet går hjem -->
+
   <li>Det samme gælder, når barnet går hjem eller bliver hentet.</li>
+
 </ul>
+
 <br>
+
+<!-- Overskrift for afsnittet om ansvarsfordeling, med en emoji for at understrege emnet -->
+
   <h2><span class="emoji">⛔</span>Ansvarsfordeling</h2>
+
+  <!-- Beskrivelse af, at ansvaret for børnenes færden ligger hos forældrene -->
+
   <p>Fritidshjemmet har ikke ansvar for børnenes færden til og fra institutionen – dette ansvar ligger hos jer som forældre.</p>
+
 </section>
+
 <br><br>
+
+<!-- Visuel adskillelse mellem sektioner med en blå streg (hand-drawn line) -->
+
 <div class="hand-drawn-line-blue"></div>
+
 <br><br>
+
+<!-- Ny info-sektion for et nyt emne -->
+
 <section class="info-section">
+
+  <!-- Billede af en blyant, der illustrerer sygdom og fravær -->
+
   <img src="images/blyant-sygdom-fritid.svg" alt="sygdom/fravær blyant" class="blyanter">
+
   <br>
+
+  <!-- Overskrift for afsnittet med emoji for at understrege vigtigheden af at give besked -->
+
   <h2><span class="emoji">🔔</span>Husk at giv besked</h2>
+
+  <!-- Besked til forældrene om at informere, hvis barnet ikke kommer -->
+
   <p>Husk at give besked, hvis jeres barn er syg eller holder fri.</p>
+
+  <!-- Besked om at give besked inden et specifikt tidspunkt -->
+
   <p>Giv besked via ALIA inden kl. <b>12.00</b> for at spare tid og sikre, at vi har den nødvendige information.</p>
+
+  <!-- Yderligere begrundelse for vigtigheden af at give besked -->
+
   <p>Det er <b>vigtigt</b> for personalet, så vi undgår at forstyrre jer på arbejdet og samtidig undgår unødig forvirring for jeres barn.</p>
+
 </section>
+
 <br><br>
+
+<!-- Visuel adskillelse med en grøn streg for at skille sektionerne -->
+
 <div class="hand-drawn-line-green"></div>
+
 <br><br>
+
+<!-- Start på afsnittet om praktisk tøj og hvad børnene skal have med -->
+
 <section class="info-section">
+
+  <!-- Billede af en blyant, der illustrerer påklædning -->
+
     <img src="images/blyant-påklædning-fritid.svg" alt="påklædning blyant" class="blyanter">
+
     <br>
+
+      <!-- Overskrift for afsnittet om praktisk tøj, med en emoji -->
+
     <h2><span class="emoji">👕</span>Praktisk tøj</h2>
+
     <ul>
+
+      <!-- Listepunkt om, at børnene skal have tøj med til alle vejrforhold -->
+
     <li>Sørg for, at børnene har tøj med til al slags vejr.</li>
+
     <li>Der skal altid være skiftetøj i fritidshjemmet.</li>
+
     <li>En fleece-trøje anbefales varmt – hele året rundt.</li>
+
   </ul>
+
     <br>
+
+    <!-- Overskrift for afsnittet om glemt tøj, med en emoji -->
+
     <h2><span class="emoji">🗄️</span>Glemt tøj</h2>
+
     <ul>
+
+      <!-- Listepunkt om, hvor glemt tøj bliver lagt -->
+
     <li>Tøj, der bliver glemt, lægges i kommoden ved indgangen.</li>
+
     <li>Tøj, der ikke afhentes, bliver afleveret til genbrug.</li>
+
   </ul>
+
 <br>
+
+<!-- Overskrift for afsnittet med vigtig information, med en emoji -->
+
 <h2><span class="emoji">🔍</span>Vigtigt at vide</h2>
+
 <p>Vi har ingen forsikring, der dækker private ejendele som tøj, legetøj osv.</p>
+
 <ul>
+
+  <!-- Listepunkt om at skrive navn i tøjet -->
+
 <li>Husk at skrive navn i tøjet!</li>
+
 <li>Medbragt legetøj er på eget ansvar.</li>
+
 </ul>
+
 </section>
+
 <br><br>
+
+<!-- Visuel adskillelse med en gul streg for at adskille sektionerne -->
+
 <div class="hand-drawn-line-yellow"></div>
+
 <br><br>
+
+<!-- Start på afsnittet om nyhedsbrev -->
+
   <div class="info-section">
+
+     <!-- Billede af en blyant, der illustrerer nyhedsbrev -->
+
     <img src="images/blyant-nyhedsbrev-gul.svg" alt="nyhedsbrev blyant" class="blyanter">
+
     <br>
+
+    <!-- Information-->
+
     <p>På Katholt fritidshjem udgiver vi et 'Nyhedsbrev' 3 gange årligt, som giver et levende indblik i livet på fritidshjemmet.</p>
+
     <p>I nyhedsbrevet finder man blandt andet:</p>
+
     <ul>
+
+      <!-- Indledning til listen over indholdet i nyhedsbrevet -->
+
     <li>Nyttige informationer.</li>
+
     <li>Spændende historier</li>
+
     <li>Små dagligdags fortællinger</li>
+
     <li>mm.</li>
+
   </ul>
+
     <br>
+
+     <!-- Afslutning med en opfordring til at følge med i nyhedsbrevet -->
+
     <p>Dette er en oplagt måde for både børn og forældre at følge med i hverdagens store og små begivenheder.</p>
+
   </div>
+
 <br><br>
+
+<!-- Visuel adskillelse med en rød streg -->
+
 <div class="hand-drawn-line-red"></div>
+
 <br><br>
+
+<!-- Start på afsnittet om opslagstavlen -->
+
   <section class="info-section">
+
+    <!-- Billede af en blyant, der illustrerer en opslagstavle -->
+
     <img src="images/blyant-tavle-rød.svg" alt="informationstavle blyant" class="blyanter">
+
     <br>
+
+    <!-- Overskrift for afsnittet om at holde sig opdateret -->
+
     <h2><span class="emoji">📌</span>Hold dig opdateret</h2>
+
+    <!-- Beskrivelse-->
+
     <p>I garderoben finder du opslagstavlen, hvor vi løbende deler vigtige informationer. Her kan du få et hurtigt overblik over nyheder, kommende aktiviteter og praktiske beskeder.</p>
+
     <p>Det er en god idé at kigge forbi opslagstavlen regelmæssigt, så du ikke går glip af noget vigtigt.</p>
+
     <p>Derudover opdaterer vi også løbende på:</p>
+
     <ul>
+
     <li>Alia.</li>
+
     <li>Vores hjemmeside.</li>
+
   </ul>
+
     <br>
+
     <p>Ved at holde øje begge steder sikrer du dig, at du altid er opdateret med de nyeste informationer.</p>
+
 </section>
+
 <br><br>
+
+<!-- Visuel adskillelse med en blå streg -->
+
 <div class="hand-drawn-line-blue"></div>
+
 <br><br>
+
+<!-- Start på afsnittet om beskeder via Alia -->
+
   <section class="info-section">
+
+    <!-- Billede af en blyant, der illustrerer beskeder til personalet -->
+
     <img src="images/blyant-beskeder-blå.svg" alt="beskeder til personale blyant" class="blyanter">
+
     <br>
+
+    <!-- Overskrift for afsnittet om beskeder via Alia -->
+
     <h2><span class="emoji">📨</span>Beskeder via Alia</h2>
+
     <p>Vi skal meget gerne senest have beskeder via Alia <b>kl. 12.00</b> dagligt, eftersom vi registrerer, inden at alle børn kommer fra skole.</p>
+
 <br>
+
+<!-- Overskrift for afsnittet om at være opmærksom på ny information -->
+
     <h2><span class="emoji">👀</span>Hold øje med ny information</h2>
+
    <p>Vær dagligt gerne ekstra opmærksom på muligvis nyt.</p>
+
    <p>Informationer tilsendes <b>pr. mail</b>, så sørg for at opgive jeres mailadresse.</p>
+
    <p><b>Sørg for at opgive jeres mailadresse.</b></p>
+
 </section>
+
 <br><br>
+
+<!-- Visuel adskillelse med en grøn streg -->
+
 <div class="hand-drawn-line-green"></div>
+
 <br><br>
+
+ 
+
+<!-- Start på footer-sektionen -->
+
 <footer>
+
     <!-- Remove the container if you want to extend the Footer to full width. -->
+
   <div class="container my-5">
+
     <!-- Footer -->
 
+ 
+
       <!-- Grid container -->
+
       <div class="container p-4 pb-0">
+
         <!-- Section: Links -->
+
         <section class="">
+
           <!--Grid row-->
+
           <div class="row">
+
             <!-- Grid column -->
+
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+
               <h3 class="text-uppercase mb-4 font-weight-bold">
+
                 Børnegården Katholt
+
               </h3>
+
               <p>
+
                 Vi tilbyder en tryg og stimulerende hverdag for børn med fokus på udvikling, leg og læring.
+
                 Med et engageret personale skaber vi et inkluderende miljø, der fremmer børns nysgerrighed og selvstændighed.
+
               </p>
+
             </div>
+
             <!-- Grid column -->
-  
+
+ 
+
             <hr class="w-100 clearfix d-md-none">
-  
+
+ 
+
             <!-- Grid column -->
+
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+
               <h3 class="text-uppercase mb-4 font-weight-bold">Børnehave</h3>
+
               <p><a href="ny-børnehave.html">Ny i børnehaven</a></p>
+
               <p><a href="børne-praktisk.html">Praktiske oplysninger</a></p>
+
               <p><a href="børne-indmeld.html">Ind- og udmeldelse/takster</a></p>
+
             </div>
+
             <!-- Grid column -->
-  
+
+ 
+
             <hr class="w-100 clearfix d-md-none">
-  
+
+ 
+
             <!-- Grid column -->
+
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+
               <h3 class="text-uppercase mb-4 font-weight-bold">
+
                 Fritidshjem
+
               </h3>
+
               <p><a href="ny-fritidshjem.html">Ny i fritidshjemmet</a></p>
+
               <p><a href="fritid-praktisk.html">Praktiske oplysninger</a></p>
+
               <p><a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a></p>
+
             </div>
-  
+
+ 
+
             <!-- Grid column -->
+
             <hr class="w-100 clearfix d-md-none">
-  
+
+ 
+
             <!-- Grid column -->
+
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+
               <h3 class="text-uppercase mb-4 font-weight-bold">Information</h3>
+
                 <p><a href="info-kontakt.html">Kontakt</a></p>
+
                 <p><a href="info-besøg.html">Åbningstider og lukkedage</a></p>
+
                 <p><a href="info-bestyrelse.html">Bestyrelse</a></p>
+
                 <p><a href="info-studerende.html">Studerende</a></p>
+
             </div>
+
             <!-- Grid column -->
+
           </div>
+
           <!--Grid row-->
+
         </section>
+
         <!-- Section: Links -->
-  
+
+ 
+
         <hr class="my-3">
-  
+
+ 
+
         <!-- Section: Copyright -->
+
         <div class="p-3 pt-0">
+
           <div class="row d-flex align-items-center">
+
             <!-- Grid column -->
+
             <div class="col-md-7 col-lg-8 text-center text-md-start">
+
               <!-- Copyright -->
+
               <div class="p-3">
+
                 © 2024 Copyright:
+
                 <a class="text-black" href="https://www.boernegaardenkatholt.dk/"
+
                    >Børnegården Katholt</a>
+
                    <span class="footer-text ms-3"><b>Made for educational purposes only</b></span>
+
               </div>
+
               <!-- Copyright -->
+
             </div>
+
             <!-- Grid column -->
+
           </div>
+
         </div>
+
         <!-- Section: Copyright -->
+
       </div>
+
       <!-- Grid container -->
+
     <!-- Footer -->
+
   </div>
+
   <!-- End of .container -->
+
   </footer>
+
 </body>
+
   </html>

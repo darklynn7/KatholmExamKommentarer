@@ -1,383 +1,889 @@
 <!DOCTYPE html>
+
 <html lang="da">
+
 <head>
+
   <meta name="robots" content="noindex">
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="børne-praktisk.css">
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
   <link href="https://fonts.googleapis.com/css2?family=Dekko&display=swap" rel="stylesheet">
+
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+
   <title>Børnegården Katholt | Børnehave | Praktiske oplysninger</title>
+
 </head>
+
 <body>
+
   <nav class="navbar">
+
     <!-- Left: Logo -->
+
     <div class="navbar-logo">
+
       <a href="index.html"><img src="images/logo-katholt-størrelse.svg" alt="Logo"></a>
+
     </div>
 
+ 
+
     <!-- Navigation Links -->
+
     <div class="topnav" id="myTopnav">
+
       <a href="index.html">Velkommen</a>
 
-      <div class="dropdown">
-        <button class="dropdown-button" id="daycarelink">Børnehave <i class="fa fa-caret-down"></i></button>
-        <div class="dropdown-content">
-          <a href="ny-børnehave.html">Ny i børnehaven</a>
-          <a href="børne-praktisk.html" id="daycarepractical">Praktiske oplysninger</a>
-          <a href="børne-indmeld.html">Ind- og udmeldelse/takster</a>
-        </div>
-      </div>
+ 
 
       <div class="dropdown">
-        <button class="dropdown-button">Fritidshjem <i class="fa fa-caret-down"></i></button>
+
+        <button class="dropdown-button" id="daycarelink">Børnehave <i class="fa fa-caret-down"></i></button>
+
         <div class="dropdown-content">
-          <a href="ny-fritidshjem.html">Ny i fritidshjemmet</a>
-          <a href="fritid-praktisk.html">Praktiske oplysninger</a>
-          <a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a>
+
+          <a href="ny-børnehave.html">Ny i børnehaven</a>
+
+          <a href="børne-praktisk.html" id="daycarepractical">Praktiske oplysninger</a>
+
+          <a href="børne-indmeld.html">Ind- og udmeldelse/takster</a>
+
         </div>
+
       </div>
+
+ 
+
+      <div class="dropdown">
+
+        <button class="dropdown-button">Fritidshjem <i class="fa fa-caret-down"></i></button>
+
+        <div class="dropdown-content">
+
+          <a href="ny-fritidshjem.html">Ny i fritidshjemmet</a>
+
+          <a href="fritid-praktisk.html">Praktiske oplysninger</a>
+
+          <a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a>
+
+        </div>
+
+      </div>
+
+ 
 
       <a href="stamkort.html">Stamkort/børneintranet</a>
 
+ 
+
       <div class="dropdown">
+
         <button class="dropdown-button">Information <i class="fa fa-caret-down"></i></button>
+
         <div class="dropdown-content">
+
           <a href="info-kontakt.html">Kontakt</a>
+
           <a href="info-besøg.html">Åbningstider og lukkedage</a>
+
           <a href="info-bestyrelse.html">Bestyrelse</a>
+
           <a href="info-studerende.html">Studerende</a>
+
         </div>
+
       </div>
+
     </div>
 
+ 
+
     <!-- Hamburger Menu Icon -->
+
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+
       <i class="fa fa-bars"></i>
+
     </a>
+
   </nav>
 
+ 
+
   <script>
+
 function myFunction() {
+
   const topnav = document.getElementById("myTopnav");
+
   topnav.classList.toggle("responsive");
+
 }
 
+ 
+
 // Dropdown Functionality for Small Screens
+
 const dropdownButtons = document.querySelectorAll(".dropdown-button");
+
 dropdownButtons.forEach((button) => {
+
   button.addEventListener("click", (event) => {
+
     event.preventDefault(); // Prevent default link behavior
+
+ 
 
     const dropdownContent = button.nextElementSibling;
 
+ 
+
     // Toggle visibility
+
     dropdownContent.style.display =
+
       dropdownContent.style.display === "block" ? "none" : "block";
 
+ 
+
     // Close other dropdowns
+
     document.querySelectorAll(".dropdown-content").forEach((content) => {
+
       if (content !== dropdownContent) {
+
         content.style.display = "none";
+
       }
+
     });
+
   });
+
 });
+
   </script>
 
- <!-- Header Section -->
- <header class="py-5 bg-light mb-4">
+ 
+
+<!-- Header Section -->
+
+  <!-- Header sektion med en lys baggrund og afstand ovenfor og nedenfor -->
+
+<header class="py-5 bg-light mb-4">
+
+  <!--Container til at centrere og strukturere indholdet-->
+
 <div class="practical-container">
+
+    <!-- Tekstcentreret blok -->
+
   <div class="text-center">
+
+    <!-- Stor og fed overskrift -->
+
       <h1 class="fw-bold">Praktiske oplysninger</h1>
+
+      <!-- Undertekst med en mindre skrifttype -->
+
       <p class="lead">Få styr på alt det praktiske – så legen kan begynde!</p>
+
   </div>
+
 </div>
+
 </header>
 
+ 
+
+<!-- Sektion for praktisk information -->
+
 <section class="info-section">
+
+   <!-- Illustration til sektionen -->
+
     <img src="images/blyant-påklædning.svg" alt="påklædning blyant" class="blyanter">
+
     <br>
+
+    <!-- Indledende tekst om påklædning -->
+
 <p>Vi bruger legepladsen, skoven og naturen omkring børnehaven flittigt – derfor er det vigtigt, at børnene er klædt godt på efter vejrforholdene.</p>
+
 <br>
+
+<!-- Tips til påklædning sektion -->
+
 <h2><span class="emoji">👕</span>Tips til beklædning</h2>
+
 <ul>
+
+  <!-- Liste over praktiske råd om beklædning -->
+
 <li>Rigeligt med skiftetøj.</li>
+
 <li>Regntøj og gummistøvler til våde dage.</li>
+
 <li>Det er en god ide at børnene har en uldsål i støvlerne, så de kan holde kulden ude.</li>
+
 <li>En god windstopper eller en uldtrøje indenunder flyverdragten.</li>
+
 <li>Hansker skal kunne gå udenover flyverdragten.</li>
+
 <li>En elefanthue, som kan komme godt ned i flyvedragten.</li>
+
 <li>Overtøjet behøver ikke at blive vasket flere gange ugentligt.</li>
+
 </ul>
+
 <br>
+
 <h2><span class="emoji">⚠️</span>Sikkerhed</h2>
+
 <p>Udskift snore i tøjet med velcro-bånd eller elastikker for at sikre børnenes sikkerhed.</p>
+
 <br>
+
 <h2><span class="emoji">🔍</span>Vigtigt at vide</h2>
+
 <p>Bemærk, at vi ikke har en forsikring for private ejendele som tøj, legetøj m.m. og står derfor på eget ansvar.</p>
+
 <ul>
+
+  <!-- Liste over nødvendige informationer -->
+
 <li>Da vi er mange børn i børnehaven, er det vigtigt, at børnenes tøj og ting er tydeligt mærket med navn.</li>
+
 </ul>
+
+ 
+
+<!-- Afslutning på tidligere sektion -->
 
 </section>
 
+ 
+
+<!-- Visuelt mellemrum med en håndtegnet blå linje -->
+
 <br><br>
+
 <div class="hand-drawn-line-blue"></div>
+
 <br><br>
 
+<!-- Ny informationssektion -->
+
 <section class="info-section">
+
+  <!-- Illustration relateret til legetøj -->
+
   <img src="images/blyant-legetøj.svg" alt="legetøj blyant" class="blyanter">
+
 <br>
+
+<!-- Indledende tekst om legetøj -->
+
 <p>Børnene er velkomne til at tage legetøj, en bog eller en CD med, så de kan dele glæden med de andre børn.</p>
+
 <br>
+
+<!-- Påmindelse om praktiske ting -->
+
 <h2><span class="emoji">❗</span>Husk!</h2>
+
 <ul>
+
+   <!-- Liste med praktiske påmindelser -->
+
 <li>Husk at skrive navn på medbragte ting.</li>
+
 <li>Medbragt legetøj er på eget ansvar.</li>
+
 </ul>
+
 <br>
+
+<!-- Regler for medbragt legetøj -->
+
 <h2><span class="emoji">🧸</span>Legetøjsregler</h2>
+
 <p>Alt legetøj er velkomment, men:</p>
+
 <ul>
+
+  <!-- Liste over specifikke regler for legetøj -->
+
 <li>Våben som geværer og pistoler må gerne medbringes.</li>
+
 <li>Våbenhvile indendørs – al leg med våben skal ske ude på legepladsen.</li>
+
 </ul>
+
 </section>
 
+<!-- Visuelt mellemrum med en håndtegnet grøn linje -->
+
 <br><br>
+
+<!-- Visuelt mellemrum med en håndtegnet gul linje -->
+
 <div class="hand-drawn-line-green"></div>
+
 <br><br>
+
+<!-- Sektion for oplysninger om aflevering og afhentning -->
 
 <section class="info-section">
+
+  <!-- Illustration relateret til aflevering og afhentning -->
+
     <img src="images/blyant-aflevering.svg" alt="aflevering og afhentning blyant" class="blyanter">
+
     <br>
+
+    <!-- Sektion om børnehavens ansvar -->
+
     <h2><span class="emoji">🕒</span>Børnehavens ansvar</h2>
+
     <p>Børnehavens ansvar begynder når barnet er afleveret til personalet, og ophører når forældrene har sagt farvel.</p>
+
 <br>
+
+<!-- Sektion om forældres ansvar -->
+
     <h2><span class="emoji">🚸</span>Forældres ansvar</h2>
+
     <p>Børnehaven har ikke ansvar for børnenes sikkerhed på vej til og fra institutionen. Det ansvar påhviler forældrene.</p>
+
 <br>
+
+  <!-- Sektion om at sige farvel -->
+
     <h2><span class="emoji">👋</span>Husk at sige til og farvel</h2>
+
     <p>For at sikre, at alle børn er i trygge hænder:</p>
+
     <ul>
+
+      <!-- Liste over trin for aflevering og afhentning -->
+
     <li><b>Ved aflevering:</b> Sig tydeligt til personalet, at dit barn er mødt op.</li>
+
     <li><b>Ved afhentning:</b> Sig farvel til personalet, så de ved, at dit barn er hentet.</li>
+
   </ul>
+
     <br>
+
+     <!-- Sektion om betydningen af processen -->
+
     <h2><span class="emoji">🎯</span>Hvorfor er det vigtigt?</h2>
+
     <p>Dette hjælper personalet med at holde styr på, hvem der er kommet og gået, og sikrer dit barns tryghed i institutionen.</p>
+
 </section>
 
+<!-- Visuelt mellemrum med en håndtegnet gul linje -->
+
 <br><br>
+
 <div class="hand-drawn-line-yellow"></div>
+
 <br><br>
+
+<!-- Sektion for information om sygdom og fravær -->
 
 <div class="info-section">
+
+  <!-- Illustration relateret til sygdom og fravær -->
+
     <img src="images/blyant-sygdom.svg" alt="sygdom/fravær blyant" class="blyanter">
+
     <br>
+
+    <!-- Indledende tekst om sygdom -->
+
 <p><b>Når barnet er sygt</b> må det ikke komme i børnehave.</p>
+
 <ul>
+
+  <!-- Liste over grunde til, at syge børn ikke må komme i børnehaven -->
+
 <li>Sygdom kan smitte andre børn og personale.</li>
+
 <li>Børnehavelivet kræver meget energi, som man ikke har, når man er syg.</li>
+
 </ul>
+
 <br>
+
+<!-- Sektion for påmindelse om at give besked -->
+
 <h2><span class="emoji">🔔</span>Husk at give besked!</h2>
+
 <ul>
+
+   <!-- Liste med instruktioner om at give besked om barnets fravær -->
+
 <li>Det er vigtigt for personalet at vide, om dit barn er syg eller holder fri.</li>
+
 <li>Ring og giv besked til børnehaven.</li>
+
 </ul>
+
 <br>
+
+<!-- Sektion for telefontid -->
+
 <h2><span class="emoji">📞</span>Telefontid</h2>
+
 <p>For at undgå unødvendige afbrydelser i arbejdet med børnene, beder vi om, at beskeder gives inden kl. 9.00.</p>
+
 <br>
+
+<!-- Sektion for opdatering af stamkort -->
+
 <h2><span class="emoji">📋</span>Opdatering af stamkort</h2>
+
 <ul>
+
+  <!-- Liste over nødvendige opdateringer på barnets stamkort -->
+
 <li>Ændringer i f.eks. telefonnummer, adresse, arbejde eller læge skal opdateres på dit barns stamkort på hjemmesiden.</li>
+
 <li>Det er forældrenes ansvar at holde stamkortet ajour.</li>
+
 </ul>
+
 </div>
 
+<!-- Visuelt mellemrum med en håndtegnet rød linje -->
+
 <br><br>
+
+<!-- Dekorative mellemrum og en rød håndtegnet linje til visuel adskillelse -->
+
 <div class="hand-drawn-line-red"></div>
+
 <br><br>
+
+<!-- Sektion for information om forældresamarbejde -->
 
   <div class="info-section">
+
+    <!-- Illustration relateret til forældresamarbejde -->
+
     <img src="images/blyant-forældresamarbejde.svg" alt="forældresamarbejde blyant" class="blyanter">
+
     <br>
+
+    <!-- Indledende tekst om vigtigheden af forældresamarbejde -->
+
     <p>Personalet i børnehaven lægger vægt på et godt samarbejde med forældrene. Vi tror på, at jo bedre vi samarbejder, desto bedre trives barnet.</p>
+
+    <!-- Tekst med fremhævelse af formålet med samarbejdet -->
+
     <p><b>Vi ønsker at:</b></p>
+
+        <!-- Liste over mål og værdier for samarbejdet -->
+
     <ul>
+
       <li>Have en god daglig kontakt.</li>
+
       <li>Lægge vægt på gensidig åbenhed og ærlighed.</li>
+
       <li>Udvise tillid og respekt for hinanden.</li>
+
       <li>Give god gensidig information.</li>
+
       <li>Være støttende, vejledende og opsøgende og tør at gøre noget ved tingene.</li>
+
       <li>Handle med indfølelse og indlevelse.</li>
+
       <li>Være åbne for ris og ros.</li>
+
     </ul>
+
   </div>
 
+ 
+
 <br><br>
+
+<!--illustration til linje-->
+
 <div class="hand-drawn-line-blue"></div>
+
 <br><br>
 
+ 
+
   <section class="info-section">
+
+    <!-- Billede af en blyant relateret til personalemøder -->
+
     <img src="images/blyant-personalemøder.svg" alt="personalemøder/stuemøder blyant" class="blyanter">
+
     <br>
+
+    <!-- Introduktion til, hvad personalet arbejder med under møderne -->
+
     <p>Fritidshjemmets personale passer børnehavebørnene en gang ugentligt over middag mens børnehavens personale holder personalemøde og stuemøde.</p>
+
     <br>
+
+    <!-- Beskrivelse af fokusområder under møderne -->
+
     <p>Her arbejder vi fokuseret på at sikre den bedste hverdag og udvikling for børnene:</p>
-      <h2><span class="emoji">📝</span>De pædagogiske læreplaner</h2>
+
+    <!-- Underoverskrift om pædagogiske læreplaner -->
+
+    <h2><span class="emoji">📝</span>De pædagogiske læreplaner</h2>
+
       <ul>
+
+        <!-- Listepunkt der fremhæver arbejdsområder -->
+
       <li>Udvikling, dokumentation og evaluering.</li>
+
     </ul>
+
+     <!-- Underoverskrift-->
+
       <h2><span class="emoji">🔍</span>TRAS</h2>
+
       <ul>
+
       <li>Tidlig registrering af sprogudvikling.</li>
+
     </ul>
+
+    <!-- Underoverskrift-->
+
       <h2><span class="emoji">🗣️</span>Sprogtest</h2>
+
       <ul>
+
       <li>For børn i alderen 2.10–3.4 år.</li>
+
     </ul>
+
+    <!-- Underoverskrift om planlægning af hverdagen -->
+
       <h2><span class="emoji">📅</span>Planlægning af hverdagen</h2>
+
       <ul>
+
       <li>Struktur og aktiviteter, der giver mening for børnene.</li>
+
     </ul>
+
+     <!-- Underoverskrift om forberedelse til forældresamtaler -->
+
       <h2><span class="emoji">🤝</span>Forberedelse til forældresamtaler</h2>
+
       <ul>
+
       <li>Samarbejde med forældre om barnets trivsel og udvikling.</li>
+
     </ul>
+
+    <!-- Underoverskrift om fokus på det enkelte barn -->
+
       <h2><span class="emoji">👶</span>Fokus på det enkelte barn</h2>
+
       <ul>
+
       <li>Gennemgang af relationsskemaer og opmærksomhed på individuelle behov.</li>
+
     </ul>
+
+    <!-- Underoverskrift-->
+
       <h2><span class="emoji">🌱</span>Børnemiljøvurdering</h2>
+
       <ul>
+
       <li>En tryg og stimulerende hverdag for alle børn.</li>
+
     </ul>
+
       <h2>Med mere..</h2>
+
 </section>
 
+ 
+
 <br><br>
+
+<!-- En grøn håndtegnet linje, der bruges som visuel opdeling -->
+
 <div class="hand-drawn-line-green"></div>
+
 <br><br>
+
+<!-- En sektion, der indeholder information om personalesamarbejde -->
 
   <section class="info-section">
+
+    <!-- Billede af en blyant relateret til personalesamarbejde -->
+
     <img src="images/blyant-personalesamarbejde.svg" alt="personalesamarbejde blyant" class="blyanter">
+
     <br>
+
+    <!-- Overskrift-->
+
     <h2><span class="emoji">✨</span>Vores grundregler for samarbejde</h2>
+
+     <!-- Introduktionstekst-->
+
     <p>Hos os er samarbejde baseret på tre centrale principper:</p>
+
+    <!-- Nummereret liste over samarbejdsprincipper -->
+
     <ol>
+
+      <!-- Fremhævet titel med forklarende tekst -->
+
       <li><b>Ansvarligt og målrettet arbejde</b><br>Vi giver hinanden plads til at udføre det, vi er bedst til, og støtte til at forfølge nye idéer og anderledes måder at løse opgaver på.</li>
+
       <li><b>Plads til forskellighed</b><br>Vi værdsætter forskellighed – for børn, forældre og personale. Det er en styrke, som skaber nytænkning og plads til udvikling.</li>
+
       <li><b>En positiv tilgang til hverdagen</b><br>Vi skaber en tryg og tillidsfuld hverdag med plads til humor, glæde og sjov. Med en positiv indstilling løser vi udfordringer og forebygger konflikter i fællesskab.</li>
+
     </ol>
+
 <br>
+
+<!-- Overskrift-->
+
     <h2><span class="emoji">👥</span>Vores personalegruppe</h2>
+
+      <!-- Tekst om personalets værdier og engagement -->
+
     <p>Vi er en engageret personalegruppe, der deler fælles værdier og fagligt engagement. Sammen har vi skabt en institution med en <b>god atmosfære</b>, hvor både børn, forældre og medarbejdere trives.</p>
+
 <br>
+
+  <!-- Overskrift-->
+
     <h2><span class="emoji">📌</span>Fokuspunkter for den kommende periode</h2>
+
 <p>Vi arbejder målrettet med:</p>
+
+<!-- Liste-->
+
 <ul>
+
 <li>Styrket kommunikation og samarbejde.</li>
+
 <li>Personalepolitik og trivsel.</li>
+
 <li>Synliggørelse og udnyttelse af hinandens kompetencer.</li>
+
 </ul>
+
 </section>
 
+ 
+
 <br><br>
+
+<!-- En gul håndtegnet linje, der markerer afslutningen af sektionen -->
+
 <div class="hand-drawn-line-yellow"></div>
+
 <br><br>
+
 <footer>
+
   <!-- Remove the container if you want to extend the Footer to full width. -->
+
 <div class="container my-5">
+
   <!-- Footer -->
+
     <!-- Grid container -->
+
     <div class="container p-4 pb-0">
+
       <!-- Section: Links -->
+
       <section class="">
+
         <!--Grid row-->
+
         <div class="row">
+
           <!-- Grid column -->
+
           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+
             <h3 class="text-uppercase mb-4 font-weight-bold">
+
               Børnegården Katholt
+
             </h3>
+
             <p>
+
               Vi tilbyder en tryg og stimulerende hverdag for børn med fokus på udvikling, leg og læring.
+
               Med et engageret personale skaber vi et inkluderende miljø, der fremmer børns nysgerrighed og selvstændighed.
+
             </p>
+
           </div>
+
           <!-- Grid column -->
+
+ 
 
           <hr class="w-100 clearfix d-md-none">
 
+ 
+
           <!-- Grid column -->
+
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+
             <h3 class="text-uppercase mb-4 font-weight-bold">Børnehave</h3>
+
             <p><a href="ny-børnehave.html">Ny i børnehaven</a></p>
+
             <p><a href="børne-praktisk.html">Praktiske oplysninger</a></p>
+
             <p><a href="børne-indmeld.html">Ind- og udmeldelse/takster</a></p>
+
           </div>
+
           <!-- Grid column -->
+
+ 
 
           <hr class="w-100 clearfix d-md-none">
 
+ 
+
           <!-- Grid column -->
+
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+
             <h3 class="text-uppercase mb-4 font-weight-bold">
+
               Fritidshjem
+
             </h3>
+
             <p><a href="ny-fritidshjem.html">Ny i fritidshjemmet</a></p>
+
             <p><a href="fritid-praktisk.html">Praktiske oplysninger</a></p>
+
             <p><a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a></p>
+
           </div>
 
+ 
+
           <!-- Grid column -->
+
           <hr class="w-100 clearfix d-md-none">
 
+ 
+
           <!-- Grid column -->
+
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+
             <h3 class="text-uppercase mb-4 font-weight-bold">Information</h3>
+
               <p><a href="info-kontakt.html">Kontakt</a></p>
+
               <p><a href="info-besøg.html">Åbningstider og lukkedage</a></p>
+
               <p><a href="info-bestyrelse.html">Bestyrelse</a></p>
+
               <p><a href="info-studerende.html">Studerende</a></p>
+
           </div>
+
           <!-- Grid column -->
+
         </div>
+
         <!--Grid row-->
+
       </section>
+
       <!-- Section: Links -->
+
+ 
 
       <hr class="my-3">
 
+ 
+
       <!-- Section: Copyright -->
+
       <div class="p-3 pt-0">
+
         <div class="row d-flex align-items-center">
+
           <!-- Grid column -->
+
           <div class="col-md-7 col-lg-8 text-center text-md-start">
+
             <!-- Copyright -->
+
             <div class="p-3">
+
               © 2024 Copyright:
+
               <a class="text-black" href="https://www.boernegaardenkatholt.dk/"
+
                  >Børnegården Katholt</a>
+
                  <span class="footer-text ms-3"><b>Made for educational purposes only</b></span>
+
             </div>
+
             <!-- Copyright -->
+
           </div>
+
           <!-- Grid column -->
+
         </div>
+
       </div>
+
       <!-- Section: Copyright -->
+
     </div>
+
     </div>
+
     <!-- Grid container -->
+
   <!-- Footer -->
+
 <!-- End of .container -->
+
 </footer>
+
 </body>
+
 </html>
