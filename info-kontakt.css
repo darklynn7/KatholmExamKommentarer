@@ -1,195 +1,218 @@
-/* Reset and basic styles */
+/* Basisreset og grundlæggende stil for siden */
 body {
-  margin: 0;
-  font-family: 'PT Serif', serif;
+  margin: 0; /* Fjerner standard margin */
+  font-family: 'PT Serif', serif; /* Sætter skrifttypen til 'PT Serif' */
 }
 
+/* Stil for et specifikt link-element med ID 'infolink' */
 #infolink {
-  font-family: 'Dekko', sans-serif;
-  font-weight: bold;
-  text-decoration: none; /* Remove default underline */
-  color: #333; /* Text color */
-  padding: 10px;
-  display: inline-block;
-  transition: border-bottom 0.3s ease; /* Optional: smooth transition */
-  margin: 0 10px;
-  font-size: 1.2rem; /* A bit larger than the original */
-  border-bottom: 2px solid #000; /* Line under the link */
+  font-family: 'Dekko', sans-serif; /* Skrifttype 'Dekko' */
+  font-weight: bold; /* Gør teksten fed */
+  text-decoration: none; /* Fjerner understregning */
+  color: #333; /* Sætter tekstfarven til mørkegrå */
+  padding: 10px; /* Tilføjer indre afstand */
+  display: inline-block; /* Gør elementet til inline-blok */
+  transition: border-bottom 0.3s ease; /* Tilføjer en glidende effekt ved ændring af 'border-bottom' */
+  margin: 0 10px; /* Giver horisontal margin */
+  font-size: 1.2rem; /* Sætter skrifttypestørrelsen til en lidt større værdi */
+  border-bottom: 2px solid #000; /* Tilføjer en sort linje under teksten */
 }
+
+/* Stil for et specifikt link-element med ID 'infocontact' */
 #infocontact {
-background-color: hsl(0, 0%, 90%);
-text-decoration: none !important;
+  background-color: hsl(0, 0%, 90%); /* Sætter en lys grå baggrundsfarve */
+  text-decoration: none !important; /* Fjerner understregning, selv hvis andre stilarter overstyrer */
 }
-/* General Reset */
+
+/* Reset til alle elementer */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Fjerner al standard margin */
+  padding: 0; /* Fjerner al standard padding */
+  box-sizing: border-box; /* Inkluder padding og border i elementets samlede størrelse */
 }
 
-/* Navbar Container */
+/* Stil for navigationens container */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  padding: 0.75rem; /* Slightly more padding */
-  height: 100px; /* Slightly taller */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex; /* Bruger flexbox til layout */
+  justify-content: space-between; /* Fordeler pladsen mellem elementer */
+  align-items: center; /* Centrerer elementer lodret */
+  background-color: #fff; /* Sætter baggrundsfarven til hvid */
+  padding: 0.75rem; /* Tilføjer indre afstand */
+  height: 100px; /* Sætter højden på navigationen */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tilføjer en svag skygge */
 }
 
-/* Logo Styles */
+
+/* Stil for logo i navigationen */
 .navbar-logo img {
-  height: 50px;
-  width: auto;
+  height: 50px; /* Højde for logoet */
+  width: auto; /* Bevarer billedets proportioner */
 }
 
-/* Top Navigation */
+/* Stil for topnavigationen */
 .topnav {
-  display: flex;
-  align-items: center;
+  display: flex; /* Bruger flexbox til layout */
+  align-items: center; /* Centrerer elementer lodret */
 }
 
+/* Stil for links og dropdown-knapper i navigationen */
 .topnav a, 
 .dropdown-button {
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
-  font-family: 'Dekko', sans-serif;
-  text-decoration: none; /* Remove default underline */
-  color: #333; /* Text color */
-  padding: 10px;
-  display: inline-block;
-  transition: border-bottom 0.3s ease; /* Optional: smooth transition */
-  margin: 0 10px;
-  font-size: 1.2rem; /* A bit larger than the original */
+  background-color: #fff; /* Hvid baggrundsfarve */
+  border: none; /* Fjerner kant */
+  cursor: pointer; /* Ændrer musens ikon til en hånd */
+  font-family: 'Dekko', sans-serif; /* Skrifttype 'Dekko' */
+  text-decoration: none; /* Fjerner understregning */
+  color: #333; /* Sætter tekstfarven til mørkegrå */
+  padding: 10px; /* Tilføjer indre afstand */
+  display: inline-block; /* Gør elementet til inline-blok */
+  transition: border-bottom 0.3s ease; /* Tilføjer en glidende effekt ved ændring af 'border-bottom' */
+  margin: 0 10px; /* Giver horisontal margin */
+  font-size: 1.2rem; /* Sætter skrifttypestørrelsen til en lidt større værdi */
 }
 
+
+/* Hover-effekt for links og dropdown-knapper */
 .topnav a:hover,
 .dropdown-button:hover {
-  font-weight: bold; /* Makes the text bold */
-  border-bottom: 2px solid #000; /* Line under the link */
+  font-weight: bold; /* Gør teksten fed */
+  border-bottom: 2px solid #000; /* Tilføjer en sort linje under teksten */
 }
 
-/* Dropdown Menu */
+/* Stil for dropdown-containeren */
 .dropdown {
-  display: inline-block;
+  display: inline-block; /* Gør dropdown til en inline-blok */
 }
 
+/* Stil for indholdet i dropdown-menuen */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 1000;
-  min-width: 200px;
-  text-decoration: none !important; /* Removes underline */
+  display: none; /* Skjuler dropdown-indholdet som standard */
+  position: absolute; /* Placerer dropdown i forhold til dens forældrecontainer */
+  background-color: white; /* Hvid baggrundsfarve */
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Tilføjer en skygge for at skabe dybde */
+  z-index: 1000; /* Sørger for, at dropdown vises over andre elementer */
+  min-width: 200px; /* Minimum bredde for dropdown */
+  text-decoration: none !important; /* Fjerner understregning */
 }
 
+/* Stil for links i dropdown-menuen */
 .dropdown-content a {
-  color: black;
-  padding: 10px;
-  text-decoration: none !important;
-  display: block;
+  color: black; /* Sort tekstfarve */
+  padding: 10px; /* Tilføjer indre afstand */
+  text-decoration: none !important; /* Fjerner understregning */
+  display: block; /* Gør linket til en blok, så det fylder hele bredden */
 }
 
+/* Hover-effekt for links i dropdown-menuen */
 .dropdown-content a:hover {
-  background-color: hsl(0, 0%, 90%);
-  border-bottom: none; /* Removes any border-bottom */
-  text-decoration: none; /* Ensures underline is removed */
-
+  background-color: hsl(0, 0%, 90%); /* Ændrer baggrund til lys grå ved hover */
+  border-bottom: none; /* Fjerner eventuelle underlinjer */
+  text-decoration: none; /* Sørger for, at ingen understregning vises */
 }
 
+/* Viser dropdown-indholdet, når man hovrer over dropdown-containeren */
 .dropdown:hover .dropdown-content {
-  display: block;
-  text-decoration: none !important;
+  display: block; /* Gør dropdown-indholdet synligt */
+  text-decoration: none !important; /* Fjerner understregning */
 }
 
+/* Stil for dropdown-knappen */
 .dropdown-button {
-  background: none;
-  border: none;
-  color: black;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+  background: none; /* Ingen baggrund */
+  border: none; /* Ingen kant */
+  color: black; /* Sort tekstfarve */
+  cursor: pointer; /* Ændrer musens ikon til en hånd */
+  display: flex; /* Bruger flexbox til layout */
+  align-items: center; /* Centrerer elementer lodret */
 }
 
-/* Hamburger Icon - Hidden by Default */
+/* Stil for hamburger-ikonet */
 .icon {
-  display: none;
-  font-size: 24px;
-  color: black;
-  cursor: pointer;
+  display: none; /* Skjuler ikonet som standard */
+  font-size: 24px; /* Sætter fontstørrelsen */
+  color: black; /* Sort farve */
+  cursor: pointer; /* Ændrer musens ikon til en hånd */
 }
 
-/* Responsive Design for Screens Smaller than 480px */
+/* Responsive design til skærme mindre end 480px */
 @media screen and (max-width: 480px) {
+
+  /* Topnavigation til mobilvisning */
   .topnav {
-    flex-direction: column;
-    align-items: flex-start;
-    display: none; /* Hidden by default */
-    background-color: #f1f1f1; /* Optional: Background for dropdown menu */
-    width: 100%; /* Full width */
-    position: absolute; /* Overlay behavior */
-    top: 100px; /* Adjust based on navbar height */
-    left: 0;
-    z-index: 1000; /* Ensure it appears above other elements */
-    border-top: 1px solid #ddd; /* Optional: Border for clarity */
+    flex-direction: column; /* Ændrer layout til en lodret stak */
+    align-items: flex-start; /* Justerer elementer til venstre */
+    display: none; /* Skjuler navigationen som standard */
+    background-color: #f1f1f1; /* Lys grå baggrund til dropdown-menuen */
+    width: 100%; /* Fylder hele bredden */
+    position: absolute; /* Placeres over indholdet */
+    top: 100px; /* Justerer placeringen baseret på navbarens højde */
+    left: 0; /* Starter fra venstre side */
+    z-index: 1000; /* Sørger for, at menuen vises over andre elementer */
+    border-top: 1px solid #ddd; /* Tynd grå kant for at adskille fra indholdet */
   }
 
-  .topnav a,
+
+  /* Links og dropdown-knapper i mobilvisning */
+  .topnav a, 
   .dropdown-button {
-    display: block; /* Stack as blocks */
-    color: #444; /* Slightly darker text color */
-    background-color: #f1f1f1; /* Optional: Slightly darker background */
-    padding: 10px 20px; /* Adjust padding for better spacing */
-    width: 100%; /* Ensure full width for touch-friendly links */
-    text-align: left; /* Align text to the left */
-    box-sizing: border-box; /* Ensure padding and borders fit */
-    border: none; /* Remove default borders */
+    display: block; /* Viser elementerne som blokke */
+    color: #444; /* Tekstfarve - mørk grå */
+    background-color: #f1f1f1; /* Lys grå baggrund */
+    padding: 10px 20px; /* Tilføjer indre afstand for bedre klikområde */
+    width: 100%; /* Fylder hele bredden */
+    text-align: left; /* Justerer teksten til venstre */
+    box-sizing: border-box; /* Inkluder padding og kant i elementets samlede bredde */
+    border: none; /* Fjerner kantlinjer */
   }
 
-  .topnav > a,
+  /* Hvert link og dropdown-element i topnavigationen */
+  .topnav > a, 
   .topnav > .dropdown {
-    display: block; /* Stack items vertically */
-    color: #444; /* Text color */
-    background-color: #f1f1f1; /* Background color */
-    padding: 10px 20px; /* Padding for touch-friendly areas */
-    width: 100%; /* Full width */
-    text-align: left; /* Align text to the left */
-    box-sizing: border-box; /* Ensure padding and borders fit */
-    border-bottom: 1px solid #aaa; /* Small grey line between items */
+    display: block; /* Viser elementerne lodret */
+    color: #444; /* Mørk grå tekstfarve */
+    background-color: #f1f1f1; /* Lys grå baggrund */
+    padding: 10px 20px; /* Indre afstand for bedre klikområde */
+    width: 100%; /* Fylder hele bredden */
+    text-align: left; /* Justerer teksten til venstre */
+    box-sizing: border-box; /* Sikrer korrekt dimensionering */
+    border-bottom: 1px solid #aaa; /* Tilføjer en tynd grå linje mellem elementer */
   }
 
+  /* Hamburgerikon til mobilvisning */
   .icon {
-    display: block; /* Show hamburger icon */
+    display: block; /* Viser hamburgerikonet */
   }
 
-  .dropdown-content {
-    display: none; /* Ensure dropdowns are hidden initially */
-    background-color: #f1f1f1; /* Match background */
+/* Dropdown-indhold til mobilvisning */
+.dropdown-content {
+  display: none; /* Skjuler dropdown-indhold som standard */
+  background-color: #f1f1f1; /* Samme baggrundsfarve som topnavigationen */
+}
+
+   /* Links i dropdown-menuen */
+   .dropdown-content a {
+    color: #444; /* Mørk grå tekstfarve */
+    background-color: #f1f1f1; /* Samme baggrundsfarve som dropdown-menuen */
+    padding: 10px 20px; /* Samme afstand som hovedmenuen */
+    width: 100%; /* Fylder hele bredden */
+    box-sizing: border-box; /* Sikrer korrekt dimensionering */
+    border: none; /* Ingen kantlinjer */
   }
 
-  .dropdown-content a {
-    color: #444; /* Match text color */
-    background-color: #f1f1f1; /* Match background */
-    padding: 10px 20px; /* Same padding as main links */
-    width: 100%; /* Full width */
-    box-sizing: border-box;
-    border: none;
-  }
+ /* Kantlinje mellem links i dropdown-menuen */
+ .dropdown-content a + a {
+  border-top: 1px solid #ccc; /* Lysere grå linje mellem dropdown-links */
+}
 
-    .dropdown-content a + a {
-    border-top: 1px solid #ccc; /* Slightly lighter line inside dropdowns */
-  }
+/* Vis dropdown-menuen ved fokus på dropdown-knappen */
+.dropdown-button:focus + .dropdown-content {
+  display: block; /* Viser dropdown-indholdet */
+}
 
-  .dropdown-button:focus + .dropdown-content {
-    display: block; /* Show dropdown on button press */
-  }
-
-  .topnav.responsive {
-    display: flex; /* Show menu when responsive class is added */
-  }
+/* Vis navigationen, når klassen 'responsive' tilføjes */
+.topnav.responsive {
+  display: flex; /* Gør menuen synlig */
+}
 }
 
 
@@ -208,140 +231,151 @@ header {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Adds subtle shadow for better readability */
 }
 
+/* Header Styles */
 header h1 {
-  font-weight: 300; /* Light font-weight */
-  font-family: 'Dekko', sans-serif;
-  font-size: 29px;
+  font-weight: 300; /* Let skrifttype */
+  font-family: 'Dekko', sans-serif; /* Dekorativ skrifttype */
+  font-size: 29px; /* Størrelse på overskrift */
 }
 
 header p {
-  color: white; /* Muted text */
-  font-family: 'PT Serif', serif;
-  font-size: 16px;
+  color: white; /* Hvid tekstfarve for kontrast */
+  font-family: 'PT Serif', serif; /* Serif-skrifttype for klassisk stil */
+  font-size: 16px; /* Standard tekststørrelse */
 }
 
-  footer a {
-    color: black; /* Muted text */
-    font-family: 'PT Serif', serif;
-    font: 16px;
-  }
- 
-  footer h3 {
-    font-family: 'Dekko', sans-serif;
-    font-size: 22px; /* Adjust the size as needed */
-    font-weight: bold;
-  }
-  
-  footer p {
-    color: black; /* Muted text */
-    font-family: 'PT Serif', serif;
-    font: 16px;
-  }
-/* General Styles */
+/* Footer Styles */
+footer a {
+  color: black; /* Sort tekstfarve til links */
+  font-family: 'PT Serif', serif; /* Serif-skrifttype for sammenhæng */
+  font: 16px; /* Standard tekststørrelse */
+}
+
+footer h3 {
+  font-family: 'Dekko', sans-serif; /* Dekorativ skrifttype */
+  font-size: 22px; /* Justeret overskriftsstørrelse */
+  font-weight: bold; /* Fed tekst for vægt */
+}
+
+footer p {
+  color: black; /* Sort tekstfarve */
+  font-family: 'PT Serif', serif; /* Serif-skrifttype */
+  font: 16px; /* Standard tekststørrelse */
+}
+
+/* General Text Section Styles */
 .text-section {
-  padding: 20px;
-  background-color: white;
-  max-width: 800px;
-  margin: auto;
+  padding: 20px; /* Indre afstand omkring teksten */
+  background-color: white; /* Hvid baggrund */
+  max-width: 800px; /* Maksimal bredde for bedre læsbarhed */
+  margin: auto; /* Centrer sektionen */
 }
 
 .text-section h2 {
-  font-size: 22px; /* Adjusted for better scaling */
-  font-weight: bold;
-  margin-bottom: 15px;
-  font-family: 'Dekko', sans-serif;
+  font-size: 22px; /* Størrelse på overskrift */
+  font-weight: bold; /* Fremhævet tekst */
+  margin-bottom: 15px; /* Afstand under overskriften */
+  font-family: 'Dekko', sans-serif; /* Dekorativ skrifttype */
 }
 
 .text-section p,
 .text-section ul,
 .text-section li {
-  margin-bottom: 15px;
-  color: #555;
-  font-family: 'PT Serif', serif;
-  font-size: 16px;
+  margin-bottom: 15px; /* Afstand under hvert element */
+  color: #555; /* Mørkegrå tekstfarve for læsbarhed */
+  font-family: 'PT Serif', serif; /* Serif-skrifttype */
+  font-size: 16px; /* Standard tekststørrelse */
 }
 
 .text-section b {
-  margin-bottom: 15px;
-  color: black;
-  font-family: 'PT Serif', serif;
-  font-size: 16px;
+  margin-bottom: 15px; /* Afstand under fed tekst */
+  color: black; /* Sort farve for vægt */
+  font-family: 'PT Serif', serif; /* Serif-skrifttype */
+  font-size: 16px; /* Standard tekststørrelse */
 }
 
-/* Remove extra padding */
+/* Fjern ekstra padding fra punktlister */
 .text-section ul {
-  padding-left: 20px;
+  padding-left: 20px; /* Indrykning for punktlister */
 }
 
 .text-section li {
-  padding-left: 10px;
+  padding-left: 10px; /* Mindre indrykning for listepunkter */
 }
 
+/* Responsive Design for Small Screens */
 @media (max-width: 480px) {
   .text-section {
-    padding: 10px;
+    padding: 10px; /* Reduceret afstand for mindre skærme */
   }
 
   .text-section h2 {
-    font-size: 18px;
-    margin-bottom: 8px;
+    font-size: 18px; /* Mindre overskriftsstørrelse */
+    margin-bottom: 8px; /* Mindre afstand under overskriften */
   }
 
   .text-section p,
   .text-section ul,
   .text-section li,
   .text-section b {
-    font-size: 14px;
-    margin-bottom: 8px;
+    font-size: 14px; /* Reduceret tekststørrelse */
+    margin-bottom: 8px; /* Mindre afstand mellem elementer */
   }
 
   .blyanter {
-    display: block;
-    margin: 0 auto 20px; /* Center align and add spacing below */
-    max-width: 90%;
-    height: auto; /* Maintain aspect ratio */
+    display: block; /* Sørger for centreret placering */
+    margin: 0 auto 20px; /* Centrer og tilføj afstand under billedet */
+    max-width: 90%; /* Tilpasning til mindre skærme */
+    height: auto; /* Bevarer billedets proportioner */
   }
 }
 
+/* Hand-Drawn Line Styles */
 .hand-drawn-line-blue {
-  background-image: url('./images/dotted-line-blå.svg'); /* Path to your SVG */
-  height: 10px;                /* Adjust height based on line style */
-  background-repeat: repeat-x; /* Repeat the pattern horizontally */
+  background-image: url('./images/dotted-line-blå.svg'); /* Sti til den blå streg-SVG */
+  height: 10px; /* Justerer højden for den håndtegnede linje */
+  background-repeat: repeat-x; /* Gentager baggrunden horisontalt */
 }
+
 .hand-drawn-line-green {
-  background-image: url('./images/dotted-line-grøn.svg'); /* Path to your SVG */
-  height: 10px;                /* Adjust height based on line style */
-  background-repeat: repeat-x; /* Repeat the pattern horizontally */
+  background-image: url('./images/dotted-line-grøn.svg'); /* Sti til den grønne streg-SVG */
+  height: 10px; /* Justerer højden for den håndtegnede linje */
+  background-repeat: repeat-x; /* Gentager baggrunden horisontalt */
 }
+
+/* Pencil Image Styling */
 .blyanter {
-  height: 70px; /* Matches the font size */
-  width: auto; /* Maintains aspect ratio */
-  align-content: center; /* Aligns image with the text baseline */
-  display: block; /* Makes the image behave like a block element */
-  margin: 0 auto; /* Horizontally centers the image */
+  height: 70px; /* Matcher skrifttypens højde */
+  width: auto; /* Bevarer billedets proportioner */
+  align-content: center; /* Centrerer billedet med tekstbasen */
+  display: block; /* Får billedet til at opføre sig som en blok */
+  margin: 0 auto; /* Centrerer billedet horisontalt */
 }
+
+/* Map Container Styling */
 .map-container {
-  position: relative;
-  padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
+  position: relative; /* For at placere børn i forhold til denne container */
+  padding-bottom: 56.25%; /* Bevarer 16:9 aspektforhold */
+  height: 0; /* Initial højde sættes til nul */
+  overflow: hidden; /* Skjuler elementer uden for containeren */
+  border-radius: 15px; /* Tilføjer afrundede hjørner */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Tilføjer en skygge for dybde */
 }
 
 .map-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 15px; /* Rounded corners for iframe */
+  position: absolute; /* Positionerer iframe inde i containeren */
+  top: 0; /* Justerer øverste kant */
+  left: 0; /* Justerer venstre kant */
+  width: 100%; /* Udfylder hele containerens bredde */
+  height: 100%; /* Udfylder hele containerens højde */
+  border: 0; /* Fjerner standardkant */
+  border-radius: 15px; /* Tilføjer afrundede hjørner til iframe */
 }
 
-/* Media query for small screens */
+/* Media Query for Small Screens */
 @media (max-width: 480px) {
   .map-container {
-    padding-bottom: 75%; /* Adjust aspect ratio for smaller screens */
+    padding-bottom: 75%; /* Justerer aspektforhold for mindre skærme */
   }
 }
+

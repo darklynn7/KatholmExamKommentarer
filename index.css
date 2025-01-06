@@ -1,22 +1,23 @@
-/* Reset and basic styles */
+/* Fjerner margin for body og sætter standard skrifttype */
 body {
   margin: 0;
   font-family: 'PT Serif', serif;
 }
 
+/* Styling til "welcome"-linket */
 #welcomeLink {
   font-family: 'Dekko', sans-serif;
   font-weight: bold;
-  text-decoration: none; /* Remove default underline */
-  color: #333; /* Text color */
+  text-decoration: none; /* Fjerner den standard understregning fra linket */
+  color: #333; /* Text farve */
   padding: 10px;
-  display: inline-block;
-  transition: border-bottom 0.3s ease; /* Optional: smooth transition */
-  margin: 0 10px;
-  font-size: 1.2rem; /* A bit larger than the original */
-  border-bottom: 2px solid #000; /* Line under the link */
+  display: inline-block; /* Sørger for, at linket opfører sig som en blok med padding */
+  transition: border-bottom 0.3s ease; /* Tilføjer en glidende animation til underlinjen ved hover */
+  margin: 0 10px; /* Skaber horisontal afstand mellem links */
+  font-size: 1.2rem; /* Gør fonten lidt større */
+  border-bottom: 2px solid #000; /* Linje under links */
 }
-/* General Reset */
+/* Generel reset til alle elementer */
 * {
   margin: 0;
   padding: 0;
@@ -25,46 +26,47 @@ body {
 
 /* Navbar Container */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex;/* Flexbox for horisontal layout */
+  justify-content: space-between;  /* Fordel plads mellem elementer */
+  align-items: center;/* Centrer elementer vertikalt */
   background-color: #fff;
-  padding: 0.75rem; /* Slightly more padding */
+  padding: 0.75rem; /* Tilføjer lidt padding */
   height: 100px; /* Slightly taller */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);/* Let skygge under navbar */
 }
 
 /* Logo Styles */
 .navbar-logo img {
-  height: 50px;
-  width: auto;
+  height: 50px; /* Fast højde */
+  width: auto;  /* Beholder billedets proportioner */
 }
 
 /* Top Navigation */
 .topnav {
-  display: flex;
-  align-items: center;
+  display: flex;/* Anvender flexbox-layout for at arrangere navigationselementerne fleksibelt */
+  align-items: center;/* Censurerer navigationselementerne vertikalt, så de er centreret på den lodrette akse */
 }
 
+/* Stilarter til links og dropdown-knapper */
 .topnav a, 
 .dropdown-button {
   background-color: #fff;
   border: none;
   cursor: pointer;
   font-family: 'Dekko', sans-serif;
-  text-decoration: none; /* Remove default underline */
+  text-decoration: none; /* Fjerner understregning */
   color: #333; /* Text color */
   padding: 10px;
-  display: inline-block;
-  transition: border-bottom 0.3s ease; /* Optional: smooth transition */
-  margin: 0 10px;
+  display: inline-block; /* Lineær placering */
+  transition: border-bottom 0.3s ease; /* Glidende effekt for linje */
+  margin: 0 10px; /* Lidt mellemrum mellem links */
   font-size: 1.2rem; /* A bit larger than the original */
 }
 
 .topnav a:hover,
 .dropdown-button:hover {
-  font-weight: bold; /* Makes the text bold */
-  border-bottom: 2px solid #000; /* Line under the link */
+  font-weight: bold; /* Gør teksten fed ved hover */
+  border-bottom: 2px solid #000; /* Understregning ved hover */
 }
 
 /* Dropdown Menu */
@@ -73,332 +75,372 @@ body {
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
+  display: none; /* Skjult som standard */
+  position: absolute;/* Placeres relativt til forældre */
   background-color: white;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 1000;
-  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);/* Skygge for dybde */
+  z-index: 1000; /* Sørger for at dropdown vises øverst */
+  min-width: 200px; /* Minimumsbredde for dropdown */
   text-decoration: none !important; /* Removes underline */
 }
 
+/* Stil for links inde i dropdown-indholdet */
 .dropdown-content a {
-  color: black;
-  padding: 10px;
-  text-decoration: none !important;
-  display: block;
+  color: black;/* Sætter tekstfarven på links til sort */
+  padding: 10px; /* Tilføjer padding rundt om link-teksten for afstand */
+  text-decoration: none !important;/* Fjerner understregning fra links, sikrer at ingen understregning anvendes */
+  display: block;/* Gør, at hvert link fylder hele bredden af dets container */
 }
 
 .dropdown-content a:hover {
-  background-color: hsl(0, 0%, 90%);
-  border-bottom: none; /* Removes any border-bottom */
-  text-decoration: none; /* Ensures underline is removed */
+  background-color: hsl(0, 0%, 90%);/* Ændrer baggrundsfarven, når linket er i hover-tilstand */
+  border-bottom: none; /* Fjerner eventuel border-bottom ved hover */
+  text-decoration: none; /* Sikrer, at ingen understregning anvendes selv ved hover */
 
 }
 
+/* Vis dropdown-menu ved hover på dropdown */
 .dropdown:hover .dropdown-content {
-  display: block;
-  text-decoration: none !important;
+  display: block; /* Gør dropdown-menuen synlig, når man holder musen over dropdown-elementet */
+  text-decoration: none !important;/* Fjerner eventuel understregning, der kan være på links i dropdown-menuen */
 }
 
+/* Styling af dropdown-knap */
 .dropdown-button {
-  background: none;
-  border: none;
-  color: black;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+  background: none; /* Fjerner baggrundsfarve på knappen */
+  border: none; /* Fjerner standard kant på knappen */
+  color: black; /* Sætter tekstfarven på knappen til sort */
+  cursor: pointer; /* Ændrer musemarkøren til en peger, når man holder musen over knappen */
+  display: flex; /* Brug flexbox-layout til at arrangere indholdet */
+  align-items: center; /* Censurerer indholdet i knappen vertikalt */
 }
 
-/* Hamburger Icon - Hidden by Default */
+/* Hamburger-ikon - Skjult som standard */
 .icon {
-  display: none;
-  font-size: 24px;
-  color: black;
-  cursor: pointer;
+  display: none; /* Skjuler hamburger-ikonet som standard */
+  font-size: 24px; /* Sætter størrelsen på ikonet til 24px */
+  color: black; /* Sætter ikonets farve til sort */
+  cursor: pointer; /* Ændrer musemarkøren til en peger, når musen holdes over ikonet */
 }
 
-/* Responsive Design for Screens Smaller than 480px */
+/* Responsivt design for skærme, der er mindre end 480px */
 @media screen and (max-width: 480px) {
   .topnav {
-    flex-direction: column;
-    align-items: flex-start;
-    display: none; /* Hidden by default */
-    background-color: #f1f1f1; /* Optional: Background for dropdown menu */
-    width: 100%; /* Full width */
-    position: absolute; /* Overlay behavior */
-    top: 100px; /* Adjust based on navbar height */
-    left: 0;
-    z-index: 1000; /* Ensure it appears above other elements */
-    border-top: 1px solid #ddd; /* Optional: Border for clarity */
+    flex-direction: column; /* Ændrer layoutet til vertikal rækkefølge i stedet for horisontal */
+    align-items: flex-start; /* Justerer elementerne til venstre i navigationen */
+    display: none; /* Skjuler navigationen som standard */
+    background-color: #f1f1f1; /* Baggrundsfarve for dropdown-menuen (valgfri) */
+    width: 100%; /* Gør navigationen fuld bredde på skærmen */
+    position: absolute; /* Gør navigationen til et overlay, som kan placeres over andre elementer */
+    top: 100px; /* Justerer positionen fra toppen af skærmen baseret på navigationshøjde */
+    left: 0;/* Placerer navigationen helt til venstre */
+    z-index: 1000;  /* Sørger for, at navigationen vises over andre elementer */
+    border-top: 1px solid #ddd; /* Valgfrit: Tilføjer en øvre grænse for at adskille navigationen visuelt */
   }
 
+  /* Stiler links og dropdown-knap i navigationen */
   .topnav a,
   .dropdown-button {
-    display: block; /* Stack as blocks */
-    color: #444; /* Slightly darker text color */
-    background-color: #f1f1f1; /* Optional: Slightly darker background */
-    padding: 10px 20px; /* Adjust padding for better spacing */
-    width: 100%; /* Ensure full width for touch-friendly links */
-    text-align: left; /* Align text to the left */
-    box-sizing: border-box; /* Ensure padding and borders fit */
-    border: none; /* Remove default borders */
+    display: block; /* Gør elementerne til blokniveau, så de stables vertikalt */
+    color: #444; /* Sætter tekstfarven til en mørkere nuance */
+    background-color: #f1f1f1; /* Sætter en let mørkere baggrundsfarve */
+    padding: 10px 20px; /* Justerer padding for bedre afstand mellem elementerne */
+    width: 100%; /* Gør links og knapper fuld bredde, så de er touch-venlige */
+    text-align: left; /* Justerer teksten til venstre */
+    box-sizing: border-box; /* Sikrer, at padding og border er inkluderet i elementets samlede størrelse */
+    border: none; /* Fjerner standardramme fra elementerne */
   }
 
+/* Specifik styling for direkte børn i topnav */
   .topnav > a,
   .topnav > .dropdown {
-    display: block; /* Stack items vertically */
-    color: #444; /* Text color */
-    background-color: #f1f1f1; /* Background color */
-    padding: 10px 20px; /* Padding for touch-friendly areas */
-    width: 100%; /* Full width */
-    text-align: left; /* Align text to the left */
-    box-sizing: border-box; /* Ensure padding and borders fit */
-    border-bottom: 1px solid #aaa; /* Small grey line between items */
+    display: block; /* Stabler elementerne vertikalt */
+    color: #444; /* Sætter tekstfarven til den samme mørke nuance */
+    background-color: #f1f1f1; /* Baggrundsfarve for elementerne */
+    padding: 10px 20px; /* Tilpasset padding for touch-venlige områder */
+    width: 100%; /* Gør elementerne fuld bredde */
+    text-align: left; /* Justerer teksten til venstre */
+    box-sizing: border-box;  /* Inkluderer padding og border i elementets samlede størrelse */
+    border-bottom: 1px solid #aaa; /* Tilføjer en lille grå linje mellem elementerne for visuel adskillelse */
   }
 
+  /* Hamburger-ikon vises kun, når det er nødvendigt */
   .icon {
-    display: block; /* Show hamburger icon */
+    display: block; /* Viser hamburger-ikonet */
   }
 
+  /* Vis menuen, når 'responsive' klassen er tilføjet til topnav */
   .topnav.responsive {
-    display: flex; /* Show menu when responsive class is added */
+    display: flex; /* Ændrer display til flex, så menuen vises i en responsiv layout */
   }
 
+  /* Dropdown-menuen skjules som standard */
   .dropdown-content {
-    display: none; /* Ensure dropdowns are hidden initially */
-    background-color: #f1f1f1; /* Match background */
+    display: none; /* Sørger for, at dropdown-menuer er skjult som standard */
+    background-color: #f1f1f1; /* Matcher baggrundsfarven med den øvrige menu */
   }
 
+  /* Stilar dropdown-links for at matche hovedmenuens design */
   .dropdown-content a {
-    color: #444; /* Match text color */
-    background-color: #f1f1f1; /* Match background */
-    padding: 10px 20px; /* Same padding as main links */
-    width: 100%; /* Full width */
-    box-sizing: border-box;
-    border: none;
+    color: #444;  /* Matcher tekstfarven med hovedmenuen */
+    background-color: #f1f1f1; /* Matcher baggrundsfarven med hovedmenuen */
+    padding: 10px 20px; /* Samme padding som hovedlinks for ensartet design */
+    width: 100%; /* Gør dropdown-links til fuld bredde */
+    box-sizing: border-box; /* Inkluderer padding i elementets samlede størrelse */
+    border: none; /* Fjerner standard kant */
   }
 
+/* Tilføjer en lysere linje mellem dropdown-links */
     .dropdown-content a + a {
-    border-top: 1px solid #ccc; /* Slightly lighter line inside dropdowns */
+    border-top: 1px solid #ccc; /* En let grå linje mellem de enkelte links i dropdown-menuen */
   }
 
+  /* Viser dropdown-menuen, når dropdown-knappen får fokus */
   .dropdown-button:focus + .dropdown-content {
-    display: block; /* Show dropdown on button press */
+    display: block; /* En let grå linje mellem de enkelte links i dropdown-menuen */
   }
 }
 
-
+/* Styling for header (øverste sektion på siden) */
 header {
-  position: relative; 
-  background-image: url('images/forside-banner-rigtig.svg');
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  min-height: 500px; 
-  text-align: center; 
-  color: white; 
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-  padding: 20px; /* Adds padding for smaller screens */
+  position: relative; /* Sikrer, at headeren kan placeres i forhold til andre elementer på siden */
+  background-image: url('images/forside-banner-rigtig.svg'); /* Sætter baggrundsbilledet til headeren */
+  background-size: cover; /* Sørger for, at baggrundsbilledet fylder hele headeren */
+  background-position: center; /* Centrerer baggrundsbilledet */
+  background-repeat: no-repeat; /* Forhindrer baggrundsbilledet i at blive gentaget */
+  min-height: 500px; /* Sætter minimumshøjden på headeren for at sikre tilstrækkelig plads til indhold */
+  text-align: center; /* Centrerer teksten horisontalt i headeren */
+  color: white; /* Sætter tekstfarven til hvid for kontrast mod baggrundsbilledet */
+  display: flex; /* Anvender flexbox for at centrere indholdet i headeren */
+  align-items: center; /* Vertikal centrering af indholdet i headeren */
+  justify-content: center; /* Horisontal centrering af indholdet i headeren */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Lægger et skyggeeffekt på teksten for bedre synlighed på lysere baggrunde */
+  padding: 20px; /* Tilføjer polstring rundt om headeren, især til mindre skærme */
 }
 
+/* Styling for headerens hovedoverskrift */
 header h1 {
-  font-weight: 300; 
-  font-family: 'Dekko', sans-serif;
-  font-size: 40px;
-  margin-bottom: 20px; /* Spacing below heading */
+  font-weight: 300; /* Gør teksten let (normal vægt) */
+  font-family: 'Dekko', sans-serif; /* Sætter skrifttypen til Dekko for overskriften */
+  font-size: 40px; /* Sætter størrelsen på overskriften */
+  margin-bottom: 20px; /* Tilføjer mellemrum under overskriften for at adskille den fra det efterfølgende indhold */
 }
 
+/* Styling for den gule knap */
 .button-yellow-light {
-  background-color: #ffd367;
-  color: #000; /* Text color */
-  text-decoration: none; /* Remove underline */
-  display: inline-block;
-  padding: 10px 20px;
-  border: 1px solid #000; /* Small black border */
-  border-radius: 5px;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-  font-family: 'Dekko', sans-serif;
-  font-size: 22px;
+  background-color: #ffd367; /* Lys gul baggrundsfarve for knappen */
+  color: #000; /* Sort tekstfarve for kontrast */
+  text-decoration: none; /* Fjerner standard understregning på knaptekst */
+  display: inline-block; /* Gør knappen til en inline-block, så den kan placeres ved siden af andre elementer */
+  padding: 10px 20px; /* Tilføjer polstring omkring knappen for at gøre den større og lettere at klikke på */
+  border: 1px solid #000; /* Lægger en lille sort kant rundt om knappen */
+  border-radius: 5px; /* Runde hjørner på knappen for et blødere udseende */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Glidende overgangseffekt på baggrundsfarve og kantfarve ved hover */
+  font-family: 'Dekko', sans-serif; /* Skrifttype for knaptekst */
+  font-size: 22px; /* Skrifttype størrelse for knaptekst */
  
 }
-
+ 
+/* Styling for knappen når den hoveres (musen er over knappen) */
 .button-yellow-light:hover {
-  background-color: #e6bc5b;
-  border-color: #444; /* Slightly darker border on hover */
+  background-color: #e6bc5b; /* Ændrer baggrundsfarven til en mørkere gul ved hover */
+  border-color: #444; /* Ændrer kantfarven til en lidt mørkere grå ved hover */
 }
 
+/* Styling for knappen når den hoveres (musen er over knappen) */
 .button-yellow-light:hover {
-  background-color: #e6bc5b;
-  border-color: #444; /* Slightly darker border on hover */
+  background-color: #e6bc5b; /* Ændrer baggrundsfarven til en mørkere gul ved hover */
+  border-color: #444; /* Ændrer kantfarven til en lidt mørkere grå ved hover */
 }
 
+/* Responsiv design for skærme mindre end 480px */
 @media (max-width: 480px) {
+   /* Styling for headeren på små skærme */
   header {
-    min-height: 250px;
-    padding: 10px; /* Add tighter padding */
+    min-height: 250px; /* Reducerer højden på headeren for at tilpasse mindre skærme */
+    padding: 10px; /* Tilføjer tættere padding for mindre skærme */
   }
 
+    /* Styling for headerens overskrift på små skærme */
   header h1 {
-    font-size: 24px;
-    line-height: 1.2; /* Improve readability on small screens */
+    font-size: 24px; /* Reducerer fontstørrelsen for at passe til mindre skærme */
+    line-height: 1.2; /* Øger linjeafstanden for at forbedre læsbarheden på små skærme */
   }
 
  
+  /* Styling for knapper på små skærme */
 .button-yellow-light {
-    width: 80%; /* Buttons take 80% width */
-    margin: 10px auto; /* Center buttons */
-    text-align: center;
+    width: 80%; /* Knapperne tager 80% af bredden af containeren */
+    margin: 10px auto; /* Centrerer knapperne horisontalt med 10px margin */
+    text-align: center; /* Centrerer tekstindholdet inde i knappen */
   }
 }
 
-/* Default styles (desktop and larger screens) */
+/* Standard styling (desktop og større skærme) */
+/* Styling af tekstafsnit */
 .text-section {
-  padding: 20px;
-  background-color: white;
-  max-width: 800px;
-  margin: auto;
-  border-radius: 8px;
+  padding: 20px; /* Tilføjer 20px padding rundt om indholdet */
+  background-color: white; /* Sætter baggrundsfarven til hvid */
+  max-width: 800px; /* Maksimal bredde af afsnittet er 800px */
+  margin: auto; /* Centrerer afsnittet horisontalt */
+  border-radius: 8px; /* Runde hjørner på afsnittet */
 }
 
+/* Styling for informationscontainer */
 .info-container {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  background: #ffffff;
+  max-width: 800px; /* Maksimal bredde af containeren er 800px */
+  margin: 50px auto; /* 50px margin øverst og nederst, centrerer horisontalt */
+  padding: 20px; /* Tilføjer 20px padding rundt om indholdet */
+  background: #ffffff; /* Sætter baggrundsfarven til hvid */
 }
 
+/* Styling for container med indhold */
 .content-box {
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
+  display: flex; /* Bruger flexbox til at placere elementerne på en række */
+  justify-content: space-between; /* Placerer elementerne med lige mellemrum */
+  gap: 50px; /* Tilføjer 50px afstand mellem de enkelte sektioner */
 }
 
+/* Styling af venstre og højre sektioner */
 .left-section,
 .right-section {
-  flex: 1;
-  padding: 20px;
-  background: #f1f1f1;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Hver sektion får lige meget plads */
+  padding: 20px; /* Tilføjer 20px padding inde i sektionerne */
+  background: #f1f1f1; /* Baggrundsfarve for sektionerne */
+  border-radius: 5px; /* Runde hjørner på sektionerne */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Let skygge for at give sektionerne dybde */
 }
 
-/* Text styles */
+/* Styling af overskrifter i tekstafsnit */
 .text-section h2 {
-  margin-bottom: 10px;
-  text-align: center;
-  font-family: 'Dekko', sans-serif;
-  font-size: 22px; 
-  font-weight: bold;
+  margin-bottom: 10px; /* Tilføjer 10px margin under overskriften */
+  text-align: center; /* Centrerer overskriften horisontalt */
+  font-family: 'Dekko', sans-serif; /* Bruger fonten 'Dekko' til overskriften */
+  font-size: 22px; /* Sætter skriftstørrelsen til 22px */
+  font-weight: bold; /* Gør overskriften fed */
 }
 
+/* Styling for paragraf i tekstafsnit */
 .text-section p {
-  font-size: 16px;
-  color: #555;
-  font-family: 'PT Serif', serif;
+  font-size: 16px; /* Sætter skriftstørrelsen til 16px */
+  color: #555; /* Mørkere grå farve for teksten */
+  font-family: 'PT Serif', serif; /* Brug serif-fonten 'PT Serif' */
 }
 
+/* Styling for ul (unordered list) i tekstafsnit */
 .text-section ul {
-  list-style: none;
-  padding: 0;
-  font-size: 16px;
-  color: black;
-  font-family: 'PT Serif', serif;
+  list-style: none; /* Fjerner standard punkttegn fra listen */
+  padding: 0; /* Fjerner standard padding */
+  font-size: 16px; /* Sætter skriftstørrelsen til 16px */
+  color: black; /* Sætter tekstfarven til sort */
+  font-family: 'PT Serif', serif; /* Brug serif-fonten 'PT Serif' */
 }
 
+/* Styling for list items i ul */
 .text-section ul li {
-  margin-bottom: 8px;
-  position: relative;
-  padding-left: 20px;
+  margin-bottom: 8px; /* Tilføjer 8px margin under hvert list item */
+  position: relative; /* Gør det muligt at placere en pseudo-element (✓) */
+  padding-left: 20px; /* Tilføjer padding til venstre for at give plads til symbolet */
 }
 
+/* Tilføjer et flueben før hvert listeelement som visuel markering */
 .text-section ul li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: #27ae60;
-  font-weight: bold;
+  content: '✓'; /* Bruger et flueben som indhold før hvert list item */
+  position: absolute; /* Absolut positionering i forhold til li */
+  left: 0; /* Placer fluebenet til venstre */
+  color: #27ae60; /* Grøn farve for fluebenet */
+  font-weight: bold; /* Gør fluebenet fed */
 }
 
+/* Responsiv design til små skærme (480px og mindre) */
 @media (max-width: 480px) {
   .text-section {
-    padding: 10px;
+    padding: 10px; /* Reducer padding for at tilpasse mindre skærme */
   }
 
   .text-section h2 {
-    font-size: 18px; /* Further reduce font size for very small screens */
+    font-size: 18px; /* Reducerer fontstørrelsen yderligere på meget små skærme */
   }
 
   .text-section p,
   .text-section ul li {
-    font-size: 14px;
+    font-size: 14px; /* Mindre tekst på små skærme for bedre læsbarhed */
   }
 
   .info-container {
-    padding: 8px;
-    margin: 10px auto;
+    padding: 8px; /* Juster padding for mindre skærme */
+    margin: 10px auto; /* Centrer containeren med margin */
   }
 
+  /* Styling for container og layout */
   .info-container {
-    padding: 8px;
-    margin: 10px auto;
+    padding: 8px; /* Justerer padding for mindre skærme */
+    margin: 10px auto; /* Centrerer containeren med margin */
   }
 
+  /* Content box layout */
   .content-box {
     display: flex;
-    flex-direction: column; /* Stack sections vertically */
-    gap: 20px; /* Add spacing between the stacked sections */
+    flex-direction: column; /* Stabler sektionerne vertikalt */
+    gap: 20px; /* Tilføjer mellemrum mellem de stakede sektioner */
   }
 
+  /* Sektioner som ikke skal strække sig */
   .left-section,
   .right-section {
-    flex: none; /* Prevent sections from stretching */
-    width: 100%; /* Ensure sections take the full width */
+    flex: none; /* Forhindrer sektionerne i at strække sig */
+    width: 100%; /* Sikrer, at sektionerne tager fuld bredde */
   }
 
+  /* Styling af blyantbilleder */
   .blyanter {
     display: block;
-    margin: 0 auto 20px; /* Center align and add spacing below */
-    max-width: 90%;
-    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto 20px; /* Centrerer billedet og tilføjer afstand under */
+    max-width: 90%; /* Begrænser billedets bredde */
+    height: auto; /* Bevarer aspektforholdet */
   }
 }
 
+/* Footer heading styling */
 footer h3 {
-  font-family: 'Dekko', sans-serif;
-  font-size: 22px; /* Adjust the size as needed */
-  font-weight: bold;
+  font-family: 'Dekko', sans-serif; /* Brug af 'Dekko' font til overskrifter */
+  font-size: 22px; /* Juster størrelsen efter behov */
+  font-weight: bold; /* Gør overskriften fed */
 }
+
+/* Footer paragraph styling */
 footer p {
-  color: black; /* Muted text */
-  font-family: 'PT Serif', serif;
-  font: 16px;
+  color: black; /* Dæmpet tekstfarve */
+  font-family: 'PT Serif', serif; /* Brug af serif font for afsnit */
+  font: 16px; /* Justerer tekststørrelsen */
 }
 
+/* Footer link styling */
 footer a {
-  color: black; /* Muted text */
-  font-family: 'PT Serif', serif;
-  font: 16px;
+  color: black; /* Dæmpet tekstfarve */
+  font-family: 'PT Serif', serif; /* Serif font for links */
+  font: 16px; /* Justerer størrelsen på linkene */
 }
 
+/* Styling for the blue hand-drawn dotted line */
 .hand-drawn-line-blue {
-  background-image: url('./images/dotted-line-blå.svg'); /* Path to your SVG */
-  height: 10px;                /* Adjust height based on line style */
-  background-repeat: repeat-x; /* Repeat the pattern horizontally */
-}
-.hand-drawn-line-green {
-  background-image: url('./images/dotted-line-grøn.svg'); /* Path to your SVG */
-  height: 10px;                /* Adjust height based on line style */
-  background-repeat: repeat-x; /* Repeat the pattern horizontally */
+  background-image: url('./images/dotted-line-blå.svg'); /* Sti til din blå SVG dotted line */
+  height: 10px;                /* Juster højden baseret på linjestilen */
+  background-repeat: repeat-x; /* Gentager mønsteret vandret */
 }
 
+/* Styling for the green hand-drawn dotted line */
+.hand-drawn-line-green {
+  background-image: url('./images/dotted-line-grøn.svg'); /* Sti til din blå SVG dotted line */
+  height: 10px;                /* Juster højden baseret på linjestilen */
+  background-repeat: repeat-x; /* Gentager mønsteret vandret */
+}
+
+/* Styling for the blyanter (image) element */
 .blyanter {
-  height: 70px; /* Matches the font size */
-  width: auto; /* Maintains aspect ratio */
-  align-content: center; /* Aligns image with the text baseline */
-  display: block; /* Makes the image behave like a block element */
-  margin: 0 auto; /* Horizontally centers the image */
+  height: 70px; /* Matcher fontstørrelsen */
+  width: auto; /* Bevarer billedets aspect ratio */
+  align-content: center; /* Justerer billedet med tekstens baseline */
+  display: block; /* Gør billedet til et blok element */
+  margin: 0 auto; /* Centrerer billedet horisontalt */
 }
